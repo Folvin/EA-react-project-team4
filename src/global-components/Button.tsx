@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 interface Props {
   children: React.ReactNode;
@@ -6,18 +7,16 @@ interface Props {
   buttonStyle?: string;
 }
 
-
-const baseStyle =
+const baseStyle: string =
   "w-full sm:w-max text-center py-2 px-4 border-solid border-2 rounded transition-all hover:scale-110";
 
-const defaultStyle = "bg-white text-black border-black";
-
+const defaultStyle: string = "bg-white text-black border-black";
 
 function Button({children, url, buttonStyle = defaultStyle}: Props) {
   return (
-    <a href={url}>
+    <Link to={url}>
       <div className={`${baseStyle} ${buttonStyle}`}>{children}</div>
-    </a>
+    </Link>
   );
 }
 
