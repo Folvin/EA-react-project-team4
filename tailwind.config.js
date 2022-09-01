@@ -525,6 +525,10 @@ module.exports = {
       10: "repeat(10, minmax(0, 1fr))",
       11: "repeat(11, minmax(0, 1fr))",
       12: "repeat(12, minmax(0, 1fr))",
+      "autosm": "repeat(auto-fit, minmax(150px, 1fr))",
+      "automd": "repeat(auto-fit, minmax(200px, 1fr))",
+      "autolg": "repeat(auto-fit, minmax(250px, 1fr))",
+      "autoxl": "repeat(auto-fit, minmax(300px, 1fr))",
     },
     gridTemplateRows: {
       none: "none",
