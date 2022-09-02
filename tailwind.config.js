@@ -46,6 +46,9 @@ module.exports = {
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
+      eaBlack: {
+        100: '#121212',
+      },
     }),
     columns: {
       auto: "auto",
@@ -111,6 +114,7 @@ module.exports = {
       72: "18rem",
       80: "20rem",
       96: "24rem",
+      400: "25rem",
     },
     animation: {
       none: "none",
