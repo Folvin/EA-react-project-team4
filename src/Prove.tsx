@@ -1,5 +1,9 @@
+import Header from "./global-components/Header";
+
 function Prove() {
-  return <div></div>;
+  return <div>
+    <Header />
+  </div>;
 }
 
 export default Prove;
