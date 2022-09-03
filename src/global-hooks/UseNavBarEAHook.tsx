@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-function UseNavBarEAHook() {
+function UseNavBarEAHook(menuRef: any) {
 
     const [userMenu, setUserMenu] = useState('top-[-400px]');
 
@@ -41,6 +41,23 @@ function UseNavBarEAHook() {
             setUserMenu('top-[-400px]');
         }
     }
+
+    useEffect(() => {
+
+        document.addEventListener("mousedown", handleOutsideClicks);
+          return () => {
+            document.removeEventListener("mousedown", handleOutsideClicks);
+        };
+
+    }, [userMenu, helpMenu]);
+
+    const handleOutsideClicks = (event: any) => {
+
+        if((userMenu === 'top-10' || helpMenu === 'top-10') && menuRef.current && !menuRef.current.contains(event.target as Node)){
+            setUserMenu('top-[-400px]');
+            setHelpMenu('top-[-400px]');
+         };
+      };
 
     return ({
         userMenu,
