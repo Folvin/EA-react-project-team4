@@ -1,5 +1,6 @@
 function Prove() {
-  return <div></div>;
+  return <div>
+  </div>;
 }
 
 export default Prove;
