@@ -4,7 +4,7 @@ import "./index.css";
 import {BrowserRouter} from "react-router-dom";
 import Routing from "./Routing";
 import Prove from "./Prove";
-import Header from "./global-components/Header";
+import NavBarEA from "./global-components/NavBarEA";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Header />
+      <NavBarEA />
       <Prove />
       <Routing />
     </BrowserRouter>
