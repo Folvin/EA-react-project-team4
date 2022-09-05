@@ -15,7 +15,7 @@ function NavHelp({ pos, handleToggle }: HelpNav) {
                     <img className="w-7 h-7 mr-9 mt-9" src="assets/global/CrossNavIcon.png" alt="" />
                 </div>
             </div>
-            <div className="h-10 w-full flex justify-center items-center">
+            <div className="h-10 w-full flex -z-10 justify-center items-center">
                 <div className="font-bold text-lg text-white">
                     Ti serve aiuto?
                 </div>
