@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { Link } from "react-router-dom";
-import UseNavBarEAHook from "../global-hooks/UseNavBarEAHook";
+import UseNavBarEAHook from "../../global-hooks/UseNavBarEAHook";
 import NavHelp from "./NavHelp";
 import NavUserNotLoggedIn from "./NavUserNotLoggedIn";
 

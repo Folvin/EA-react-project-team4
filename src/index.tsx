@@ -4,7 +4,8 @@ import "./index.css";
 import {BrowserRouter} from "react-router-dom";
 import Routing from "./Routing";
 import Prove from "./Prove";
-import NavBarEA from "./global-components/NavBarEA";
+import NavBarEA from "./global-components/navbar/NavBarEA";
+
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
