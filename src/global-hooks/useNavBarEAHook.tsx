@@ -2,9 +2,13 @@ import { useEffect, useState } from "react";
 
 function useNavBarEAHook(menuRef: any) {
 
+    /* States that control the NavBarEA menus */
+
     const [userMenu, setUserMenu] = useState('top-[-400px]');
 
     const [helpMenu, setHelpMenu] = useState('top-[-400px]');
+
+    /* Function to handle the opening and closing of the NavBarEA menus */
 
     function handleToggle(event: React.MouseEvent<HTMLImageElement>) {
 
@@ -42,10 +46,12 @@ function useNavBarEAHook(menuRef: any) {
         }
     }
 
+    /* Side effect and function to handle the closing of the NavBarEA menus when clicking outside of the navbar itself */
+
     useEffect(() => {
 
         document.addEventListener("mousedown", handleOutsideClicks);
-          return () => {
+        return () => {
             document.removeEventListener("mousedown", handleOutsideClicks);
         };
 
@@ -53,11 +59,11 @@ function useNavBarEAHook(menuRef: any) {
 
     const handleOutsideClicks = (event: any) => {
 
-        if((userMenu === 'top-10' || helpMenu === 'top-10') && menuRef.current && !menuRef.current.contains(event.target as Node)){
+        if ((userMenu === 'top-10' || helpMenu === 'top-10') && menuRef.current && !menuRef.current.contains(event.target as Node)) {
             setUserMenu('top-[-400px]');
             setHelpMenu('top-[-400px]');
-         };
-      };
+        };
+    };
 
     return ({
         userMenu,

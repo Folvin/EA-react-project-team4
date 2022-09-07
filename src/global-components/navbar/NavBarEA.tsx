@@ -6,7 +6,11 @@ import NavUserNotLoggedIn from "./NavUserNotLoggedIn";
 
 function NavBarEA() {
 
+    /* Ref used to handle the function in the hook that handles the closing of the menus when clicking outside */
+
     const menuRef = useRef<HTMLDivElement>(null);
+
+    /* Custom Hook that handles all of the code for the NavBarEA component and all of its children */
 
     const {userMenu, helpMenu, handleToggle} = useNavBarEAHook(menuRef);
 
@@ -18,9 +22,9 @@ function NavBarEA() {
                 <Link className="h-full mr-8" to="/homepage"><img onClick={handleToggle} className="w-9 h-full object-contain cursor-pointer hover:brightness-125" src="assets/global/EANavIcon.png" alt="" /></Link>
             </div>
             <div>
-                {/* Componente Area Utente */}
+                {/* User Menu Component */}
                 <NavUserNotLoggedIn pos={userMenu} handleToggle={handleToggle} />
-                {/* Componente Area Aiuto */}
+                {/* Help Area Component */}
                 <NavHelp pos={helpMenu} handleToggle={handleToggle} />
             </div>
         </div>
