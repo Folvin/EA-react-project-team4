@@ -2,11 +2,11 @@ import React from "react";
 
 interface Props {
   children: React.ReactNode;
-  style?: string;
+  className?: string;
 }
 
-function Section({children, style}: Props) {
-  return <section className={`px-[8%] ${style}`}>{children}</section>;
+function Section({children, className}: Props) {
+  return <section className={`px-[8%] ${className}`}>{children}</section>;
 }
 
 export default Section;
