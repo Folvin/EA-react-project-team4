@@ -46,9 +46,6 @@ module.exports = {
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
-      eaBlack: {
-        100: '#121212',
-      },
     }),
     columns: {
       auto: "auto",
@@ -114,7 +111,6 @@ module.exports = {
       72: "18rem",
       80: "20rem",
       96: "24rem",
-      400: "25rem",
     },
     animation: {
       none: "none",
@@ -227,7 +223,6 @@ module.exports = {
       lg: "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
       xl: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
       "2xl": "0 25px 50px -12px rgb(0 0 0 / 0.25)",
-      "3xl": "0 1rem 20px 10px rgb(0 0 0 / 0.40)",
       inner: "inset 0 2px 4px 0 rgb(0 0 0 / 0.05)",
       none: "none",
     },
@@ -530,10 +525,6 @@ module.exports = {
       10: "repeat(10, minmax(0, 1fr))",
       11: "repeat(11, minmax(0, 1fr))",
       12: "repeat(12, minmax(0, 1fr))",
-      autosm: "repeat(auto-fit, minmax(150px, 1fr))",
-      automd: "repeat(auto-fit, minmax(200px, 1fr))",
-      autolg: "repeat(auto-fit, minmax(250px, 1fr))",
-      autoxl: "repeat(auto-fit, minmax(300px, 1fr))",
     },
     gridTemplateRows: {
       none: "none",
