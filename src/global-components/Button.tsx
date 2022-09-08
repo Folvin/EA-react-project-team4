@@ -4,18 +4,17 @@ import {Link} from "react-router-dom";
 interface Props {
   children: React.ReactNode;
   url: string;
-  buttonStyle?: string;
+  className?: string;
 }
 
-const baseStyle: string =
-  "block w-full sm:w-max text-center py-2 px-4 border-solid border-2 rounded transition-all hover:scale-110";
+const baseStyle: string = `
+block w-full sm:w-max text-center py-2 px-4 border-solid border-2 rounded transition-all hover:scale-110
+bg-white text-black border-white`;
 
-const defaultStyle: string = "bg-white text-black border-black";
-
-function Button({children, url, buttonStyle = defaultStyle}: Props) {
+function Button({children, url, className}: Props) {
   return (
     <div>
-      <Link className={`${baseStyle} ${buttonStyle}`} to={url}>
+      <Link className={`${baseStyle} ${className}`} to={url}>
         {children}
       </Link>
     </div>

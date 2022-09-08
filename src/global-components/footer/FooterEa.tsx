@@ -7,8 +7,8 @@ function FooterEa() {
     <footer className="bg-gray-100">
       <Section className="pt-8 pb-12">
         <div className="flex flex-col lg:flex-row items-start gap-8">
-          {/* the img */}
           <div className="basis-12 shrink-0">
+            {/* the img */}
             <Link className="block" to="/homepage">
               <img
                 className="max-h-12"
