@@ -1,4 +1,4 @@
-import CardGrid from "../CardGrid";
+import CardGrid from "../shared/CardGrid";
 import EaNavButton from "./EaNavButton";
 
 interface NavUser {

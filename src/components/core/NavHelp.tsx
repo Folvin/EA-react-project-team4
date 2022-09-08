@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import CardGrid from "../CardGrid";
+import CardGrid from "../shared/CardGrid";
 import EaNavButton from "./EaNavButton";
 
 interface HelpNav {

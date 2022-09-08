@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import Section from "../Section";
+import Section from "../shared/Section";
 import TextAndSelect from "./TextAndSelect";
 
 function FooterEa() {

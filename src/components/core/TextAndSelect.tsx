@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
-import SelectBox from "../SelectBox";
-import TextWrap from "../TextWrap";
+import SelectBox from "../shared/SelectBox";
+import TextWrap from "../shared/TextWrap";
 
 function TextAndSelect() {
   return (
