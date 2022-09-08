@@ -4,8 +4,8 @@ import "./index.css";
 import {BrowserRouter} from "react-router-dom";
 import Routing from "./Routing";
 import Prove from "./Prove";
-import FooterEa from "./global-components/footer/FooterEa";
-import NavBarEA from "./global-components/loginbar/NavBarEA";
+import FooterEa from "./components/core/FooterEa";
+import NavBarEA from "./components/core/NavBarEA";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
