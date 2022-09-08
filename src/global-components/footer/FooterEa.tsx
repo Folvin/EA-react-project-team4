@@ -12,7 +12,7 @@ function FooterEa() {
             <Link className="block" to="/homepage">
               <img
                 className="max-h-12"
-                src="assets/global/ea-ring-purple-logo.png"
+                src="assets/core/ea-ring-purple-logo.png"
                 alt="logo ea-purple"
               />
             </Link>
