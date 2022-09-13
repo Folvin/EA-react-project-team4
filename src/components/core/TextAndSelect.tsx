@@ -1,8 +1,11 @@
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import SelectBox from "../shared/SelectBox";
 import TextWrap from "../shared/TextWrap";
+import MyListbox from "../shared/Select";
+
 
 function TextAndSelect() {
+  
   return (
     <div className="flex flex-col grow">
       <div className="flex flex-col lg:flex-row gap-4">
@@ -25,12 +28,17 @@ function TextAndSelect() {
         <div className="grow-[4] min-w-[400px] basis-0 shrink-0 flex flex-col md:flex-row gap-8">
           {/* select box */}
 
-          <SelectBox className="flex-1" title="Prezzi Regionali">
+          <SelectBox className="flex-1 relative">
+
+            <MyListbox />
+
+
+          </SelectBox>
+
+          <SelectBox className="flex-1">
             italia
           </SelectBox>
-          <SelectBox className="flex-1" title="Lingua">
-            italia
-          </SelectBox>
+
         </div>
       </div>
 
