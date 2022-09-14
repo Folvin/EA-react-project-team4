@@ -1,8 +1,6 @@
 import { Fragment, useState } from 'react'
 import { Listbox, Transition } from '@headlessui/react'
 
-
-
 interface Props {
 	name: string,
 	id: number,
