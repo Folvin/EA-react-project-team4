@@ -21,9 +21,9 @@ function SelectBoxData({ title, arr }: { title: string, arr: Array<Props> }) {
               {title}
             </Listbox.Label>
             <span className='block truncate'>
-              <span className='flex flex-row items-center gap-x-2'>
+              <span className='flex items-center gap-x-2'>
                 {selected.name}
-                {selected.img ? <img src={selected.img} alt='' className='w-[16px] h-[12px]' /> : null}
+                {selected.img ? <img src={selected.img} alt={selected.name} className='w-[16px] h-[12px]' /> : null}
               </span>
             </span>
             <span className='absolute inset-y-6 right-0 pr-2'>
@@ -37,18 +37,21 @@ function SelectBoxData({ title, arr }: { title: string, arr: Array<Props> }) {
             leaveTo='opacity-0'
           >
             <Listbox.Options
-              className='absolute mt-4 max-h-80 w-full overflow-auto bg-gray-100 py-2 text-base shadow-lg ring-1 ring-black ring-opacity-10 focus:outline-none sm:text-sm'>
+              className='absolute mt-4 max-h-80 w-full overflow-auto bg-gray-100 py-2 text-base shadow-lg 
+              sm:text-sm 2xl:grid 2xl:grid-cols-4 2xl:min-w-max 2xl:max-h-min 2xl:gap-6 2xl:right-0 2xl:px-2 2xl:py-4 '
+            >
               {arr.map((nation, nationIdx) => (
                 <Listbox.Option
                   key={nationIdx}
-                  className={({ active }) => `relative cursor-default select-none py-1 pl-1  ${active ? 'bg-blue-700 text-white' : 'text-gray-900'}`}
                   value={nation}
+                  className={({ active }) => `relative cursor-default select-none py-1 pl-1 
+                  ${active
+                      ? 'bg-blue-700 text-white 2xl:bg-transparent 2xl:text-inherit 2xl:translate-x-2 2xl:trnasition 2xl:ease-in 2xl:duration-100'
+                      : 'text-gray-900'}`}
                 >
                   {({ selected }) => (
                     <>
-                      <span
-                        className={`block truncate ${selected ? 'font-medium' : 'font-normal'}`}
-                      >
+                      <span className={`block truncate ${selected ? 'font-medium' : 'font-normal'}`}>
                         <span className='flex items-center gap-1'>
                           <img src={nation.img} alt='' className='w-[16px]' />
                           {nation.name}
