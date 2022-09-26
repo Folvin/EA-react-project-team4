@@ -1,45 +1,10 @@
-interface Config {
-  navColor: string;
-  textColor: string;
-  hoverColor: string;
-  buyButtonColor: string;
-  burgerColor: string;
-  logo: string;
-  navLinks: NavLinks[];
-  buyButtonConfig: buyButtonConfig;
-}
-
-interface NavLinks {
-  main: string;
-  mainLink?: string;
-  subsections?: Subsections[];
-}
-
-interface Subsections {
-  title?: string;
-  subTitles: Subtitles[];
-}
-
-interface Subtitles {
-  title: string;
-  link: string;
-}
-
-interface buyButtonConfig {
-  eaApp?: string;
-  origin?: string;
-  steam?: string;
-  ps4?: string;
-  ps5?: string;
-  xbox?: string;
-  switch?: string;
-}
+import {Config} from "./Interfaces";
 
 const ApexConfig: Config = {
-  navColor: "bg-black",
-  textColor: "text-white",
+  navColor: "bg-black" /* classe tailwind */,
+  textColor: "text-white" /* classe tailwind */,
   hoverColor:
-    "hover:text-red-600" /* hoverColor e buyButtonColor corrispondono sempre, ma sono separati perché usano due proprietà tailwind diverse */,
+    "hover:text-red-600" /* hoverColor e buyButtonColor corrispondono sempre, ma sono separati perché usano due classi tailwind diverse */,
   buyButtonColor: "bg-red-600",
   burgerColor: "#FFFFFF",
   logo: "assets/core/EANavIcon.png",
@@ -213,7 +178,6 @@ const ApexConfig: Config = {
   ],
   buyButtonConfig: {
     eaApp: "https://www.ea.com/it-it/games/apex-legends/buy/pc",
-    origin: "bruh",
     steam: "https://smarturl.it/apex-steam-unav",
     ps4: "http://smarturl.it/apexlegends-ps4",
     ps5: "https://store.playstation.com/product/EP0006-PPSA04874_00-APEXLEGENDRSPWN1",
