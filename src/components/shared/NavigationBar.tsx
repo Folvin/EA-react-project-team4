@@ -1,25 +1,29 @@
 import NavBuyButton from "./NavBuyButton";
 
 interface Props {
-  /* children: React.ReactNode; */
+  children: React.ReactNode;
   navColor: string;
   textColor: string;
   hoverColor: string;
   burgerColor: string;
   logo: string;
+  buyButtonConfig: {};
+  buyButtonColor: string;
 }
 
 function NavigationBar({
-  /* children, */
+  children,
   navColor,
   textColor,
   hoverColor,
   burgerColor,
   logo,
+  buyButtonConfig,
+  buyButtonColor,
 }: Props) {
   return (
     <div
-      className={`h-14 w-full flex justify-between sticky top-10 z-40 gap-x-8 items-center ${navColor}`}>
+      className={`h-14 w-full flex justify-between sticky top-10 z-10 gap-x-8 items-center ${navColor}`}>
       <div className="flex gap-3 items-center">
         <button className="block lg:hidden ml-1" title="burgerMenu">
           <svg
@@ -46,10 +50,14 @@ function NavigationBar({
           </svg>
         </button>
         <img className="h-6 w-12 lg:ml-12" src={`${logo}`} alt="" />
-        {/* {children} */}
+        {children}
       </div>
       <div>
-        <NavBuyButton />
+        <NavBuyButton
+          buyButtonColor={buyButtonColor}
+          buyButtonConfig={buyButtonConfig}
+          textColor={textColor}
+        />
       </div>
     </div>
   );
