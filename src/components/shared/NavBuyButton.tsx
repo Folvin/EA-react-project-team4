@@ -1,7 +1,11 @@
 import {Popover} from "@headlessui/react";
 import {FaChevronDown} from "react-icons/fa";
-import {Link} from "react-router-dom";
 import Button from "./Button";
+import {SiOrigin} from "react-icons/si";
+import {SiSteam} from "react-icons/si";
+import {SiPlaystation} from "react-icons/si";
+import {SiXbox} from "react-icons/si";
+import {SiNintendoswitch} from "react-icons/si";
 
 interface Props {
   buyButtonConfig: buyButtonConfig;
@@ -26,15 +30,103 @@ function NavBuyButton({buyButtonConfig, buyButtonColor, textColor}: Props) {
         SCARICA GRATIS* <FaChevronDown className="mt-1 ml-1" />
       </Popover.Button>
 
-      <Popover.Panel className="absolute w-56 bg-black -left-7 mt-3 z-20 transition-all">
-        <div className="flex flex-col z-10 justify-center items-center">
+      <Popover.Panel className="absolute w-60 bg-black bg-opacity-80 -left-12 mt-3 z-20 transition-all">
+        <div className="flex flex-col z-10 items-center">
           {buyButtonConfig.eaApp ? (
-            <Button url={buyButtonConfig.eaApp}>
-              <div>App EA per Windows</div>
+            <Button
+              className="mt-5 h-12 bg-gradient-to-r from-indigo-800 to-fuchsia-800 border-none flex sm:w-full"
+              url={buyButtonConfig.eaApp}>
+              <div className="text-base text-white front flex gap-2 items-center justify-between">
+                App EA per Windows
+                <img
+                  className=" w-5 block"
+                  alt="ea-logo"
+                  src="assets/core/ea-logo-button.png"
+                />
+              </div>
             </Button>
           ) : (
             <></>
           )}
+          ;
+          {buyButtonConfig.origin ? (
+            <Button
+              className="h-12 shrink-0 sm:w-full bg-[#F56C2D] border-none flex"
+              url={buyButtonConfig.origin}>
+              <div className="text-base text-white front flex gap-2 items-center justify-between">
+                Origin
+                <SiOrigin className="mt-1" />
+              </div>
+            </Button>
+          ) : (
+            <></>
+          )}
+          ;
+          {buyButtonConfig.steam ? (
+            <Button
+              className="h-12 bg-transparent flex"
+              url={buyButtonConfig.steam}>
+              <div className="text-base text-white front flex gap-2 items-center justify-between">
+                Steam
+                <SiSteam className="mt-1" />
+              </div>
+            </Button>
+          ) : (
+            <></>
+          )}
+          ;
+          {buyButtonConfig.ps4 ? (
+            <Button
+              className="h-12 bg-[#003087] border-none flex"
+              url={buyButtonConfig.ps4}>
+              <div className="text-base text-white front flex gap-2 items-center justify-between">
+                PlayStation® 4
+                <SiPlaystation className="mt-1" />
+              </div>
+            </Button>
+          ) : (
+            <></>
+          )}
+          ;
+          {buyButtonConfig.ps5 ? (
+            <Button
+              className="h-12 bg-[#003087] border-none flex"
+              url={buyButtonConfig.ps5}>
+              <div className="text-base text-white front flex gap-2 items-center justify-between">
+                PlayStation® 5
+                <SiPlaystation className="mt-1" />
+              </div>
+            </Button>
+          ) : (
+            <></>
+          )}
+          ;
+          {buyButtonConfig.xbox ? (
+            <Button
+              className="h-12 bg-[#52b043] border-none flex"
+              url={buyButtonConfig.xbox}>
+              <div className="text-base text-white front flex gap-2 items-center justify-between">
+                Xbox
+                <SiXbox className="mt-1" />
+              </div>
+            </Button>
+          ) : (
+            <></>
+          )}
+          ;
+          {buyButtonConfig.switch ? (
+            <Button
+              className="h-12 bg-[#E61400] border-none flex"
+              url={buyButtonConfig.switch}>
+              <div className="text-base text-white front flex gap-2 items-center justify-between">
+                Nintendo Switch™
+                <SiNintendoswitch className="mt-1" />
+              </div>
+            </Button>
+          ) : (
+            <></>
+          )}
+          ;
         </div>
 
         <img src="/solutions.jpg" alt="" />

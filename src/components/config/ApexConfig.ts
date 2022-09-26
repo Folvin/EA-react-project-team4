@@ -213,6 +213,7 @@ const ApexConfig: Config = {
   ],
   buyButtonConfig: {
     eaApp: "https://www.ea.com/it-it/games/apex-legends/buy/pc",
+    origin: "bruh",
     steam: "https://smarturl.it/apex-steam-unav",
     ps4: "http://smarturl.it/apexlegends-ps4",
     ps5: "https://store.playstation.com/product/EP0006-PPSA04874_00-APEXLEGENDRSPWN1",
