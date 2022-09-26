@@ -103,7 +103,7 @@ function TextAndSelect() {
           </TextWrap>
         </div>
 
-        <div className="grow-[4] min-w-[400px] basis-0 shrink-0 flex flex-col md:flex-row gap-8">
+        <div className="grow-[4] min-w-[200px] md:min-w-[400px] basis-0 shrink-0 flex flex-col md:flex-row gap-8">
           {/* select box */}
 
           <SelectBox className="flex-1">
