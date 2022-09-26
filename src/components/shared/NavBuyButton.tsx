@@ -31,12 +31,13 @@ function NavBuyButton({buyButtonConfig, buyButtonColor, textColor}: Props) {
       </Popover.Button>
 
       <Transition
-        enter="transform transition ease-in-out duration-300"
-        enterFrom="translate-y-0"
-        enterTo="translate-y-full"
-        leave="transform transition ease-in-out duration-300"
-        leaveFrom="translate-y-full"
-        leaveTo="translate-y-0">
+        enter="origin-top ease-in-out duration-300"
+        enterFrom="scale-y-0 opacity-0"
+        enterTo="scale-y-100 opacity-100"
+        leave="origin-top ease-in-out duration-300"
+        leaveFrom="scale-y-100 opacity-100"
+        leaveTo="scale-y-0 opacity-0">
+
         <Popover.Panel className="absolute w-60 bg-black bg-opacity-80 -left-12 mt-3 z-20 transition-all">
           <div className="flex flex-col z-10 items-stretch gap-4 p-3">
             {buyButtonConfig.eaApp ? (
