@@ -1,5 +1,9 @@
+import LocalFooterEa from "./components/core/LocalFooterEa";
+
 function Prove() {
-  return <div></div>;
+  return (
+    <LocalFooterEa />
+  );
 }
 
 export default Prove;
