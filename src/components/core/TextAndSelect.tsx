@@ -110,7 +110,7 @@ function TextAndSelect() {
             <SelectBoxData title="Prezzi Regionali" arr={nations} />
           </SelectBox>
 
-          <SelectBox className="flex-1">
+          <SelectBox className="flex-1 z-[1]">
             <SelectBoxData title="Lingua" arr={language} />
           </SelectBox>
         </div>
