@@ -106,7 +106,7 @@ function TextAndSelect() {
         <div className="grow-[4] min-w-[200px] md:min-w-[400px] basis-0 shrink-0 flex flex-col md:flex-row gap-8">
           {/* select box */}
 
-          <SelectBox className="flex-1 z-[1]">
+          <SelectBox className="flex-1 z-[2]">
             <SelectBoxData title="Prezzi Regionali" arr={nations} />
           </SelectBox>
 
