@@ -7,6 +7,7 @@ type AccordionProps = {
   navColor: string;
   burgerColor: string;
   hoverColor: string;
+  mobileBorderColor: string;
   children: React.ReactNode;
 };
 const Accordion = ({
@@ -14,6 +15,7 @@ const Accordion = ({
   navColor,
   hoverColor,
   burgerColor,
+  mobileBorderColor,
   children,
 }: AccordionProps) => {
   const [isOpened, setOpened] = useState<boolean>(false);
@@ -31,15 +33,15 @@ const Accordion = ({
     <div className={`${totalHeight}`}>
       <div
         onClick={HandleOpening}
-        className={`${navColor} h-9 flex justify-between border-b border-1 cursor-pointer border-solid border-[${burgerColor}] ${
-          isOpened ? `${hoverColor}` : ""
-        }`}>
+        className={`${navColor} h-9 flex justify-between border-b border-1 cursor-pointer border-solid ${
+          isOpened ? `${mobileBorderColor}` : `border-[${burgerColor}]`
+        } ${isOpened ? `${hoverColor}` : ""}`}>
         <div className="text-lg">{title}</div>
         {isOpened ? (
           <FaChevronUp
             className={`mt-1 ${
               isOpened
-                ? `${hoverColor}`
+                ? `${mobileBorderColor}`
                 : burgerColor === "#FFFFFF"
                 ? "text-white"
                 : "text-black"
@@ -48,7 +50,11 @@ const Accordion = ({
         ) : (
           <FaChevronDown
             className={`mt-1 ${
-              burgerColor === "#FFFFFF" ? "text-white" : "text-black"
+              isOpened
+                ? `${mobileBorderColor}`
+                : burgerColor === "#FFFFFF"
+                ? "text-white"
+                : "text-black"
             }`}
           />
         )}
@@ -56,7 +62,7 @@ const Accordion = ({
       <div
         ref={contentElement}
         className={`${navColor} ${height} overflow-hidden transition-all duration-200`}>
-        <div className={`${height} mt-2`}>{children}</div>
+        <div className={`${height} mt-2 `}>{children}</div>
       </div>
     </div>
   );

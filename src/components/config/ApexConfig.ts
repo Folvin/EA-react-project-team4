@@ -4,8 +4,10 @@ const ApexConfig: Config = {
   navColor: "bg-black" /* classe tailwind */,
   textColor: "text-white" /* classe tailwind */,
   hoverColor:
-    "text-red-600" /* hoverColor e buyButtonColor corrispondono sempre, ma sono separati perché usano due classi tailwind diverse */,
-  mobileSidebarHeaderColor: "bg-[#161616]",
+    "text-red-600" /* hoverColor, mobileBorderColor e buyButtonColor corrispondono sempre, ma sono separati perché usano tre classi tailwind diverse */,
+  mobileBorderColor: "border-red-600",
+  mobileSidebarHeaderColor:
+    "bg-[#161616]" /* bg-[#161616] per le navbar nere e bg-[#1C1F26] per le navbar bianche*/,
   buyButtonColor: "bg-red-600",
   burgerColor: "#FFFFFF",
   logo: "assets/core/EANavIcon.png",

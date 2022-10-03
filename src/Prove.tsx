@@ -11,6 +11,7 @@ function Prove() {
         hoverColor={config.hoverColor}
         burgerColor={config.burgerColor}
         logo={config.logo}
+        mobileBorderColor={config.mobileBorderColor}
         buyButtonConfig={config.buyButtonConfig}
         buyButtonColor={config.buyButtonColor}
         navLinks={config.navLinks}

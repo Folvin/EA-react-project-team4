@@ -8,6 +8,7 @@ interface Props {
   textColor: string;
   burgerColor: string;
   hoverColor: string;
+  mobileBorderColor: string;
   logo: string;
   buyButtonColor: string;
   navLinks: NavLinks[];
@@ -20,6 +21,7 @@ function MobileSidebar({
   burgerColor,
   hoverColor,
   logo,
+  mobileBorderColor,
   buyButtonColor,
   navLinks,
   mobileSidebarHeaderColor,
@@ -79,6 +81,7 @@ function MobileSidebar({
                   title={section.main}
                   burgerColor={burgerColor}
                   hoverColor={hoverColor}
+                  mobileBorderColor={mobileBorderColor}
                   navColor={navColor}>
                   {section.subsections.map((subsection) => {
                     if (!subsection.title) {
@@ -101,6 +104,7 @@ function MobileSidebar({
                           <Accordion
                             title={subsection.title}
                             burgerColor={burgerColor}
+                            mobileBorderColor={mobileBorderColor}
                             hoverColor={hoverColor}
                             navColor={navColor}>
                             {subsection.subTitles.map((subtitle) => {

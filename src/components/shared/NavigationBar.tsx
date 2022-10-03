@@ -7,6 +7,7 @@ interface Props {
   navColor: string;
   textColor: string;
   hoverColor: string;
+  mobileBorderColor: string;
   burgerColor: string;
   logo: string;
   buyButtonConfig: buyButtonConfig;
@@ -20,6 +21,7 @@ function NavigationBar({
   navColor,
   textColor,
   hoverColor,
+  mobileBorderColor,
   burgerColor,
   logo,
   buyButtonConfig,
@@ -37,6 +39,7 @@ function NavigationBar({
           navColor={navColor}
           textColor={textColor}
           logo={logo}
+          mobileBorderColor={mobileBorderColor}
           buyButtonColor={buyButtonColor}
           hoverColor={hoverColor}
           navLinks={navLinks}

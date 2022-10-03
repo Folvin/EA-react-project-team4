@@ -3,6 +3,7 @@ export interface Config {
   textColor: string;
   hoverColor: string;
   mobileSidebarHeaderColor: string;
+  mobileBorderColor: string;
   buyButtonColor: string;
   burgerColor: string;
   logo: string;
