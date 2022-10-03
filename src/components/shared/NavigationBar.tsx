@@ -38,6 +38,7 @@ function NavigationBar({
           textColor={textColor}
           logo={logo}
           buyButtonColor={buyButtonColor}
+          hoverColor={hoverColor}
           navLinks={navLinks}
           mobileSidebarHeaderColor={mobileSidebarHeaderColor}
         />

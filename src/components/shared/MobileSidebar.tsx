@@ -7,6 +7,7 @@ interface Props {
   navColor: string;
   textColor: string;
   burgerColor: string;
+  hoverColor: string;
   logo: string;
   buyButtonColor: string;
   navLinks: NavLinks[];
@@ -17,6 +18,7 @@ function MobileSidebar({
   navColor,
   textColor,
   burgerColor,
+  hoverColor,
   logo,
   buyButtonColor,
   navLinks,
@@ -60,13 +62,15 @@ function MobileSidebar({
         />
       </div>
       <div
-        className={`${textColor} absolute h-[88.6vh] w-[66vw] py-3 px-5 top-0 mt-14 z-50 flex flex-col gap-3 align-center ${navColor}`}>
+        className={`${textColor} absolute h-[88.6vh] w-[66vw] py-3 px-5 top-0 mt-14 z-50 flex flex-col gap-3 overflow-scroll align-center ${navColor}`}>
         {navLinks.map((section) => {
           if (!section.subsections) {
             return (
-              <div className="flex justify-start items-center">
-                <Link to={`${section.mainLink}`}>{section.main}</Link>
-              </div>
+              <Link
+                className={`h-9 pb-2 text-lg flex justify-start items-center border-b border-1 border-solid border-[${burgerColor}]`}
+                to={`${section.mainLink}`}>
+                {section.main}
+              </Link>
             );
           } else {
             return (
@@ -74,9 +78,47 @@ function MobileSidebar({
                 <Accordion
                   title={section.main}
                   burgerColor={burgerColor}
+                  hoverColor={hoverColor}
                   navColor={navColor}>
-                  <div className="text-base">This is a test</div>
-                  <div className="text-base">This is a test</div>
+                  {section.subsections.map((subsection) => {
+                    if (!subsection.title) {
+                      return (
+                        <div className="flex flex-col gap-2 mt-2 px-2">
+                          {subsection.subTitles.map((subtitle) => {
+                            return (
+                              <Link
+                                className={`pb-1 border-b text-base flex items-center h-9 border-1 border-solid border-[${burgerColor}]`}
+                                to={subtitle.link}>
+                                {subtitle.title}
+                              </Link>
+                            );
+                          })}
+                        </div>
+                      );
+                    } else {
+                      return (
+                        <div className="px-2 py-1">
+                          <Accordion
+                            title={subsection.title}
+                            burgerColor={burgerColor}
+                            hoverColor={hoverColor}
+                            navColor={navColor}>
+                            {subsection.subTitles.map((subtitle) => {
+                              return (
+                                <div className="px-2">
+                                  <Link
+                                    className={`pb-1 my-1 text-base border-b flex items-center h-9 border-1 border-solid border-[${burgerColor}]`}
+                                    to={subtitle.link}>
+                                    {subtitle.title}
+                                  </Link>
+                                </div>
+                              );
+                            })}
+                          </Accordion>
+                        </div>
+                      );
+                    }
+                  })}
                 </Accordion>
               </div>
             );

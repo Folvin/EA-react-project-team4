@@ -6,11 +6,13 @@ type AccordionProps = {
   title: string;
   navColor: string;
   burgerColor: string;
+  hoverColor: string;
   children: React.ReactNode;
 };
 const Accordion = ({
   title,
   navColor,
+  hoverColor,
   burgerColor,
   children,
 }: AccordionProps) => {
@@ -22,20 +24,39 @@ const Accordion = ({
   const HandleOpening = () => {
     setOpened(!isOpened);
     setHeight(!isOpened ? `h-fit` : "h-0");
-    setTotalHeight(!isOpened ? "h-fit" : "h-10");
+    setTotalHeight(!isOpened ? "h-fit" : "h-9");
   };
 
   return (
-    <div onClick={HandleOpening} className={`${totalHeight}`}>
+    <div className={`${totalHeight}`}>
       <div
-        className={`${navColor} h-9 flex justify-between items text-white border-b border-1 border-solid border-[${burgerColor}]`}>
-        <div>{title}</div>
-        {isOpened ? <FaChevronUp /> : <FaChevronDown />}
+        onClick={HandleOpening}
+        className={`${navColor} h-9 flex justify-between border-b border-1 cursor-pointer border-solid border-[${burgerColor}] ${
+          isOpened ? `${hoverColor}` : ""
+        }`}>
+        <div className="text-lg">{title}</div>
+        {isOpened ? (
+          <FaChevronUp
+            className={`mt-1 ${
+              isOpened
+                ? `${hoverColor}`
+                : burgerColor === "#FFFFFF"
+                ? "text-white"
+                : "text-black"
+            }`}
+          />
+        ) : (
+          <FaChevronDown
+            className={`mt-1 ${
+              burgerColor === "#FFFFFF" ? "text-white" : "text-black"
+            }`}
+          />
+        )}
       </div>
       <div
         ref={contentElement}
         className={`${navColor} ${height} overflow-hidden transition-all duration-200`}>
-        <div className={`${height}`}>{children}</div>
+        <div className={`${height} mt-2`}>{children}</div>
       </div>
     </div>
   );
