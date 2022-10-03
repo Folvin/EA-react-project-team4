@@ -20,19 +20,19 @@ function LocalFooterEa() {
     <Section className="bg-gray-200 py-8">
       <div>
 
-        <div className="">
+        <div>
           <p className="py-4 tracking-tight">*SI APPLICANO CONDIZIONI, LIMITAZIONI ED ESCLUSIONI. CONSULTARE https://tos.ea.com/legalapp/eaplay/US/it/PC/ PER I DETTAGLI.</p>
           <hr style={{ borderColor: 'gray' }} />
-          <p className="py-4 text-sm">**L'offerta scade il 30 settembre 2022 alle ore 10:00 PT. Solo per i nuovi abbonati. Dopo il primo mese, l'abbonamento si rinnoverà automaticamente ogni mese al prezzo attuale dell'abbonamento mensile fino all'annullamento.</p>
+          <p className="py-4 text-sm xl:text-md">**L'offerta scade il 30 settembre 2022 alle ore 10:00 PT. Solo per i nuovi abbonati. Dopo il primo mese, l'abbonamento si rinnoverà automaticamente ogni mese al prezzo attuale dell'abbonamento mensile fino all'annullamento.</p>
           <hr style={{ borderColor: 'gray' }} />
         </div>
 
-        <div className="pt-20 flex flex-col xl:flex-row">
-          <div className="">
-            <LocalFooterLinks className='' arr={links} />
-            <hr style={{ borderColor: 'gray' }} className='mt-4' />
+        <div className="pt-4 flex flex-col xl:flex-row justify-between">
+          <div>
+            <LocalFooterLinks className='basis-[45%] lg:basis-auto' arr={links} />
+            <hr style={{ borderColor: 'gray' }} className='mt-4 xl:hidden' />
           </div>
-          <div className='py-4'>
+          <div className='min-w-max mt-4 xl:mt-0'>
             <span className="font-bold">Partecipa alla conversazione</span>
             <div className="flex gap-6 py-4">
               <a target="_blank" rel="noreferrer" href="https://www.facebook.com/ea.it/?brand_redir=68678914189"
