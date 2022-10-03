@@ -2,6 +2,7 @@ export interface Config {
   navColor: string;
   textColor: string;
   hoverColor: string;
+  mobileSidebarHeaderColor: string;
   buyButtonColor: string;
   burgerColor: string;
   logo: string;
@@ -9,7 +10,7 @@ export interface Config {
   buyButtonConfig: buyButtonConfig;
 }
 
-interface NavLinks {
+export interface NavLinks {
   main: string;
   mainLink?: string;
   subsections?: Subsections[];
@@ -25,7 +26,7 @@ interface Subtitles {
   link: string;
 }
 
-interface buyButtonConfig {
+export interface buyButtonConfig {
   eaApp?: string;
   origin?: string;
   steam?: string;

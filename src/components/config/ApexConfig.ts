@@ -5,6 +5,7 @@ const ApexConfig: Config = {
   textColor: "text-white" /* classe tailwind */,
   hoverColor:
     "hover:text-red-600" /* hoverColor e buyButtonColor corrispondono sempre, ma sono separati perché usano due classi tailwind diverse */,
+  mobileSidebarHeaderColor: "bg-[#161616]",
   buyButtonColor: "bg-red-600",
   burgerColor: "#FFFFFF",
   logo: "assets/core/EANavIcon.png",
