@@ -37,4 +37,5 @@ export interface buyButtonConfig {
   ps5?: string;
   xbox?: string;
   switch?: string;
+  egs?: string;
 }

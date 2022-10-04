@@ -6,6 +6,7 @@ import {SiSteam} from "react-icons/si";
 import {SiPlaystation} from "react-icons/si";
 import {SiXbox} from "react-icons/si";
 import {SiNintendoswitch} from "react-icons/si";
+import {SiEpicgames} from "react-icons/si";
 
 interface Props {
   buyButtonConfig: buyButtonConfig;
@@ -21,6 +22,7 @@ interface buyButtonConfig {
   ps5?: string;
   xbox?: string;
   switch?: string;
+  egs?: string;
 }
 
 function NavBuyButton({
@@ -135,6 +137,19 @@ function NavBuyButton({
                 <div className="text-base text-white front flex gap-2 items-center justify-between">
                   Nintendo Switch™
                   <SiNintendoswitch className="mt-1" />
+                </div>
+              </Button>
+            ) : (
+              <></>
+            )}
+
+            {buyButtonConfig.egs ? (
+              <Button
+                className="h-12 sm:w-full bg-slate-600 border-none"
+                url={buyButtonConfig.egs}>
+                <div className="text-base text-white border-black front flex gap-2 items-center justify-between">
+                  Epic Game Store
+                  <SiEpicgames className="mt-1" />
                 </div>
               </Button>
             ) : (

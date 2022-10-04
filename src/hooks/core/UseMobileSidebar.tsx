@@ -10,7 +10,7 @@ function useMobileSidebar(sidebarRef: any) {
   /* Function to handle the opening and closing of the MobileSidebar */
 
   function handleToggle(event: any) {
-    let target = event.target as any;
+    let target = event.currentTarget as any;
 
     if (target.id !== "cross") {
       setSidebarOpen("left-0");

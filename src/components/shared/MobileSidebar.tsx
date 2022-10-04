@@ -72,7 +72,7 @@ function MobileSidebar({
       </div>
       <div className="lg:hidden">
         <div
-          className={`absolute top-0 left-0 w-screen ${navColor} bg-opacity-70 z-50 h-[97vh] ${
+          className={`absolute top-0 left-0 w-screen bg-black bg-opacity-70 z-50 h-[97vh] ${
             !isOverlayOpen ? "hidden" : ""
           }`}></div>
         <div

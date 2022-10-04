@@ -1,5 +1,5 @@
 import NavigationBar from "./components/shared/NavigationBar";
-import config from "../src/components/config/ApexConfig";
+import config from "../src/components/config/FifaConfig";
 
 function Prove() {
   return (
