@@ -27,24 +27,25 @@ start: it serve react on localhost
 
 # naming convention
 
-## for components and folder
+### for components and folder
 
-always start components name with capitalization and successive word doesn't use - or _ and also use capitalization
+always start components name with capitalization and successive word doesn't use - or \_ and also use capitalization
 so for example TextWrap.tsx
 
 folder instead have all name in lowercase and successive word are separated by -
-so for example src/pages/apex-legend/
+so for example apex-legend
 
-## for branch and commit
+### for branch and commit
+
 we are partially using git naming convention so
 for commit is groupType(optionalScope): small description
 for branch is groupType/small-description
 
-commit example:     feat: created footer component    example 2   fix(homepage): header overflowing to the navbar
-branch example:     feature/shared-button-component   example 2   fix/section-component
+commit example: feat: created footer component example 2 fix(homepage): header overflowing to the navbar
+branch example: feature/shared-button-component example 2 fix/section-component
 
 list of group type:
-feat: you are creating something new or adding something to something that already existed
+feat(commit) or feature(branch): you are creating something new or adding something to something that already existed
 fix: bug fix, something is not working visually or functionally or the code is broken and you are fixing it
 style: formatting the code, adding comments or improving variables name
 docs: modifying something related to documentation (like this file), configs (like tsconfig.json or gitignore) and package json
@@ -70,11 +71,9 @@ for example src/pages/homepage inside of it Homepage.tsx HeaderSection.tsx etc..
 if you want to save and use an image locally we are saving those into the public/assets folder, inside there are core, global and pages folder.
 into core goes images relative to core components, into global images usable by everyone and into pages images specific to a single page
 
-always use tailwind classes as much as possible. so, unless you necessarily need to write normal css, always use tailwind
+# some good practice
 
-remember to code your comment to make it more readable, also we are using prettier extension for VSC and formatting using that and a prettier config so use it if you can
-
-
-# the way we are writing
-
-
+- when writing a component for props define an interface called Props and use it to type props
+- never push changes directly into develop or master branch but rather do a new branch and then make a pull request to develop
+- always use tailwind classes as much as possible. so, unless you necessarily need to write normal css, always use tailwind
+- comment your code to make it more readable, also use prettier extension for VSC to format your code
