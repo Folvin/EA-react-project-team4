@@ -62,7 +62,12 @@ const Accordion = ({
       <div
         ref={contentElement}
         className={`${navColor} ${height} overflow-hidden transition-all duration-200`}>
-        <div className={`${height} mt-2 `}>{children}</div>
+        <div
+          className={`${height} mt-2 pb-3 mb-3 border-b border-1 cursor-pointer border-solid ${
+            isOpened ? `${mobileBorderColor}` : `border-[${burgerColor}]`
+          }`}>
+          {children}
+        </div>
       </div>
     </div>
   );

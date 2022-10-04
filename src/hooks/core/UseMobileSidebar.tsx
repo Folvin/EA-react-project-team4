@@ -1,72 +1,58 @@
 import {useCallback, useEffect, useState} from "react";
 
-function UseMobileSidebar(menuRef: any) {
-  /* States that control the NavBarEA menus */
+function useMobileSidebar(sidebarRef: any) {
+  /* States that control the mobile sidebar */
 
-  const [userMenu, setUserMenu] = useState("top-[-400px]");
+  const [sidebarOpen, setSidebarOpen] = useState<string>("left-[-66vw]");
 
-  const [helpMenu, setHelpMenu] = useState("top-[-400px]");
+  const [isOverlayOpen, setIsOverlayOpen] = useState<boolean>(false);
 
-  /* Function to handle the opening and closing of the NavBarEA menus */
+  /* Function to handle the opening and closing of the MobileSidebar */
 
-  function handleToggle(event: React.MouseEvent<HTMLImageElement>) {
-    let target = event.target as HTMLImageElement;
+  function handleToggle(event: any) {
+    let target = event.target as any;
 
-    if (target.id === "user") {
-      if (helpMenu === "top-10") {
-        setHelpMenu("top-[-400px]");
-      }
-
-      if (userMenu === "top-[-400px]") {
-        setUserMenu("top-10");
-      } else {
-        setUserMenu("top-[-400px]");
-      }
-    } else if (target.id === "help") {
-      if (userMenu === "top-10") {
-        setUserMenu("top-[-400px]");
-      }
-
-      if (helpMenu === "top-[-400px]") {
-        setHelpMenu("top-10");
-      } else {
-        setHelpMenu("top-[-400px]");
-      }
+    if (target.id !== "cross") {
+      setSidebarOpen("left-0");
+      setIsOverlayOpen(true);
+      document.body.style.overflow = "hidden";
     } else {
-      setHelpMenu("top-[-400px]");
-      setUserMenu("top-[-400px]");
+      setSidebarOpen("left-[-66vw]");
+      setIsOverlayOpen(false);
+      document.body.style.overflow = "unset";
     }
   }
 
-  /* Side effect and function to handle the closing of the NavBarEA menus when clicking outside of the navbar itself */
+  /* Side effect and function to handle the closing of MobileSidebar when clicking outside of the sidebar itself */
 
   const handleOutsideClicks = useCallback(
     (event: any) => {
       if (
-        (userMenu === "top-10" || helpMenu === "top-10") &&
-        menuRef.current &&
-        !menuRef.current.contains(event.target as Node)
+        sidebarOpen === "left-0" &&
+        sidebarRef.current &&
+        !sidebarRef.current.contains(event.target as Node)
       ) {
-        setUserMenu("top-[-400px]");
-        setHelpMenu("top-[-400px]");
+        setSidebarOpen("left-[-66vw]");
+        setIsOverlayOpen(false);
+        document.body.style.overflow = "unset";
       }
     },
-    [helpMenu, menuRef, userMenu]
+    [sidebarOpen, sidebarRef]
   );
+
   useEffect(() => {
     document.addEventListener("mousedown", handleOutsideClicks);
     return () => {
       document.removeEventListener("mousedown", handleOutsideClicks);
     };
-  }, [userMenu, helpMenu, handleOutsideClicks]);
+  }, [sidebarOpen, handleOutsideClicks]);
 
   return {
-    userMenu,
-    helpMenu,
     handleToggle,
-    setUserMenu,
-    setHelpMenu,
+    setIsOverlayOpen,
+    isOverlayOpen,
+    sidebarOpen,
   };
 }
 
-export default UseMobileSidebar;
+export default useMobileSidebar;
