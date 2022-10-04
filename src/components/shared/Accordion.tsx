@@ -6,14 +6,15 @@ type AccordionProps = {
   title: string;
   navColor: string;
   burgerColor: string;
-  hoverColor: string;
+  mobileActiveColor: string;
   mobileBorderColor: string;
   children: React.ReactNode;
 };
+
 const Accordion = ({
   title,
   navColor,
-  hoverColor,
+  mobileActiveColor,
   burgerColor,
   mobileBorderColor,
   children,
@@ -35,8 +36,8 @@ const Accordion = ({
         onClick={HandleOpening}
         className={`${navColor} h-9 flex justify-between border-b border-1 cursor-pointer border-solid ${
           isOpened ? `${mobileBorderColor}` : `border-[${burgerColor}]`
-        } ${isOpened ? `${hoverColor}` : ""}`}>
-        <div className="text-lg">{title}</div>
+        } ${isOpened ? `${mobileActiveColor}` : ""}`}>
+        <div className="text-lg">{title.toUpperCase()}</div>
         {isOpened ? (
           <FaChevronUp
             className={`mt-1 ${

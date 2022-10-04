@@ -10,7 +10,7 @@ interface Props {
   navColor: string;
   textColor: string;
   burgerColor: string;
-  hoverColor: string;
+  mobileActiveColor: string;
   mobileBorderColor: string;
   logo: string;
   buyButtonColor: string;
@@ -22,7 +22,7 @@ function MobileSidebar({
   navColor,
   textColor,
   burgerColor,
-  hoverColor,
+  mobileActiveColor,
   logo,
   mobileBorderColor,
   buyButtonColor,
@@ -104,7 +104,7 @@ function MobileSidebar({
                     <Link
                       className={`h-9 pb-2 text-lg flex justify-start items-center border-b border-1 border-solid border-[${burgerColor}]`}
                       to={`${section.mainLink}`}>
-                      {section.main}
+                      {section.main.toUpperCase()}
                     </Link>
                   );
                 } else {
@@ -113,7 +113,7 @@ function MobileSidebar({
                       <Accordion
                         title={section.main}
                         burgerColor={burgerColor}
-                        hoverColor={hoverColor}
+                        mobileActiveColor={mobileActiveColor}
                         mobileBorderColor={mobileBorderColor}
                         navColor={navColor}>
                         {section.subsections.map((subsection) => {
@@ -138,7 +138,7 @@ function MobileSidebar({
                                   title={subsection.title}
                                   burgerColor={burgerColor}
                                   mobileBorderColor={mobileBorderColor}
-                                  hoverColor={hoverColor}
+                                  mobileActiveColor={mobileActiveColor}
                                   navColor={navColor}>
                                   {subsection.subTitles.map((subtitle) => {
                                     return (

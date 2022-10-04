@@ -2,11 +2,13 @@ export interface Config {
   navColor: string;
   textColor: string;
   hoverColor: string;
+  mobileActiveColor: string;
   mobileSidebarHeaderColor: string;
   mobileBorderColor: string;
   buyButtonColor: string;
   burgerColor: string;
   logo: string;
+  free: boolean;
   navLinks: NavLinks[];
   buyButtonConfig: buyButtonConfig;
 }
@@ -22,7 +24,7 @@ interface Subsections {
   subTitles: Subtitles[];
 }
 
-interface Subtitles {
+export interface Subtitles {
   title: string;
   link: string;
 }

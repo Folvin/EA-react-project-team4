@@ -11,6 +11,7 @@ interface Props {
   buyButtonConfig: buyButtonConfig;
   buyButtonColor: string;
   textColor: string;
+  free: boolean;
 }
 interface buyButtonConfig {
   eaApp?: string;
@@ -22,12 +23,18 @@ interface buyButtonConfig {
   switch?: string;
 }
 
-function NavBuyButton({buyButtonConfig, buyButtonColor, textColor}: Props) {
+function NavBuyButton({
+  buyButtonConfig,
+  buyButtonColor,
+  textColor,
+  free,
+}: Props) {
   return (
     <Popover className="z-10 relative transition-all">
       <Popover.Button
         className={`flex justify-center w-40 lg:w-48 h-10 cursor-pointer text-sm lg:text-base text-center items-center mr-2 rounded ${buyButtonColor} ${textColor}`}>
-        SCARICA GRATIS* <FaChevronDown className="mt-1 ml-1" />
+        {free ? "SCARICA GRATIS*" : "ACQUISTA ORA"}{" "}
+        <FaChevronDown className="mt-1 ml-1" />
       </Popover.Button>
 
       <Transition
@@ -37,8 +44,7 @@ function NavBuyButton({buyButtonConfig, buyButtonColor, textColor}: Props) {
         leave="origin-top ease-in-out duration-300"
         leaveFrom="scale-y-100 opacity-100"
         leaveTo="scale-y-0 opacity-0">
-
-        <Popover.Panel className="absolute w-60 bg-black bg-opacity-80 -left-12 mt-3 z-20 transition-all">
+        <Popover.Panel className="absolute w-60 bg-black bg-opacity-80 -left-[4.8rem] lg:-left-12 mt-3 z-20 transition-all">
           <div className="flex flex-col z-10 items-stretch gap-4 p-3">
             {buyButtonConfig.eaApp ? (
               <Button

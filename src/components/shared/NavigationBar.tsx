@@ -1,15 +1,17 @@
 import NavBuyButton from "./NavBuyButton";
 import {NavLinks, buyButtonConfig} from "../config/Interfaces";
 import MobileSidebar from "./MobileSidebar";
+import DesktopNavContainer from "./DesktopNavContainer";
 
 interface Props {
-  children: React.ReactNode;
   navColor: string;
   textColor: string;
-  hoverColor: string;
+  mobileActiveColor: string;
   mobileBorderColor: string;
+  hoverColor: string;
   burgerColor: string;
   logo: string;
+  free: boolean;
   buyButtonConfig: buyButtonConfig;
   buyButtonColor: string;
   navLinks: NavLinks[];
@@ -17,13 +19,14 @@ interface Props {
 }
 
 function NavigationBar({
-  children,
   navColor,
   textColor,
-  hoverColor,
   mobileBorderColor,
+  mobileActiveColor,
   burgerColor,
+  hoverColor,
   logo,
+  free,
   buyButtonConfig,
   buyButtonColor,
   navLinks,
@@ -41,18 +44,27 @@ function NavigationBar({
           logo={logo}
           mobileBorderColor={mobileBorderColor}
           buyButtonColor={buyButtonColor}
-          hoverColor={hoverColor}
+          mobileActiveColor={mobileActiveColor}
           navLinks={navLinks}
           mobileSidebarHeaderColor={mobileSidebarHeaderColor}
         />
-        <img className="h-6 w-12 lg:ml-12" src={`${logo}`} alt="" />
-        {children}
+        <img className="h-6 w-12 mr-8 lg:ml-12" src={`${logo}`} alt="" />
+        <DesktopNavContainer
+          navColor={navColor}
+          textColor={textColor}
+          hoverColor={hoverColor}
+          burgerColor={burgerColor}
+          logo={logo}
+          buyButtonColor={buyButtonColor}
+          navLinks={navLinks}
+        />
       </div>
       <div>
         <NavBuyButton
           buyButtonColor={buyButtonColor}
           buyButtonConfig={buyButtonConfig}
           textColor={textColor}
+          free={free}
         />
       </div>
     </div>
