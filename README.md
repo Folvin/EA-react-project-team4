@@ -25,11 +25,56 @@ start: it serve react on localhost
 - @types/react 18.0.18
 - @types/react-dom 18.0.6
 
+# naming convention
+
+## for components and folder
+
+always start components name with capitalization and successive word doesn't use - or _ and also use capitalization
+so for example TextWrap.tsx
+
+folder instead have all name in lowercase and successive word are separated by -
+so for example src/pages/apex-legend/
+
+## for branch and commit
+we are partially using git naming convention so
+for commit is groupType(optionalScope): small description
+for branch is groupType/small-description
+
+commit example:     feat: created footer component    example 2   fix(homepage): header overflowing to the navbar
+branch example:     feature/shared-button-component   example 2   fix/section-component
+
+list of group type:
+feat: you are creating something new or adding something to something that already existed
+fix: bug fix, something is not working visually or functionally or the code is broken and you are fixing it
+style: formatting the code, adding comments or improving variables name
+docs: modifying something related to documentation (like this file), configs (like tsconfig.json or gitignore) and package json
+chore: modifying structure of the project for example moving all component into a folder called components
+refactor: total rewrite of pieces of code
 
 # workflow
 
+there is 1 person that manage the work assigning tasks to the other member of the group and everything that is made, changed or deleted is comunicated to this manager so that the manager is the one worrying about the organization and that everything is running smoothly doing code review and applying eventual fixes meanwhile the other member continue with whatever task get assigned this way there is 0 risk of running into conflict and no one depends on the work of someone else, this makes us agile.
+
+we also have a whatsapp group for comunicating important thing and we usually meet on discord every while
+
+# about the sructure
+
+we have an src folder where all the components are written, inside of it there is an index.css importing tailwind, an index.tsx that initialize a root for react and render browserRouter and inside of it a Routing component in which will be inserted all routes of the pages for the website. outside of the Routing we insert all components that doesn't need to get rerendered because they are always present (for example the footer and the top navbar)
+
+then we have a components folder inside of which there are 3 folder, config core and shared. into core goes components that are used for part of the pages that are outside the routing (like footer), into shared goes component that are reused multiple times from different components and into config goes all config file (and interfaces) that are used to describe the content of a page
+this same logic (less config) is used into contexts and hooks folder also.
+
+now returning to src we have a pages folder, into this folder goes folders that contains all the components of a single page.
+for example src/pages/homepage inside of it Homepage.tsx HeaderSection.tsx etc...
+
+if you want to save and use an image locally we are saving those into the public/assets folder, inside there are core, global and pages folder.
+into core goes images relative to core components, into global images usable by everyone and into pages images specific to a single page
+
+always use tailwind classes as much as possible. so, unless you necessarily need to write normal css, always use tailwind
+
+remember to code your comment to make it more readable, also we are using prettier extension for VSC and formatting using that and a prettier config so use it if you can
 
 
-# commit and branch naming
+# the way we are writing
 
 
