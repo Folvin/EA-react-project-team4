@@ -196,8 +196,11 @@ const ApexConfig: Config = {
 
 export default ApexConfig;
 
-/*      PROPS DA AGGIUNGERE A NavigationBar
+/*      Come usare config per NavigationBar
 
+import config from "../src/components/config/NomeDelGiocoConfig";
+
+      <NavigationBar
         navColor={config.navColor}
         textColor={config.textColor}
         burgerColor={config.burgerColor}
@@ -210,4 +213,5 @@ export default ApexConfig;
         navLinks={config.navLinks}
         mobileSidebarHeaderColor={config.mobileSidebarHeaderColor}
         free={config.free}
+      />
 */
