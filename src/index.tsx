@@ -13,10 +13,10 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <NavBarEA />
+     {/*  <NavBarEA /> */}
       <Prove />
       <Routing />
-      <FooterEa />
+     {/*  <FooterEa /> */}
     </BrowserRouter>
   </React.StrictMode>
 );

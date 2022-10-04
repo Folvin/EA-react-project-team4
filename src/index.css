@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+  font-family: 'f1-bold';
+  src: url('../public/assets/pages/f1-ea/font/Formula1-Bold_web_0.ttf');
+}
+@font-face {
+  font-family: 'f1-regular';
+  src: url('../public/assets/pages/f1-ea/font/Formula1-Regular_web_0.ttf');
+}
+@font-face {
+  font-family: 'f1-wide';
+  src: url('../public/assets/pages/f1-ea/font/Formula1-Wide_web_0.ttf');
+}

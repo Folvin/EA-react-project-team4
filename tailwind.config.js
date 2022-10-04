@@ -18,6 +18,13 @@ module.exports = {
       xl: "1280px",
       "2xl": "1536px",
     },
+    extend: {
+      fontFamily: {
+        'f1-bold': ['f1-bold', 'sans-serif'],
+        'f1-regular': ['f1-regular', 'sans-serif'],
+        'f1-wide': ['f1-wide', 'sans-serif'],
+      }
+    },
     colors: ({colors}) => ({
       inherit: colors.inherit,
       current: colors.current,
@@ -152,6 +159,8 @@ module.exports = {
       "gradient-to-l": "linear-gradient(to left, var(--tw-gradient-stops))",
       "gradient-to-tl":
         "linear-gradient(to top left, var(--tw-gradient-stops))",
+      "f1-orange-banner": "url('../public/assets/pages/f1-ea/orange_banner.jpg')",
+      "f1-video": "url('../public/assets/pages/f1-ea/f122-video.mp4')",
     },
     backgroundOpacity: ({theme}) => theme("opacity"),
     backgroundPosition: {
