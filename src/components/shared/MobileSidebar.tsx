@@ -70,7 +70,7 @@ function MobileSidebar({
           </svg>
         </button>
       </div>
-      <div>
+      <div className="lg:hidden">
         <div
           className={`absolute top-0 left-0 w-screen ${navColor} bg-opacity-70 z-50 h-[97vh] ${
             !isOverlayOpen ? "hidden" : ""
@@ -88,7 +88,7 @@ function MobileSidebar({
             leaveFrom="opacity-100"
             leaveTo="opacity-0">
             <div
-              className={`absolute flex justify-between items-center top-0 left-0 w-[66vw] ${mobileSidebarHeaderColor} z-[100] h-14`}>
+              className={`absolute flex justify-between items-center top-0 left-0 min-w-[320px] w-[75vw] ${mobileSidebarHeaderColor} z-[100] h-14`}>
               <img className="ml-3 h-6 w-12 lg:ml-12" src={`${logo}`} alt="" />
               <AiOutlineCloseCircle
                 onClick={handleToggle}
@@ -97,12 +97,12 @@ function MobileSidebar({
               />
             </div>
             <div
-              className={`${textColor} absolute h-[88.6vh] w-[66vw] py-3 px-5 top-0 mt-14 z-50 flex flex-col gap-3 overflow-scroll align-center ${navColor}`}>
+              className={`${textColor} absolute h-[88.6vh] w-[75vw] min-w-[320px] py-3 px-4 top-0 mt-14 z-50 flex flex-col gap-3 overflow-scroll align-center ${navColor}`}>
               {navLinks.map((section) => {
                 if (!section.subsections) {
                   return (
                     <Link
-                      className={`h-9 pb-2 text-lg flex justify-start items-center border-b border-1 border-solid border-[${burgerColor}]`}
+                      className={`h-9 pb-2 text-base md:text-lg flex justify-start items-center border-b border-1 border-solid border-[${burgerColor}]`}
                       to={`${section.mainLink}`}>
                       {section.main.toUpperCase()}
                     </Link>

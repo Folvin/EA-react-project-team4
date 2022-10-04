@@ -28,7 +28,7 @@ function DesktopNavContainer({
         if (!section.subsections) {
           return (
             <Link
-              className={`h-12 text-base ${textColor} flex justify-start items-center ${hoverColor}`}
+              className={`h-12 md:text-xs 2xl:text-base ${textColor} flex justify-start items-center ${hoverColor}`}
               to={`${section.mainLink}`}>
               {section.main.toUpperCase()}
             </Link>
@@ -59,7 +59,7 @@ function DesktopNavContainer({
                   return (
                     <div className="flex flex-col flex-wrap p-6 gap-3">
                       <div
-                        className={`${textColor} flex text-sm flex-start border-b pb-2`}>
+                        className={`${textColor} flex text-xs lg:text-base flex-start border-b pb-2`}>
                         {subsection.title.toUpperCase()}
                       </div>
                       <DesktopNavChildContent

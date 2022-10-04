@@ -17,7 +17,7 @@ function DesktopNavChild({
 }: DesktopNavChildProps) {
   return (
     <button
-      className={`group w-fit z-10 relative flex gap-2 justify-center items-center bg-transparent h-12 ${hoverColor} ${textColor}`}>
+      className={`md:text-xs 2xl:text-base group w-fit z-10 relative flex gap-2 justify-center items-center bg-transparent h-12 ${hoverColor} ${textColor}`}>
       {title.toUpperCase()} <FaChevronDown className={`mt-1 text-inherit`} />
       <div className="hidden group-hover:block absolute top-100% h-20 w-full z-30"></div>
       <div
