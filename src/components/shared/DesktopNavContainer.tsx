@@ -49,11 +49,7 @@ function DesktopNavContainer({
               {section.subsections.map((subsection) => {
                 if (!subsection.title) {
                   return (
-                    <div
-                      key={shortid.generate()}
-                      className={`border rounded border-solid ${
-                        burgerColor === "#FFFFFF" ? "border-white" : "border-black"
-                      } flex flex-col p-6 gap-3`}>
+                    <div key={shortid.generate()} className={`flex flex-col p-6 gap-3`}>
                       {subsection.subTitles.map((subtitle) => {
                         return (
                           <Link

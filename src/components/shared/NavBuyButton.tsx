@@ -27,7 +27,7 @@ interface buyButtonConfig {
 
 function NavBuyButton({buyButtonConfig, buyButtonColor, textColor, free}: Props) {
   return (
-    <Popover className="font-tt-regular z-10 relative transition-all">
+    <Popover className="font-tt-regular z-40 relative transition-all">
       <Popover.Button
         className={`flex justify-center w-40 lg:w-48 h-10 cursor-pointer text-sm lg:text-base text-center items-center mr-2 rounded ${buyButtonColor} ${textColor}`}>
         {free ? "SCARICA GRATIS*" : "ACQUISTA ORA"} <FaChevronDown className="mt-1 ml-1" />
