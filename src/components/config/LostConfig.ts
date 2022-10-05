@@ -1,6 +1,7 @@
 import {Config} from "./Interfaces";
 
 const Lost: Config = {
+  mainPage: "#",
   navColor: "bg-black" /* bg-black per navbar nere e bg-white per navbar bianche */,
   textColor: "text-white" /* text-black per navbar bianche e text-white per navbar nere */,
   hoverColor:

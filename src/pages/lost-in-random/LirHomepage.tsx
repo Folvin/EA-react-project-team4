@@ -15,6 +15,7 @@ function LiRHomepage() {
       style={{fontFamily: "baskerville"}}>
       <div className="h-[100px] w-full "></div>
       <NavigationBar
+        mainPage={config.mainPage}
         navColor={config.navColor}
         textColor={config.textColor}
         burgerColor={config.burgerColor}
