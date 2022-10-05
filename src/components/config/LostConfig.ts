@@ -53,12 +53,11 @@ const Lost: Config = {
       main: "Notizie",
       mainLink: "#",
     },
-
   ],
   buyButtonConfig: {
     eaApp: "https://www.ea.com/it-it/games/apex-legends/buy/pc",
     steam: "https://smarturl.it/apex-steam-unav",
-    ps4: "http://smarturl.it/apexlegends-ps4",
+    // ps4: "http://smarturl.it/apexlegends-ps4",
     ps5: "https://store.playstation.com/product/EP0006-PPSA04874_00-APEXLEGENDRSPWN1",
     xbox: "https://www.microsoft.com/p/APEX-Legends/BV9ML45J2Q5V",
     switch: "https://smarturl.it/apex-std-ed-switch",

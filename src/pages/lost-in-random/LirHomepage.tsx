@@ -6,6 +6,7 @@ import FirstSectionHP from "./FirstSectionHP";
 import Newsletter from "../../components/shared/Newsletter";
 import NavigationBar from "../../components/shared/NavigationBar";
 import config from "../../components/config/LostConfig";
+import UltimeNotizie from "./UltimeNotizieHP";
 
 function LiRHomepage() {
   return (
@@ -32,7 +33,11 @@ function LiRHomepage() {
       <FirstSectionHP />
       <SecondSectionHomepage />
       <TrailerHP />
+
+      <UltimeNotizie />
+
       <div className="w-full h-400"></div>
+
       <div className=" bg-cover bg-[url(https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/common/lir-email-sub-xl.jpg.adapt.1920w.jpg)]">
         <div className="max-w-7xl m-auto">
           <Newsletter
