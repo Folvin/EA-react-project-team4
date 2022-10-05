@@ -84,11 +84,7 @@ function Form({buttonColor, bgColor, borderColor, textColor, bgCheck}: Props) {
             Paese
           </div>
           <div className="absolute w-full top-4">
-            <SelectPaese
-              bgColor={bgColor}
-              borderColor={borderColor}
-              textColor={textColor}
-            />
+            <SelectPaese bgColor={bgColor} borderColor={borderColor} textColor={textColor} />
           </div>
         </div>
       </div>
@@ -97,15 +93,12 @@ function Form({buttonColor, bgColor, borderColor, textColor, bgCheck}: Props) {
         <div
           className={`${borderColor} ${bgColor} border-2 rounded-sm w-12 h-4 md:w-8 md:h-4 mr-2 mt-1 flex justify-center items-center`}
           onClick={handleCheckBox}>
-          {checkBox ? (
-            <div className={` ${bgCheck} w-full h-full z-10 `}></div>
-          ) : null}
+          {checkBox ? <div className={` ${bgCheck} w-full h-full z-10 `}></div> : null}
         </div>
         <p>
-          Posso annullare l'iscrizione in qualsiasi momento modificando le mie
-          preferenze e-mail, contattando privacyadmin.ea.com o scrivendo a
-          Electronic Arts Inc., ATTN: Email Opt-Out, 209 Redwood Shores Pkwy,
-          Redwood City, CA, 94065, USA.
+          Posso annullare l'iscrizione in qualsiasi momento modificando le mie preferenze e-mail,
+          contattando privacyadmin.ea.com o scrivendo a Electronic Arts Inc., ATTN: Email Opt-Out,
+          209 Redwood Shores Pkwy, Redwood City, CA, 94065, USA.
         </p>
       </div>
       <button

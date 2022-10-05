@@ -8,6 +8,7 @@ export interface Config {
   buyButtonColor: string;
   burgerColor: string;
   logo: string;
+  font: string;
   free: boolean;
   navLinks: NavLinks[];
   buyButtonConfig: buyButtonConfig;
@@ -40,17 +41,16 @@ export interface buyButtonConfig {
   egs?: string;
 }
 
-
 //LOCAL FOOTER INTERFACE
 export interface LocalFooterType {
   bgColor: string;
   textColor: string;
   linkColor: string;
   hover: string;
-  links: Links [];
+  links: Links[];
   title?: string;
   condition: Condition[];
-  social: Social []
+  social: Social[];
 }
 
 export interface Links {

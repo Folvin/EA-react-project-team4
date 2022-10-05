@@ -11,6 +11,7 @@ interface Props {
   mobileBorderColor: string;
   hoverColor: string;
   burgerColor: string;
+  font: string;
   logo: string;
   free: boolean;
   buyButtonConfig: buyButtonConfig;
@@ -22,6 +23,7 @@ interface Props {
 function NavigationBar({
   navColor,
   textColor,
+  font,
   mobileBorderColor,
   mobileActiveColor,
   burgerColor,
@@ -49,6 +51,7 @@ function NavigationBar({
           navColor={navColor}
           textColor={textColor}
           logo={logo}
+          font={font}
           mobileBorderColor={mobileBorderColor}
           buyButtonColor={buyButtonColor}
           mobileActiveColor={mobileActiveColor}
@@ -58,6 +61,7 @@ function NavigationBar({
         <img className="h-6 w-12 mr-8 lg:ml-12" src={`${logo}`} alt="" />
         <DesktopNavContainer
           navColor={navColor}
+          font={font}
           textColor={textColor}
           hoverColor={hoverColor}
           burgerColor={burgerColor}

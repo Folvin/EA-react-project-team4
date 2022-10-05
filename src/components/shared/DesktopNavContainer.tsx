@@ -9,6 +9,7 @@ interface Props {
   textColor: string;
   burgerColor: string;
   hoverColor: string;
+  font: string;
   logo: string;
   buyButtonColor: string;
   navLinks: NavLinks[];
@@ -20,17 +21,18 @@ function DesktopNavContainer({
   burgerColor,
   hoverColor,
   logo,
+  font,
   buyButtonColor,
   navLinks,
 }: Props) {
   return (
-    <div className="lg:flex hidden gap-4 justify-center items-center">
+    <div className={`lg:flex ${font} hidden gap-4 justify-center items-center`}>
       {navLinks.map((section) => {
         if (!section.subsections) {
           return (
             <Link
               key={shortid.generate()}
-              className={`h-12 md:text-xs 2xl:text-base ${textColor} flex justify-start items-center ${hoverColor}`}
+              className={`h-12 md:text-base 2xl:text-lg ${textColor} flex justify-start items-center ${hoverColor}`}
               to={`${section.mainLink}`}>
               {section.main.toUpperCase()}
             </Link>
@@ -40,6 +42,7 @@ function DesktopNavContainer({
             <DesktopNavChild
               key={shortid.generate()}
               title={section.main}
+              burgerColor={burgerColor}
               navColor={navColor}
               textColor={textColor}
               hoverColor={hoverColor}>
@@ -48,12 +51,14 @@ function DesktopNavContainer({
                   return (
                     <div
                       key={shortid.generate()}
-                      className="flex flex-col p-6 gap-3">
+                      className={`border rounded border-solid ${
+                        burgerColor === "#FFFFFF" ? "border-white" : "border-black"
+                      } flex flex-col p-6 gap-3`}>
                       {subsection.subTitles.map((subtitle) => {
                         return (
                           <Link
                             key={shortid.generate()}
-                            className={`text-base ${textColor} ${hoverColor} flex items-center h-full`}
+                            className={`text-sm 2xl:text-base font-tt-regular ${textColor} ${hoverColor} flex items-center h-full`}
                             to={subtitle.link}>
                             {subtitle.title}
                           </Link>
@@ -65,10 +70,10 @@ function DesktopNavContainer({
                   return (
                     <div
                       key={shortid.generate()}
-                      className="flex flex-col flex-wrap p-6 gap-3">
+                      className={`flex rounded flex-col flex-wrap p-6 gap-3`}>
                       <div
                         key={shortid.generate()}
-                        className={`${textColor} flex text-xs lg:text-base flex-start border-b pb-2`}>
+                        className={`${textColor} flex text-base lg:text-lg ${font} flex-start border-b pb-2`}>
                         {subsection.title.toUpperCase()}
                       </div>
                       <DesktopNavChildContent

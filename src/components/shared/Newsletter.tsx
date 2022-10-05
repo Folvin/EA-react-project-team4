@@ -22,14 +22,7 @@ className="bg-cover bg-[url(https://media.contentapi.ea.com/content/dam/apex-leg
 dove l'url è limmagine di bg da usare
  */
 
-function Newsletter({
-  game,
-  buttonColor,
-  bgColor,
-  borderColor,
-  textColor,
-  bgCheck,
-}: Props) {
+function Newsletter({game, buttonColor, bgColor, borderColor, textColor, bgCheck}: Props) {
   return (
     <Section className="py-20">
       <div className=" flex flex-col lg:flex-row gap-y-6 lg:gap-x-6 justify-center">
@@ -62,10 +55,9 @@ function FormTitle({gameTitle, textCoror}: Props2) {
         ISCRIVITI PER RICEVERE LE NOVITÀ DI {gameTitle.toUpperCase()}
       </h2>
       <p className="">
-        Iscriviti oggi per ricevere tramite e-mail le ultime novità su{" "}
-        {gameTitle} con aggiornamenti, contenuti dietro le quinte, offerte e
-        molto altro (insieme alle novità su notizie, prodotti, eventi e
-        promozioni EA).{" "}
+        Iscriviti oggi per ricevere tramite e-mail le ultime novità su {gameTitle} con
+        aggiornamenti, contenuti dietro le quinte, offerte e molto altro (insieme alle novità su
+        notizie, prodotti, eventi e promozioni EA).{" "}
       </p>
     </div>
   );
