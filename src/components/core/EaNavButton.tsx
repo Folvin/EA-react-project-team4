@@ -14,7 +14,9 @@ function EaNavButton({icon, url, text, handleToggle}: Props) {
         onClick={handleToggle}
         className="hover:-translate-y-2 transition-all w-full flex flex-row lg:flex-col mb-4 md:mb-0 justify-start lg:justify-center items-center md:p-8">
         <img className="shrink-0 w-9 h-9 lg:mb-3" src={icon} alt="" />
-        <div className="text-white text-lg ml-2 lg:ml-0 shrink-0">{text}</div>
+        <div className="text-white text-base md:text-base lg:text-lg ml-2 lg:ml-0 shrink-0">
+          {text}
+        </div>
       </div>
     </Link>
   );
