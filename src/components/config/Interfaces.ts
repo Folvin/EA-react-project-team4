@@ -39,3 +39,31 @@ export interface buyButtonConfig {
   switch?: string;
   egs?: string;
 }
+
+
+//LOCAL FOOTER INTERFACE
+export interface LocalFooterType {
+  bgColor: string;
+  textColor: string;
+  linkColor: string;
+  hover: string;
+  links: Links [];
+  title?: string;
+  condition: Condition[];
+  social: Social []
+}
+
+export interface Links {
+  name: string;
+  path?: any;
+}
+
+export interface Condition {
+  id: number;
+  value: string;
+}
+
+export interface Social {
+  icon: any;
+  link: string;
+}
