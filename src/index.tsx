@@ -14,6 +14,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <NavBarEA />
+      <div className="h-[96px]"></div>
       <Prove />
       <Routing />
       <FooterEa />
