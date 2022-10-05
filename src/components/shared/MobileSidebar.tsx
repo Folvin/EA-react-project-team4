@@ -137,7 +137,7 @@ function MobileSidebar({
                                   return (
                                     <Link
                                       key={shortid.generate()}
-                                      className={`pb-1 border-b text-base flex items-center h-9 border-1 border-solid border-[${burgerColor}]`}
+                                      className={`pb-1 font-tt-regular border-b text-sm flex items-center h-9 border-1 border-solid border-[${burgerColor}]`}
                                       to={subtitle.link}>
                                       {subtitle.title}
                                     </Link>
@@ -160,7 +160,7 @@ function MobileSidebar({
                                       <div key={shortid.generate()} className="px-2">
                                         <Link
                                           key={shortid.generate()}
-                                          className={`pb-1 my-1 text-base border-b flex items-center h-9 border-1 border-solid border-[${burgerColor}]`}
+                                          className={`pb-1 font-tt-regular my-1 text-sm border-b flex items-center h-9 border-1 border-solid border-[${burgerColor}]`}
                                           to={subtitle.link}>
                                           {subtitle.title}
                                         </Link>

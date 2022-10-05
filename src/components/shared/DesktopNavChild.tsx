@@ -23,7 +23,7 @@ function DesktopNavChild({
       {title.toUpperCase()} <FaChevronDown className={`text-inherit`} />
       <div className="hidden group-hover:block absolute top-100% h-20 w-full z-30"></div>
       <div
-        className={`hidden absolute top-[120%] z-30 rounded w-max group-hover:flex hover:flex flex-row ${navColor} border rounded border-solid ${
+        className={`hidden font-tt-regular absolute top-[120%] z-30 rounded w-max group-hover:flex hover:flex flex-row ${navColor} border rounded border-solid ${
           burgerColor === "#FFFFFF" ? "border-white" : "border-black"
         }`}>
         {children}

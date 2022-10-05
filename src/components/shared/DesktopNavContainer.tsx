@@ -58,7 +58,7 @@ function DesktopNavContainer({
                         return (
                           <Link
                             key={shortid.generate()}
-                            className={`text-lg ${textColor} ${hoverColor} flex items-center h-full`}
+                            className={`text-sm 2xl:text-base font-tt-regular ${textColor} ${hoverColor} flex items-center h-full`}
                             to={subtitle.link}>
                             {subtitle.title}
                           </Link>
@@ -73,7 +73,7 @@ function DesktopNavContainer({
                       className={`flex rounded flex-col flex-wrap p-6 gap-3`}>
                       <div
                         key={shortid.generate()}
-                        className={`${textColor} flex text-base lg:text-lg flex-start border-b pb-2`}>
+                        className={`${textColor} flex text-base lg:text-lg ${font} flex-start border-b pb-2`}>
                         {subsection.title.toUpperCase()}
                       </div>
                       <DesktopNavChildContent

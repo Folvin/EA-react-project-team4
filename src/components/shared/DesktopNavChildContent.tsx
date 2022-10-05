@@ -17,7 +17,7 @@ function DesktopNavChildContent({navColor, textColor, hoverColor, subtitles}: Pr
           <div key={shortid.generate()}>
             <Link
               key={shortid.generate()}
-              className={`text-base lg:text-lg ${textColor} ${hoverColor} flex items-center h-full`}
+              className={`text-sm 2xl:text-base font-tt-regular ${textColor} ${hoverColor} flex items-center h-full`}
               to={subtitle.link}>
               {subtitle.title}
             </Link>
