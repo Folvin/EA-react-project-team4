@@ -29,7 +29,7 @@ start: it serve react on localhost
 
 ### for components and folder
 
-always start components name with capitalization and successive word doesn't use - or \_ and also use capitalization
+components name have every word capitalized and not separated
 so for example TextWrap.tsx
 
 folder instead have all name in lowercase and successive word are separated by -
