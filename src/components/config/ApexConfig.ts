@@ -1,13 +1,19 @@
 import {Config} from "./Interfaces";
 
 const ApexConfig: Config = {
-  navColor: "bg-black" /* classe tailwind */,
-  textColor: "text-white" /* classe tailwind */,
+  navColor: "bg-black" /* bg-black per navbar nere e bg-white per navbar bianche */,
+  textColor: "text-white" /* text-black per navbar bianche e text-white per navbar nere */,
   hoverColor:
-    "hover:text-red-600" /* hoverColor e buyButtonColor corrispondono sempre, ma sono separati perché usano due classi tailwind diverse */,
+    "hover:text-red-600" /* hoverColor, mobileBorderColor, mobileActiveColor e buyButtonColor corrispondono sempre, ma sono separati perché usano quattro classi tailwind diverse */,
+  mobileActiveColor: "text-red-600",
+  mobileBorderColor: "border-red-600",
   buyButtonColor: "bg-red-600",
-  burgerColor: "#FFFFFF",
+  font: "font-teko",
+  mobileSidebarHeaderColor:
+    "bg-[#161616]" /* bg-[#161616] per le navbar nere e bg-[#1C1F26] per le navbar bianche*/,
+  burgerColor: "#FFFFFF" /* #FFFFFF per navbar nere e #000000 per navbar bianche */,
   logo: "assets/core/EANavIcon.png",
+  free: true /* Determina se il gioco è free to play o no e cambia il testo del BuyButton nella navbar */,
   navLinks: [
     {
       main: "Informazioni",
@@ -187,3 +193,24 @@ const ApexConfig: Config = {
 };
 
 export default ApexConfig;
+
+/*      Come usare config per NavigationBar
+
+import config from "../src/components/config/NomeDelGiocoConfig";
+
+      <NavigationBar
+        navColor={config.navColor}
+        textColor={config.textColor}
+        burgerColor={config.burgerColor}
+        font={config.font}
+        logo={config.logo}
+        hoverColor={config.hoverColor}
+        mobileActiveColor={config.mobileActiveColor}
+        mobileBorderColor={config.mobileBorderColor}
+        buyButtonConfig={config.buyButtonConfig}
+        buyButtonColor={config.buyButtonColor}
+        navLinks={config.navLinks}
+        mobileSidebarHeaderColor={config.mobileSidebarHeaderColor}
+        free={config.free}
+      />
+*/

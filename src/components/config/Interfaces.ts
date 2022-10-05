@@ -2,14 +2,19 @@ export interface Config {
   navColor: string;
   textColor: string;
   hoverColor: string;
+  mobileActiveColor: string;
+  mobileSidebarHeaderColor: string;
+  mobileBorderColor: string;
   buyButtonColor: string;
   burgerColor: string;
   logo: string;
+  font: string;
+  free: boolean;
   navLinks: NavLinks[];
   buyButtonConfig: buyButtonConfig;
 }
 
-interface NavLinks {
+export interface NavLinks {
   main: string;
   mainLink?: string;
   subsections?: Subsections[];
@@ -20,12 +25,12 @@ interface Subsections {
   subTitles: Subtitles[];
 }
 
-interface Subtitles {
+export interface Subtitles {
   title: string;
   link: string;
 }
 
-interface buyButtonConfig {
+export interface buyButtonConfig {
   eaApp?: string;
   origin?: string;
   steam?: string;
@@ -33,8 +38,8 @@ interface buyButtonConfig {
   ps5?: string;
   xbox?: string;
   switch?: string;
+  egs?: string;
 }
-
 
 //LOCAL FOOTER INTERFACE
 export interface LocalFooterType {
@@ -42,10 +47,10 @@ export interface LocalFooterType {
   textColor: string;
   linkColor: string;
   hover: string;
-  links: Links [];
+  links: Links[];
   title?: string;
   condition: Condition[];
-  social: Social []
+  social: Social[];
 }
 
 export interface Links {

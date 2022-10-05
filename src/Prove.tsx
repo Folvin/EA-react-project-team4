@@ -7,5 +7,4 @@ function Prove() {
     </div>
   );
 }
-
 export default Prove;
