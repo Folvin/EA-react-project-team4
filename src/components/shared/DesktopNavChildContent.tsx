@@ -9,12 +9,7 @@ interface Props {
   subtitles: Subtitles[];
 }
 
-function DesktopNavChildContent({
-  navColor,
-  textColor,
-  hoverColor,
-  subtitles,
-}: Props) {
+function DesktopNavChildContent({navColor, textColor, hoverColor, subtitles}: Props) {
   return (
     <div className="flex flex-col gap-3">
       {subtitles.map((subtitle) => {
@@ -22,7 +17,7 @@ function DesktopNavChildContent({
           <div key={shortid.generate()}>
             <Link
               key={shortid.generate()}
-              className={`text-base ${textColor} ${hoverColor} flex items-center h-full`}
+              className={`text-base lg:text-lg ${textColor} ${hoverColor} flex items-center h-full`}
               to={subtitle.link}>
               {subtitle.title}
             </Link>

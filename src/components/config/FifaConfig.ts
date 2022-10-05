@@ -1,19 +1,17 @@
 import {Config} from "./Interfaces";
 
-const ApexConfig: Config = {
-  navColor:
-    "bg-white" /* bg-black per navbar nere e bg-white per navbar bianche */,
-  textColor:
-    "text-black" /* text-black per navbar bianche e text-white per navbar nere */,
+const FifaConfig: Config = {
+  navColor: "bg-white" /* bg-black per navbar nere e bg-white per navbar bianche */,
+  textColor: "text-black" /* text-black per navbar bianche e text-white per navbar nere */,
   hoverColor:
     "hover:text-[#FF5E0C]" /* hoverColor, mobileBorderColor, mobileActiveColor e buyButtonColor corrispondono sempre, ma sono separati perché usano quattro classi tailwind diverse */,
   mobileActiveColor: "text-[#FF5E0C]",
   mobileBorderColor: "border-[#FF5E0C]",
   buyButtonColor: "bg-[#FF5E0C]",
+  font: "",
   mobileSidebarHeaderColor:
     "bg-[#F3F3F3]" /* bg-[#161616] per le navbar nere e bg-[#F3F3F3] per le navbar bianche*/,
-  burgerColor:
-    "#000000" /* #FFFFFF per navbar nere e #000000 per navbar bianche */,
+  burgerColor: "#000000" /* #FFFFFF per navbar nere e #000000 per navbar bianche */,
   logo: "assets/core/EANavIcon.png",
   free: false /* Determina se il gioco è free to play o no e cambia il testo del BuyButton nella navbar */,
   navLinks: [
@@ -176,7 +174,7 @@ const ApexConfig: Config = {
   },
 };
 
-export default ApexConfig;
+export default FifaConfig;
 
 /*      Come usare config per NavigationBar
 

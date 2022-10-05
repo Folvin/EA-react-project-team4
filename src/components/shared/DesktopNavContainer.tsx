@@ -9,6 +9,7 @@ interface Props {
   textColor: string;
   burgerColor: string;
   hoverColor: string;
+  font: string;
   logo: string;
   buyButtonColor: string;
   navLinks: NavLinks[];
@@ -20,17 +21,18 @@ function DesktopNavContainer({
   burgerColor,
   hoverColor,
   logo,
+  font,
   buyButtonColor,
   navLinks,
 }: Props) {
   return (
-    <div className="lg:flex hidden gap-4 justify-center items-center">
+    <div className="lg:flex font-teko hidden gap-4 justify-center items-center">
       {navLinks.map((section) => {
         if (!section.subsections) {
           return (
             <Link
               key={shortid.generate()}
-              className={`h-12 md:text-xs 2xl:text-base ${textColor} flex justify-start items-center ${hoverColor}`}
+              className={`h-12 md:text-base 2xl:text-lg ${textColor} flex justify-start items-center ${hoverColor}`}
               to={`${section.mainLink}`}>
               {section.main.toUpperCase()}
             </Link>
@@ -46,14 +48,12 @@ function DesktopNavContainer({
               {section.subsections.map((subsection) => {
                 if (!subsection.title) {
                   return (
-                    <div
-                      key={shortid.generate()}
-                      className="flex flex-col p-6 gap-3">
+                    <div key={shortid.generate()} className="flex flex-col p-6 gap-3">
                       {subsection.subTitles.map((subtitle) => {
                         return (
                           <Link
                             key={shortid.generate()}
-                            className={`text-base ${textColor} ${hoverColor} flex items-center h-full`}
+                            className={`text-lg ${textColor} ${hoverColor} flex items-center h-full`}
                             to={subtitle.link}>
                             {subtitle.title}
                           </Link>
@@ -63,12 +63,10 @@ function DesktopNavContainer({
                   );
                 } else {
                   return (
-                    <div
-                      key={shortid.generate()}
-                      className="flex flex-col flex-wrap p-6 gap-3">
+                    <div key={shortid.generate()} className="flex flex-col flex-wrap p-6 gap-3">
                       <div
                         key={shortid.generate()}
-                        className={`${textColor} flex text-xs lg:text-base flex-start border-b pb-2`}>
+                        className={`${textColor} flex text-base lg:text-lg flex-start border-b pb-2`}>
                         {subsection.title.toUpperCase()}
                       </div>
                       <DesktopNavChildContent

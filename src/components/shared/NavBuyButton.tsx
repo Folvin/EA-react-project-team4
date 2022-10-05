@@ -25,18 +25,12 @@ interface buyButtonConfig {
   egs?: string;
 }
 
-function NavBuyButton({
-  buyButtonConfig,
-  buyButtonColor,
-  textColor,
-  free,
-}: Props) {
+function NavBuyButton({buyButtonConfig, buyButtonColor, textColor, free}: Props) {
   return (
-    <Popover className="z-10 relative transition-all">
+    <Popover className="font-tt-regular z-10 relative transition-all">
       <Popover.Button
         className={`flex justify-center w-40 lg:w-48 h-10 cursor-pointer text-sm lg:text-base text-center items-center mr-2 rounded ${buyButtonColor} ${textColor}`}>
-        {free ? "SCARICA GRATIS*" : "ACQUISTA ORA"}{" "}
-        <FaChevronDown className="mt-1 ml-1" />
+        {free ? "SCARICA GRATIS*" : "ACQUISTA ORA"} <FaChevronDown className="mt-1 ml-1" />
       </Popover.Button>
 
       <Transition
@@ -54,11 +48,7 @@ function NavBuyButton({
                 url={buyButtonConfig.eaApp}>
                 <div className="text-base text-white front flex gap-2 items-center justify-between">
                   App EA per Windows
-                  <img
-                    className=" w-5 block"
-                    alt="ea-logo"
-                    src="assets/core/ea-logo-button.png"
-                  />
+                  <img className=" w-5 block" alt="ea-logo" src="assets/core/ea-logo-button.png" />
                 </div>
               </Button>
             ) : (
@@ -79,9 +69,7 @@ function NavBuyButton({
             )}
 
             {buyButtonConfig.steam ? (
-              <Button
-                className="h-12 sm:w-full bg-transparent"
-                url={buyButtonConfig.steam}>
+              <Button className="h-12 sm:w-full bg-transparent" url={buyButtonConfig.steam}>
                 <div className="text-base text-white front flex gap-2 items-center justify-between">
                   Steam
                   <SiSteam className="mt-1" />
@@ -92,9 +80,7 @@ function NavBuyButton({
             )}
 
             {buyButtonConfig.ps4 ? (
-              <Button
-                className="h-12 sm:w-full bg-[#003087] border-none"
-                url={buyButtonConfig.ps4}>
+              <Button className="h-12 sm:w-full bg-[#003087] border-none" url={buyButtonConfig.ps4}>
                 <div className="text-base text-white front flex gap-2 items-center justify-between">
                   PlayStation® 4
                   <SiPlaystation className="mt-1" />
@@ -105,9 +91,7 @@ function NavBuyButton({
             )}
 
             {buyButtonConfig.ps5 ? (
-              <Button
-                className="h-12 sm:w-full bg-[#003087] border-none"
-                url={buyButtonConfig.ps5}>
+              <Button className="h-12 sm:w-full bg-[#003087] border-none" url={buyButtonConfig.ps5}>
                 <div className="text-base text-white front flex gap-2 items-center justify-between">
                   PlayStation® 5
                   <SiPlaystation className="mt-1" />
@@ -144,9 +128,7 @@ function NavBuyButton({
             )}
 
             {buyButtonConfig.egs ? (
-              <Button
-                className="h-12 sm:w-full bg-slate-600 border-none"
-                url={buyButtonConfig.egs}>
+              <Button className="h-12 sm:w-full bg-slate-600 border-none" url={buyButtonConfig.egs}>
                 <div className="text-base text-white border-black front flex gap-2 items-center justify-between">
                   Epic Game Store
                   <SiEpicgames className="mt-1" />

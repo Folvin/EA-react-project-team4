@@ -14,6 +14,7 @@ interface Props {
   burgerColor: string;
   mobileActiveColor: string;
   mobileBorderColor: string;
+  font: string;
   logo: string;
   buyButtonColor: string;
   navLinks: NavLinks[];
@@ -25,6 +26,7 @@ function MobileSidebar({
   textColor,
   burgerColor,
   mobileActiveColor,
+  font,
   logo,
   mobileBorderColor,
   buyButtonColor,
@@ -37,8 +39,7 @@ function MobileSidebar({
 
   /* Custom Hook that handles the visibility for the MobileSidebar component and the overlay under it */
 
-  const {sidebarOpen, isOverlayOpen, handleToggle} =
-    useMobileSidebar(sidebarRef);
+  const {sidebarOpen, isOverlayOpen, handleToggle} = useMobileSidebar(sidebarRef);
 
   /* Custom hook that handles the hiding and showing of the NavBarEA on scroll */
 
@@ -81,9 +82,7 @@ function MobileSidebar({
           className={`absolute top-0 left-0 w-screen bg-black bg-opacity-70 z-50 h-screen ${
             !isOverlayOpen ? "hidden" : ""
           }`}></div>
-        <div
-          ref={sidebarRef}
-          className={`absolute top-0 ${sidebarOpen} h-screen w-[66vw] z-[100]`}>
+        <div ref={sidebarRef} className={`absolute top-0 ${sidebarOpen} h-screen w-[66vw] z-[100]`}>
           <Transition
             appear={true}
             show={isOverlayOpen}
@@ -105,7 +104,7 @@ function MobileSidebar({
             </div>
             <div
               key={shortid.generate()}
-              className={`${textColor} absolute ${
+              className={`${textColor} ${font} absolute ${
                 handleShow ? "h-[calc(100vh-96px)]" : "h-[calc(100vh-40px)]"
               } w-[75vw] min-w-[320px] pt-3 pb-6 px-4 top-0 mt-14 z-50 flex flex-col gap-3 overflow-scroll align-center ${navColor}`}>
               {navLinks.map((section) => {
@@ -148,9 +147,7 @@ function MobileSidebar({
                             );
                           } else {
                             return (
-                              <div
-                                key={shortid.generate()}
-                                className="px-2 py-1">
+                              <div key={shortid.generate()} className="px-2 py-1">
                                 <Accordion
                                   key={shortid.generate()}
                                   title={subsection.title}
@@ -160,9 +157,7 @@ function MobileSidebar({
                                   navColor={navColor}>
                                   {subsection.subTitles.map((subtitle) => {
                                     return (
-                                      <div
-                                        key={shortid.generate()}
-                                        className="px-2">
+                                      <div key={shortid.generate()} className="px-2">
                                         <Link
                                           key={shortid.generate()}
                                           className={`pb-1 my-1 text-base border-b flex items-center h-9 border-1 border-solid border-[${burgerColor}]`}
@@ -182,9 +177,7 @@ function MobileSidebar({
                   );
                 }
               })}
-              <button
-                title="spacer"
-                className={`cursor-default grow shrink-0`}></button>
+              <button title="spacer" className={`cursor-default grow shrink-0`}></button>
             </div>
           </Transition>
         </div>

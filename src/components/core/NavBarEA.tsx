@@ -19,7 +19,7 @@ function NavBarEA() {
   const {userMenu, helpMenu, handleToggle} = useNavBarEAHook(menuRef);
 
   return (
-    <div ref={menuRef}>
+    <div className="font-tt-regular" ref={menuRef}>
       <div
         className={`h-10 w-full flex fixed justify-end ${
           handleShow ? "top-0" : "-top-10"
