@@ -202,6 +202,7 @@ import config from "../src/components/config/NomeDelGiocoConfig";
         navColor={config.navColor}
         textColor={config.textColor}
         burgerColor={config.burgerColor}
+        font={config.font}
         logo={config.logo}
         hoverColor={config.hoverColor}
         mobileActiveColor={config.mobileActiveColor}
