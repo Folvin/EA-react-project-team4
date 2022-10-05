@@ -63,7 +63,7 @@ function NavigationBar({
           mobileSidebarHeaderColor={mobileSidebarHeaderColor}
         />
         <Link to={`${mainPage}`}>
-          <img className="h-8 w-12 mr-8 lg:ml-12" src={`${logo}`} alt="" />
+          <img className="h-9 w-14 mr-8 lg:ml-7" src={`${logo}`} alt="" />
         </Link>
         <DesktopNavContainer
           navColor={navColor}

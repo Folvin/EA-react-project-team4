@@ -1,5 +1,5 @@
 import NavigationBar from "../../components/shared/NavigationBar";
-import config from "../../components/config/FifaConfig";
+import config from "../../components/config/ApexConfig";
 import FooterEa from "../../components/core/FooterEa";
 
 function ApexHomepage() {
