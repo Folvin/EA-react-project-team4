@@ -83,7 +83,7 @@ function MobileSidebar({
           }`}></div>
         <div
           ref={sidebarRef}
-          className={`absolute top-0 ${sidebarOpen} w-[66vw] z-[100]`}>
+          className={`absolute top-0 ${sidebarOpen} h-screen w-[66vw] z-[100]`}>
           <Transition
             appear={true}
             show={isOverlayOpen}
@@ -106,8 +106,8 @@ function MobileSidebar({
             <div
               key={shortid.generate()}
               className={`${textColor} absolute ${
-                handleShow ? "h-[88vh]" : "h-[95vh]"
-              } w-[75vw] min-w-[320px] py-3 px-4 top-0 mt-14 z-50 flex flex-col gap-3 overflow-scroll align-center ${navColor}`}>
+                handleShow ? "h-[calc(100vh-96px)]" : "h-[calc(100vh-40px)]"
+              } w-[75vw] min-w-[320px] pt-3 pb-6 px-4 top-0 mt-14 z-50 flex flex-col gap-3 overflow-scroll align-center ${navColor}`}>
               {navLinks.map((section) => {
                 if (!section.subsections) {
                   return (

@@ -1,5 +1,5 @@
 import NavigationBar from "./components/shared/NavigationBar";
-import config from "../src/components/config/FifaConfig";
+import config from "../src/components/config/ApexConfig";
 import LocalFooterEa from "./components/core/LocalFooterEa";
 
 function Prove() {
