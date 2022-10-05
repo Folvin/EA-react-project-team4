@@ -1,5 +1,5 @@
 import NavigationBar from "../../components/shared/NavigationBar";
-import config from "../../components/config/ApexConfig";
+import config from "../../components/config/FifaConfig";
 import FooterEa from "../../components/core/FooterEa";
 
 function ApexHomepage() {
@@ -11,6 +11,7 @@ function ApexHomepage() {
         burgerColor={config.burgerColor}
         font={config.font}
         logo={config.logo}
+        mainPage={config.mainPage}
         hoverColor={config.hoverColor}
         mobileActiveColor={config.mobileActiveColor}
         mobileBorderColor={config.mobileBorderColor}

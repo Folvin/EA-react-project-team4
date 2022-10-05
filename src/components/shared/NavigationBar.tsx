@@ -3,6 +3,7 @@ import {NavLinks, buyButtonConfig} from "../config/Interfaces";
 import MobileSidebar from "./MobileSidebar";
 import DesktopNavContainer from "./DesktopNavContainer";
 import useHideNavbar from "../../hooks/core/useHideNavbar";
+import {Link} from "react-router-dom";
 
 interface Props {
   navColor: string;
@@ -14,6 +15,8 @@ interface Props {
   font: string;
   logo: string;
   free: boolean;
+  borderColor?: string;
+  mainPage: string;
   buyButtonConfig: buyButtonConfig;
   buyButtonColor: string;
   navLinks: NavLinks[];
@@ -27,6 +30,7 @@ function NavigationBar({
   mobileBorderColor,
   mobileActiveColor,
   burgerColor,
+  mainPage,
   hoverColor,
   logo,
   free,
@@ -58,7 +62,9 @@ function NavigationBar({
           navLinks={navLinks}
           mobileSidebarHeaderColor={mobileSidebarHeaderColor}
         />
-        <img className="h-6 w-12 mr-8 lg:ml-12" src={`${logo}`} alt="" />
+        <Link to={`${mainPage}`}>
+          <img className="h-8 w-12 mr-8 lg:ml-12" src={`${logo}`} alt="" />
+        </Link>
         <DesktopNavContainer
           navColor={navColor}
           font={font}
