@@ -1,6 +1,6 @@
 # What is this project?
 
-This is a scolastic project for Develhope, realized for didactic purpose. it's a replica of Electronic Arts's website, developed in an agile environment with a team of 4 student using react.
+This is a scolastic project for Develhope, realized for didactic purpose. it's a replica of Electronic Arts website, developed in an agile environment with a team of 4 student using react and typescript.
 
 # scripts
 
@@ -54,7 +54,7 @@ refactor: total rewrite of pieces of code
 
 # workflow
 
-there is 1 person that manage the work assigning tasks to the other member of the group and everything that is made, changed or deleted is comunicated to this manager so that the manager is the one worrying about the organization and that everything is running smoothly doing code review and applying eventual fixes meanwhile the other member continue with whatever task get assigned this way there is 0 risk of running into conflict and no one depends on the work of someone else, this makes us agile.
+there is 1 person that manage the project assigning tasks to the other member of the group, and everything that is made, changed or deleted, is comunicated to this manager so that the manager is the one worrying about the organization and that everything is running smoothly and do code review and apply eventual fixes meanwhile the other member continue with whatever task get assigned this way there is zero risk of running into conflict and no one depends on the work of someone else, this makes us agile.
 
 we also have a whatsapp group for comunicating important thing and we usually meet on discord every while
 
