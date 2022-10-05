@@ -1,5 +1,6 @@
 import NavigationBar from "./components/shared/NavigationBar";
 import config from "../src/components/config/FifaConfig";
+import LocalFooterEa from "./components/core/LocalFooterEa";
 
 function Prove() {
   return (
@@ -18,6 +19,8 @@ function Prove() {
         mobileSidebarHeaderColor={config.mobileSidebarHeaderColor}
         free={config.free}
       />
+      <div className="h-screen"></div>
+      <LocalFooterEa />
     </div>
   );
 }

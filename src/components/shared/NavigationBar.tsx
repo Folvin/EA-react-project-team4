@@ -2,6 +2,7 @@ import NavBuyButton from "./NavBuyButton";
 import {NavLinks, buyButtonConfig} from "../config/Interfaces";
 import MobileSidebar from "./MobileSidebar";
 import DesktopNavContainer from "./DesktopNavContainer";
+import useHideNavbar from "../../hooks/core/useHideNavbar";
 
 interface Props {
   navColor: string;
@@ -32,9 +33,15 @@ function NavigationBar({
   navLinks,
   mobileSidebarHeaderColor,
 }: Props) {
+  /* Custom hook that handles the hiding and showing of the NavBarEA on scroll */
+
+  const {handleShow} = useHideNavbar();
+
   return (
     <div
-      className={`h-14 w-full flex justify-between sticky top-10 z-10 gap-x-8 items-center ${navColor}`}>
+      className={`h-14 w-full flex justify-between fixed ${
+        handleShow ? "top-10" : "top-0"
+      } z-10 gap-x-8 items-center ${navColor}`}>
       <div className="flex gap-3 items-center">
         {/* Mobile sidebar */}
         <MobileSidebar

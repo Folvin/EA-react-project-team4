@@ -2,9 +2,11 @@ import {useRef} from "react";
 import {AiOutlineCloseCircle} from "react-icons/ai";
 import {Transition} from "@headlessui/react";
 import {Link} from "react-router-dom";
-import useMobileSidebar from "../../hooks/core/useMobileSidebar";
+import useMobileSidebar from "../../hooks/core/UseMobileSidebar";
 import {NavLinks} from "../config/Interfaces";
 import Accordion from "./Accordion";
+import shortid from "shortid";
+import useHideNavbar from "../../hooks/core/useHideNavbar";
 
 interface Props {
   navColor: string;
@@ -37,6 +39,10 @@ function MobileSidebar({
 
   const {sidebarOpen, isOverlayOpen, handleToggle} =
     useMobileSidebar(sidebarRef);
+
+  /* Custom hook that handles the hiding and showing of the NavBarEA on scroll */
+
+  const {handleShow} = useHideNavbar();
 
   return (
     <div>
@@ -72,7 +78,7 @@ function MobileSidebar({
       </div>
       <div className="lg:hidden">
         <div
-          className={`absolute top-0 left-0 w-screen bg-black bg-opacity-70 z-50 h-[97vh] ${
+          className={`absolute top-0 left-0 w-screen bg-black bg-opacity-70 z-50 h-screen ${
             !isOverlayOpen ? "hidden" : ""
           }`}></div>
         <div
@@ -88,6 +94,7 @@ function MobileSidebar({
             leaveFrom="opacity-100"
             leaveTo="opacity-0">
             <div
+              key={shortid.generate()}
               className={`absolute flex justify-between items-center top-0 left-0 min-w-[320px] w-[75vw] ${mobileSidebarHeaderColor} z-[100] h-14`}>
               <img className="ml-3 h-6 w-12 lg:ml-12" src={`${logo}`} alt="" />
               <AiOutlineCloseCircle
@@ -97,11 +104,15 @@ function MobileSidebar({
               />
             </div>
             <div
-              className={`${textColor} absolute h-[88.6vh] w-[75vw] min-w-[320px] py-3 px-4 top-0 mt-14 z-50 flex flex-col gap-3 overflow-scroll align-center ${navColor}`}>
+              key={shortid.generate()}
+              className={`${textColor} absolute ${
+                handleShow ? "h-[88vh]" : "h-[95vh]"
+              } w-[75vw] min-w-[320px] py-3 px-4 top-0 mt-14 z-50 flex flex-col gap-3 overflow-scroll align-center ${navColor}`}>
               {navLinks.map((section) => {
                 if (!section.subsections) {
                   return (
                     <Link
+                      key={shortid.generate()}
                       className={`h-9 pb-2 text-base md:text-lg flex justify-start items-center border-b border-1 border-solid border-[${burgerColor}]`}
                       to={`${section.mainLink}`}>
                       {section.main.toUpperCase()}
@@ -109,8 +120,9 @@ function MobileSidebar({
                   );
                 } else {
                   return (
-                    <div>
+                    <div key={shortid.generate()}>
                       <Accordion
+                        key={shortid.generate()}
                         title={section.main}
                         burgerColor={burgerColor}
                         mobileActiveColor={mobileActiveColor}
@@ -119,10 +131,13 @@ function MobileSidebar({
                         {section.subsections.map((subsection) => {
                           if (!subsection.title) {
                             return (
-                              <div className="flex flex-col gap-2 mt-2 px-2">
+                              <div
+                                key={shortid.generate()}
+                                className="flex flex-col gap-2 mt-2 px-2">
                                 {subsection.subTitles.map((subtitle) => {
                                   return (
                                     <Link
+                                      key={shortid.generate()}
                                       className={`pb-1 border-b text-base flex items-center h-9 border-1 border-solid border-[${burgerColor}]`}
                                       to={subtitle.link}>
                                       {subtitle.title}
@@ -133,8 +148,11 @@ function MobileSidebar({
                             );
                           } else {
                             return (
-                              <div className="px-2 py-1">
+                              <div
+                                key={shortid.generate()}
+                                className="px-2 py-1">
                                 <Accordion
+                                  key={shortid.generate()}
                                   title={subsection.title}
                                   burgerColor={burgerColor}
                                   mobileBorderColor={mobileBorderColor}
@@ -142,8 +160,11 @@ function MobileSidebar({
                                   navColor={navColor}>
                                   {subsection.subTitles.map((subtitle) => {
                                     return (
-                                      <div className="px-2">
+                                      <div
+                                        key={shortid.generate()}
+                                        className="px-2">
                                         <Link
+                                          key={shortid.generate()}
                                           className={`pb-1 my-1 text-base border-b flex items-center h-9 border-1 border-solid border-[${burgerColor}]`}
                                           to={subtitle.link}>
                                           {subtitle.title}
@@ -163,7 +184,7 @@ function MobileSidebar({
               })}
               <button
                 title="spacer"
-                className={`h-24 cursor-default flex-1`}></button>
+                className={`cursor-default grow shrink-0`}></button>
             </div>
           </Transition>
         </div>

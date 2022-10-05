@@ -2,6 +2,7 @@ import DesktopNavChild from "./DesktopNavChild";
 import {NavLinks} from "../config/Interfaces";
 import {Link} from "react-router-dom";
 import DesktopNavChildContent from "./DesktopNavChildContent";
+import shortid from "shortid";
 
 interface Props {
   navColor: string;
@@ -28,6 +29,7 @@ function DesktopNavContainer({
         if (!section.subsections) {
           return (
             <Link
+              key={shortid.generate()}
               className={`h-12 md:text-xs 2xl:text-base ${textColor} flex justify-start items-center ${hoverColor}`}
               to={`${section.mainLink}`}>
               {section.main.toUpperCase()}
@@ -36,6 +38,7 @@ function DesktopNavContainer({
         } else {
           return (
             <DesktopNavChild
+              key={shortid.generate()}
               title={section.main}
               navColor={navColor}
               textColor={textColor}
@@ -43,10 +46,13 @@ function DesktopNavContainer({
               {section.subsections.map((subsection) => {
                 if (!subsection.title) {
                   return (
-                    <div className="flex flex-col p-6 gap-3">
+                    <div
+                      key={shortid.generate()}
+                      className="flex flex-col p-6 gap-3">
                       {subsection.subTitles.map((subtitle) => {
                         return (
                           <Link
+                            key={shortid.generate()}
                             className={`text-base ${textColor} ${hoverColor} flex items-center h-full`}
                             to={subtitle.link}>
                             {subtitle.title}
@@ -57,12 +63,16 @@ function DesktopNavContainer({
                   );
                 } else {
                   return (
-                    <div className="flex flex-col flex-wrap p-6 gap-3">
+                    <div
+                      key={shortid.generate()}
+                      className="flex flex-col flex-wrap p-6 gap-3">
                       <div
+                        key={shortid.generate()}
                         className={`${textColor} flex text-xs lg:text-base flex-start border-b pb-2`}>
                         {subsection.title.toUpperCase()}
                       </div>
                       <DesktopNavChildContent
+                        key={shortid.generate()}
                         subtitles={subsection.subTitles}
                         hoverColor={hoverColor}
                         textColor={textColor}

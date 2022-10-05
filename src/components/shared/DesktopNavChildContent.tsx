@@ -1,5 +1,6 @@
 import {Link} from "react-router-dom";
 import {Subtitles} from "../config/Interfaces";
+import shortid from "shortid";
 
 interface Props {
   navColor: string;
@@ -18,8 +19,9 @@ function DesktopNavChildContent({
     <div className="flex flex-col gap-3">
       {subtitles.map((subtitle) => {
         return (
-          <div>
+          <div key={shortid.generate()}>
             <Link
+              key={shortid.generate()}
               className={`text-base ${textColor} ${hoverColor} flex items-center h-full`}
               to={subtitle.link}>
               {subtitle.title}
