@@ -1,7 +1,7 @@
 import NavigationBar from "../../components/shared/NavigationBar";
 import config from "../../components/config/ApexConfig";
-import FooterEa from "../../components/core/FooterEa";
 import LocalFooterEa from "../../components/core/LocalFooterEa";
+import ApexHeroSection from "./apex-components/ApexHeroSection";
 
 function ApexHomepage() {
   return (
@@ -22,7 +22,7 @@ function ApexHomepage() {
         mobileSidebarHeaderColor={config.mobileSidebarHeaderColor}
         free={config.free}
       />
-      <div className="bg-red-400 h-screen"></div>
+      <ApexHeroSection />
       <LocalFooterEa />
     </div>
   );
