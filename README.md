@@ -58,7 +58,7 @@ there is 1 person that manage the work assigning tasks to the other member of th
 
 we also have a whatsapp group for comunicating important thing and we usually meet on discord every while
 
-# about the sructure
+# about the structure
 
 we have an src folder where all the components are written, inside of it there is an index.css importing tailwind, an index.tsx that initialize a root for react and render browserRouter and inside of it a Routing component in which will be inserted all routes of the pages for the website. outside of the Routing we insert all components that doesn't need to get rerendered because they are always present (for example the footer and the top navbar)
 
