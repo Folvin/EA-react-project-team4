@@ -7,6 +7,7 @@ export interface Config {
   mobileBorderColor: string;
   buyButtonColor: string;
   burgerColor: string;
+  mainPage: string;
   logo: string;
   font: string;
   free: boolean;
