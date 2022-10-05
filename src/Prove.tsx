@@ -1,11 +1,4 @@
-import Button from "./components/shared/Button";
-
 function Prove() {
-  return <div>
-    <Button url="#" >
-      aa
-    </Button>
-  </div>;
+  return <div></div>;
 }
-
 export default Prove;
