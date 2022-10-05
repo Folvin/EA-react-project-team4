@@ -6,16 +6,16 @@ function FirstSectionHP() {
     <div>
       <div className="relative flex justify-center items-end">
         <img
-          className="absolute md:z-10 xl:z-0 -top-10"
+          className="absolute md:z-[2] xl:z-0 -top-10"
           src="https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/images/2021/09/lir-homepage-accolades-it-it.png.adapt.crop3x2.1455w.png"
           alt=""
         />
         <img
-          className="absolute xl:z-10"
+          className="absolute xl:z-[2]"
           src="https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/images/2021/09/lir-homepage-accolades-it-it.png.adapt.crop16x9.1920w.png"
           alt=""
         />
-        <div className="absolute w-[55%] mb-[5%] z-10">
+        <div className="absolute w-[55%] mb-[5%] z-[2]">
           <h2 className="hidden md:block text-xl text-center text-white lg:text-2xl">
             Ora disponibile su tutte le piattaforme, inclusi PC e Nintendo
             Switch.

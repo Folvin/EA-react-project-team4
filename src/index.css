@@ -12,12 +12,17 @@
   src: url("./pages/apex-legends/font/Teko-Regular.ttf");
 }
 
+@font-face {
+  font-family: "baskerville";
+  src: url("./pages/lost-in-random/font/Baskerville.otf");
+}
+
 input:focus {
   outline: none;
 }
 
 *::-webkit-scrollbar {
-  width: 6px;
+  width: 10px;
   border-radius: 2px;
 }
 
