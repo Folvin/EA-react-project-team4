@@ -26,7 +26,7 @@ function DesktopNavContainer({
   navLinks,
 }: Props) {
   return (
-    <div className="lg:flex font-teko hidden gap-4 justify-center items-center">
+    <div className={`lg:flex ${font} hidden gap-4 justify-center items-center`}>
       {navLinks.map((section) => {
         if (!section.subsections) {
           return (
@@ -42,13 +42,18 @@ function DesktopNavContainer({
             <DesktopNavChild
               key={shortid.generate()}
               title={section.main}
+              burgerColor={burgerColor}
               navColor={navColor}
               textColor={textColor}
               hoverColor={hoverColor}>
               {section.subsections.map((subsection) => {
                 if (!subsection.title) {
                   return (
-                    <div key={shortid.generate()} className="flex flex-col p-6 gap-3">
+                    <div
+                      key={shortid.generate()}
+                      className={`border rounded border-solid ${
+                        burgerColor === "#FFFFFF" ? "border-white" : "border-black"
+                      } flex flex-col p-6 gap-3`}>
                       {subsection.subTitles.map((subtitle) => {
                         return (
                           <Link
@@ -63,7 +68,9 @@ function DesktopNavContainer({
                   );
                 } else {
                   return (
-                    <div key={shortid.generate()} className="flex flex-col flex-wrap p-6 gap-3">
+                    <div
+                      key={shortid.generate()}
+                      className={`flex rounded flex-col flex-wrap p-6 gap-3`}>
                       <div
                         key={shortid.generate()}
                         className={`${textColor} flex text-base lg:text-lg flex-start border-b pb-2`}>

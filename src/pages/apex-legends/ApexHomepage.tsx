@@ -1,5 +1,5 @@
 import NavigationBar from "../../components/shared/NavigationBar";
-import config from "../../components/config/ApexConfig";
+import config from "../../components/config/FifaConfig";
 import FooterEa from "../../components/core/FooterEa";
 
 function ApexHomepage() {
@@ -20,7 +20,7 @@ function ApexHomepage() {
         mobileSidebarHeaderColor={config.mobileSidebarHeaderColor}
         free={config.free}
       />
-      <div className="h-screen"></div>
+      <div className="bg-red-400 h-screen"></div>
       <FooterEa />
     </div>
   );
