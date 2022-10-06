@@ -15,7 +15,7 @@ function VideoSection() {
           Your browser does not support the video tag.
       </video>
 
-      <Section className="absolute md:top-[150px] bg-black md:bg-transparent pt-16 2xl:pt-32 md:pt-2">
+      <Section className="md:absolute md:top-[150px] bg-black md:bg-transparent pt-16 2xl:pt-32 md:pt-2">
         <div>
           {/* Logo F1 manage */}
           <a href=' '>
@@ -46,6 +46,7 @@ function VideoSection() {
         </div>
 
       </Section>
+      
     </div>
   )
 }

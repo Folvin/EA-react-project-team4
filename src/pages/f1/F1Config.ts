@@ -1,6 +1,7 @@
 import {Config} from '../../components/config/Interfaces';
 
 
+
 //Hero banner configuration
 export const F1ConfigBanner = {
   logo: 'assets/pages/f1-ea/f122-black-logo.png',
@@ -49,6 +50,8 @@ export const F1ConfigVideoSection = {
     description: 'Logo F122 white'
   } 
 }
+
+
 
 const F1Config: Config = {
   navColor: "bg-black" /* classe tailwind */,
