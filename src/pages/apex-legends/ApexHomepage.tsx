@@ -1,6 +1,6 @@
 import NavigationBar from "../../components/shared/NavigationBar";
 import config from "../../components/config/ApexConfig";
-import FooterEa from "../../components/core/FooterEa";
+import LocalFooterEa from "../../components/shared/PreFooter";
 
 function ApexHomepage() {
   return (
@@ -11,6 +11,7 @@ function ApexHomepage() {
         burgerColor={config.burgerColor}
         font={config.font}
         logo={config.logo}
+        mainPage={config.mainPage}
         hoverColor={config.hoverColor}
         mobileActiveColor={config.mobileActiveColor}
         mobileBorderColor={config.mobileBorderColor}
@@ -21,7 +22,7 @@ function ApexHomepage() {
         free={config.free}
       />
       <div className="bg-red-400 h-screen"></div>
-      <FooterEa />
+      <LocalFooterEa />
     </div>
   );
 }

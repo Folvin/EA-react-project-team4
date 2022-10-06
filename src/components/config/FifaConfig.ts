@@ -11,8 +11,9 @@ const FifaConfig: Config = {
   font: "",
   mobileSidebarHeaderColor:
     "bg-[#F3F3F3]" /* bg-[#161616] per le navbar nere e bg-[#F3F3F3] per le navbar bianche*/,
+  mainPage: "/homepage/fifa" /* Determina l'url della mainpage del gioco */,
   burgerColor: "#000000" /* #FFFFFF per navbar nere e #000000 per navbar bianche */,
-  logo: "assets/core/EANavIcon.png",
+  logo: "assets/core/fifa23-logo-nav.svg",
   free: false /* Determina se il gioco è free to play o no e cambia il testo del BuyButton nella navbar */,
   navLinks: [
     {

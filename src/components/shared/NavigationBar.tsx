@@ -1,8 +1,9 @@
-import NavBuyButton from "./NavBuyButton";
+import NavBuyButton from "./low-order-component/NavBuyButton";
 import {NavLinks, buyButtonConfig} from "../config/Interfaces";
-import MobileSidebar from "./MobileSidebar";
-import DesktopNavContainer from "./DesktopNavContainer";
-import useHideNavbar from "../../hooks/core/useHideNavbar";
+import MobileSidebar from "./low-order-component/MobileSidebar";
+import DesktopNavContainer from "./low-order-component/DesktopNavContainer";
+import useHideNavbar from "../../hooks/useHideLoginBar";
+import {Link} from "react-router-dom";
 
 interface Props {
   navColor: string;
@@ -14,6 +15,8 @@ interface Props {
   font: string;
   logo: string;
   free: boolean;
+  borderColor?: string;
+  mainPage: string;
   buyButtonConfig: buyButtonConfig;
   buyButtonColor: string;
   navLinks: NavLinks[];
@@ -27,6 +30,7 @@ function NavigationBar({
   mobileBorderColor,
   mobileActiveColor,
   burgerColor,
+  mainPage,
   hoverColor,
   logo,
   free,
@@ -43,7 +47,7 @@ function NavigationBar({
     <div
       className={`h-14 w-full flex justify-between fixed ${
         handleShow ? "top-10" : "top-0"
-      } z-10 gap-x-8 items-center ${navColor}`}>
+      } z-10 gap-x-2 sm:gap-x-8 items-center ${navColor}`}>
       <div className="flex gap-3 items-center">
         {/* Mobile sidebar */}
         <MobileSidebar
@@ -58,7 +62,9 @@ function NavigationBar({
           navLinks={navLinks}
           mobileSidebarHeaderColor={mobileSidebarHeaderColor}
         />
-        <img className="h-6 w-12 mr-8 lg:ml-12" src={`${logo}`} alt="" />
+        <Link className="h-14 flex min-w-[80px] items-center lg:max-w-[15%] xl:max-w-none" to={`${mainPage}`}>
+          <img className="h-8 object-contain w-full" src={`${logo}`} alt="" />
+        </Link>
         <DesktopNavContainer
           navColor={navColor}
           font={font}
