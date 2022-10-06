@@ -3,20 +3,17 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import {BrowserRouter} from "react-router-dom";
 import Routing from "./Routing";
-import Prove from "./Prove";
-import FooterEa from "./components/core/FooterEa";
-import NavBarEA from "./components/core/NavBarEA";
+import Footer from "./components/core/Footer";
+import LoginBar from "./components/core/LoginBar";
 
-const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <NavBarEA />
-      <Prove />
+      <LoginBar />
+      <div className="h-[96px]"></div>
       <Routing />
-      <FooterEa />
+      <Footer />
     </BrowserRouter>
   </React.StrictMode>
 );
