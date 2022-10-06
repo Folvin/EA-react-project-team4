@@ -21,7 +21,7 @@ function FirstSectionHP() {
           </h2>
 
           <div className="hidden md:flex justify-center gap-x-5 mt-5 ">
-            <Button url="#" className="bg-[#4D4A8A] border-[#4D4A8A]">
+            <Button url="#" className="bg-[#4D4A8A] border-[#4D4A8a]">
               <div className="text-white lg:text-lg">Guarda il trailer</div>
               <svg
                 viewBox="0 0 16 16"
