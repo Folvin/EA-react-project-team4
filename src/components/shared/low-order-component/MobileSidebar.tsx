@@ -39,7 +39,7 @@ function MobileSidebar({
 
   /* Custom Hook that handles the visibility for the MobileSidebar component and the overlay under it */
 
-  const {sidebarOpen, isOverlayOpen, handleToggle} = useMobileSidebar(sidebarRef);
+  const {sidebarOpen, isOverlayOpen, handleToggle, removeOverflow} = useMobileSidebar(sidebarRef);
 
   /* Custom hook that handles the hiding and showing of the NavBarEA on scroll */
 
@@ -112,6 +112,7 @@ function MobileSidebar({
                   return (
                     <Link
                       key={shortid.generate()}
+                      onClick={removeOverflow}
                       className={`h-9 pb-2 text-base md:text-lg flex justify-start items-center border-b border-1 border-solid border-[${burgerColor}]`}
                       to={`${section.mainLink}`}>
                       {section.main.toUpperCase()}
@@ -136,6 +137,7 @@ function MobileSidebar({
                                 {subsection.subTitles.map((subtitle) => {
                                   return (
                                     <Link
+                                      onClick={removeOverflow}
                                       key={shortid.generate()}
                                       className={`pb-1 font-tt-regular border-b text-sm flex items-center h-9 border-1 border-solid border-[${burgerColor}]`}
                                       to={subtitle.link}>
@@ -159,6 +161,7 @@ function MobileSidebar({
                                     return (
                                       <div key={shortid.generate()} className="px-2">
                                         <Link
+                                          onClick={removeOverflow}
                                           key={shortid.generate()}
                                           className={`pb-1 font-tt-regular my-1 text-sm border-b flex items-center h-9 border-1 border-solid border-[${burgerColor}]`}
                                           to={subtitle.link}>
