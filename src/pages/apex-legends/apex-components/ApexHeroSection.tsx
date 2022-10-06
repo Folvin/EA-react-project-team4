@@ -8,14 +8,11 @@ function ApexHeroSection() {
       <img className="md:hidden" alt="hero" src="assets/pages/apex-legends/hero-mobile.png" />
       <Section className="relative md:absolute md:top-[4%] md:-left-[3%] lg:top-[10%] lg:-left-[5%] xl:top-[14%] xl:left-[0%] 2xl:left-[6%] bg-black md:bg-transparent pb-8 md:py-0">
         <div className="flex flex-col items-center gap-3 justify-center">
-          <a href=" ">
-            <img
-              className="min-w-[120px] md:w-[200px] lg:w-[250px] xl:w-[320px] 2xl:w-[400px]"
-              src="assets/core/apex-hero-medium-logo-light.svg"
-              alt="logo-apex"
-            />
-          </a>
-
+          <img
+            className="min-w-[120px] md:w-[200px] lg:w-[250px] xl:w-[320px] 2xl:w-[400px]"
+            src="assets/core/apex-hero-medium-logo-light.svg"
+            alt="logo-apex"
+          />
           <div
             className={`font-tt-regular flex flex-col gap-y-4 text-white text-center md:w-[350px] xl:w-[550px]`}>
             <div className={`2xl:text-xl text-base md:text-lg`}>
