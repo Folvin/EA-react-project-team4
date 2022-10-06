@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
-import SelectBox from "../shared/SelectBox";
-import TextWrap from "../shared/TextWrap";
+import SelectBox from "../../shared/SelectBox";
+import TextWrap from "../../shared/TextWrap";
 import SelectBoxData from "./SelectBoxData";
 
 const nations = [

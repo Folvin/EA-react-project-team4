@@ -1,4 +1,4 @@
-import LocalFooterEa from "../../components/core/LocalFooterEa";
+import LocalFooterEa from "../../components/shared/PreFooter";
 import NavigationBar from "../../components/shared/NavigationBar";
 import F1Config from "./F1Config";
 import HeroBanner from "./HeroBanner";

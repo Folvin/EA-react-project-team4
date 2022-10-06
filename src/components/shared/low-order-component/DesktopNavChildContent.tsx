@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import {Subtitles} from "../config/Interfaces";
+import {Subtitles} from "../../config/Interfaces";
 import shortid from "shortid";
 
 interface Props {

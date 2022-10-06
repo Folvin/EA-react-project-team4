@@ -1,8 +1,8 @@
-import NavBuyButton from "./NavBuyButton";
+import NavBuyButton from "./low-order-component/NavBuyButton";
 import {NavLinks, buyButtonConfig} from "../config/Interfaces";
-import MobileSidebar from "./MobileSidebar";
-import DesktopNavContainer from "./DesktopNavContainer";
-import useHideNavbar from "../../hooks/core/useHideNavbar";
+import MobileSidebar from "./low-order-component/MobileSidebar";
+import DesktopNavContainer from "./low-order-component/DesktopNavContainer";
+import useHideNavbar from "../../hooks/useHideLoginBar";
 import {Link} from "react-router-dom";
 
 interface Props {

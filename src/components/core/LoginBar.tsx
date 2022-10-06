@@ -1,9 +1,9 @@
 import {useRef} from "react";
 import {Link} from "react-router-dom";
-import useHideNavbar from "../../hooks/core/useHideNavbar";
-import useNavBarEAHook from "../../hooks/core/useNavBarEAHook";
-import NavHelp from "./NavHelp";
-import NavUserNotLoggedIn from "./NavUserNotLoggedIn";
+import useHideLoginBar from "../../hooks/useHideLoginBar";
+import useLoginBar from "../../hooks/useLoginBar";
+import LoginHelp from "./low-order-component/LoginHelp";
+import LoginNotLoggedIn from "./low-order-component/LoginNotLoggedIn";
 
 function NavBarEA() {
   /* Ref used to handle the function in the hook that handles the closing of the menus when clicking outside */
@@ -12,11 +12,11 @@ function NavBarEA() {
 
   /* Custom hook that handles the hiding and showing of the NavBarEA on scroll */
 
-  const {handleShow} = useHideNavbar();
+  const {handleShow} = useHideLoginBar();
 
   /* Custom Hook that handles all of the code for the NavBarEA component and all of its children */
 
-  const {userMenu, helpMenu, handleToggle} = useNavBarEAHook(menuRef);
+  const {userMenu, helpMenu, handleToggle} = useLoginBar(menuRef);
 
   return (
     <div className="font-tt-regular" ref={menuRef}>
@@ -49,9 +49,9 @@ function NavBarEA() {
       </div>
       <div>
         {/* User Menu Component */}
-        <NavUserNotLoggedIn pos={userMenu} handleToggle={handleToggle} />
+        <LoginNotLoggedIn pos={userMenu} handleToggle={handleToggle} />
         {/* Help Area Component */}
-        <NavHelp pos={helpMenu} handleToggle={handleToggle} />
+        <LoginHelp pos={helpMenu} handleToggle={handleToggle} />
       </div>
     </div>
   );

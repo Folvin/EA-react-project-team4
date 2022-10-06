@@ -1,5 +1,5 @@
-import CardGrid from "../shared/CardGrid";
-import EaNavButton from "./EaNavButton";
+import CardGrid from "../../shared/CardGrid";
+import EaNavButton from "./LoginButton";
 
 interface NavUser {
     pos: string,

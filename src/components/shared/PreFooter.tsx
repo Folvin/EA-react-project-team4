@@ -1,7 +1,7 @@
-import Section from "../shared/Section";
-import LocalFooterLinks from "./LocalFooterLinks";
-import LocalFooterConditions from "./LocalFooterConditions";
-import LocalFooterSocialLinks from "./LocalFooterSocialLinks";
+import Section from "./Section";
+import LocalFooterLinks from "./low-order-component/PreFooterLinks";
+import LocalFooterConditions from "./low-order-component/PreFooterConditions";
+import LocalFooterSocialLinks from "./low-order-component/PreFooterSocialLinks";
 import config from "../config/LocalFooterHome";
 
 function LocalFooterEa() {

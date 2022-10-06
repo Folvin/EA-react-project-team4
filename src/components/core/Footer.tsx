@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
 import Section from "../shared/Section";
-import TextAndSelect from "./TextAndSelect";
+import TextAndSelect from "./low-order-component/TextAndSelect";
 
 function FooterEa() {
   return (

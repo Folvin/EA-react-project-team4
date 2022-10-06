@@ -1,4 +1,4 @@
-import {Social as SocialInterface} from '../config/Interfaces';
+import {Social as SocialInterface} from '../../config/Interfaces';
 
 
 function LocalFooterSocialLinks({arr}: {arr: Array<SocialInterface>} ) {

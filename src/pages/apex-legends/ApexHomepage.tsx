@@ -1,6 +1,6 @@
 import NavigationBar from "../../components/shared/NavigationBar";
 import config from "../../components/config/ApexConfig";
-import LocalFooterEa from "../../components/core/LocalFooterEa";
+import LocalFooterEa from "../../components/shared/PreFooter";
 
 function ApexHomepage() {
   return (
