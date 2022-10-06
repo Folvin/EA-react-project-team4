@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
-import SelectBox from "../shared/SelectBox";
-import TextWrap from "../shared/TextWrap";
+import SelectBox from "../../shared/SelectBox";
+import TextWrap from "../../shared/TextWrap";
 import SelectBoxData from "./SelectBoxData";
 
 const nations = [
@@ -86,7 +86,7 @@ const language = [
 function TextAndSelect() {
   return (
     <div className="flex flex-col grow">
-      <div className="flex flex-col lg:flex-row gap-4">
+      <div className="flex flex-col lg:flex-row gap-4 lg:items-center">
         {/* top text list and select box */}
 
         <div className="grow-[5] shrink-0 basis-0">
@@ -110,7 +110,7 @@ function TextAndSelect() {
             <SelectBoxData title="Prezzi Regionali" arr={nations} />
           </SelectBox>
 
-          <SelectBox className="flex-1 z-[1]">
+          <SelectBox className="flex-1 z-[2]">
             <SelectBoxData title="Lingua" arr={language} />
           </SelectBox>
         </div>

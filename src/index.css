@@ -2,16 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "TT-Lakes Condensed Regular";
+  src: url("../public/fonts/TT-Lakes-Condensed-Regular.woff2");
+}
+@font-face {
+  font-family: "Teko";
+  src: url("./pages/apex-legends/font/Teko-Regular.ttf");
+}
+@font-face {
+  font-family: "f1-bold";
+  src: url("../public/assets/pages/f1-ea/font/Formula1-Bold_web_0.ttf");
+}
+@font-face {
+  font-family: "f1-regular";
+  src: url("../public/assets/pages/f1-ea/font/Formula1-Regular_web_0.ttf");
+}
+@font-face {
+  font-family: "f1-wide";
+  src: url("../public/assets/pages/f1-ea/font/Formula1-Wide_web_0.ttf");
+}
 
-@font-face {
-  font-family: 'f1-bold';
-  src: url('../public/assets/pages/f1-ea/font/Formula1-Bold_web_0.ttf');
+input:focus {
+  outline: none;
 }
-@font-face {
-  font-family: 'f1-regular';
-  src: url('../public/assets/pages/f1-ea/font/Formula1-Regular_web_0.ttf');
+
+button {
+  letter-spacing: inherit;
 }
-@font-face {
-  font-family: 'f1-wide';
-  src: url('../public/assets/pages/f1-ea/font/Formula1-Wide_web_0.ttf');
+
+*::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 2px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(131, 131, 131);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-track {
+  background: #cdcdcd;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(73, 73, 73, 0.702);
 }

@@ -1,228 +1,127 @@
-import {Config} from '../../components/config/Interfaces';
-
+import {Config} from "../../components/config/Interfaces";
 
 
 //Hero banner configuration
 export const F1ConfigBanner = {
-  logo: 'assets/pages/f1-ea/f122-black-logo.png',
-  background: 'bg-f1-orange-banner',
+  logo: "assets/pages/f1-ea/f122-black-logo.png",
+  background: "bg-f1-orange-banner",
   title: {
-    value: 'SPETTACOLARI LIVREE DEBUTTANO NELLA SERIE 2 DEL PASS PODIO.',
-    font: 'font-f1-bold',
+    value: "SPETTACOLARI LIVREE DEBUTTANO NELLA SERIE 2 DEL PASS PODIO.",
+    font: "font-f1-bold",
   },
   button: {
-    value: 'Altre informazioni',
-    font: 'font-f1-regular',
-    bgColor: 'bg-slate-100',  //#f1f5f9
-  }
+    value: "Altre informazioni",
+    font: "font-f1-regular",
+    bgColor: "bg-slate-100", //#f1f5f9
+  },
 };
 
 //Video section configuration
 export const F1ConfigVideoSection = {
   button: {
     buttonOne: {
-      value: 'Acquista ora',
-      font: 'font-f1-regular',
-      bgColor: 'bg-orange-400'
+      value: "Acquista ora",
+      font: "font-f1-regular",
+      bgColor: "bg-orange-400",
     },
     buttonTwo: {
-      value: 'Guarda il trailer',
-      font: 'font-f1-regular',
-      bgColor: ''
+      value: "Guarda il trailer",
+      font: "font-f1-regular",
+      bgColor: "",
     },
   },
   article: {
     title: {
-       value: "GAREGGIA CON LA LIVREA SPECIALE PER IL GP D'ITALIA",
-       font: 'font-f1-bold',
+      value: "GAREGGIA CON LA LIVREA SPECIALE PER IL GP D'ITALIA",
+      font: "font-f1-bold",
     },
-    subTitle: { 
-       value: 'Disponibile ora nel gioco per tutti i giocatori',
-       font: 'font-f1-regular'
+    subTitle: {
+      value: "Disponibile ora nel gioco per tutti i giocatori",
+      font: "font-f1-regular",
     },
   },
   video: {
-    url: 'https://media.contentapi.ea.com/content/dam/ea/f1/f1-2022/common/homepage-hero-ferrari/f122-ferrari-homepage-3x2-l-m-1455x970.mp4',
-    type: 'video/mp4',
-  }, 
+    url: "https://media.contentapi.ea.com/content/dam/ea/f1/f1-2022/common/homepage-hero-ferrari/f122-ferrari-homepage-3x2-l-m-1455x970.mp4",
+    type: "video/mp4",
+    poster: "assets/pages/f1-ea/video-fallback.jpg"
+  },
   logo: {
-    url: 'assets/pages/f1-ea/f122-black-logo.png',
-    description: 'Logo F122 white'
-  } 
-}
+    url: "assets/pages/f1-ea/f122-black-logo.png",
+    description: "Logo F122 white",
+  },
+};
 
 
 
 const F1Config: Config = {
-  navColor: "bg-black" /* classe tailwind */,
-  textColor: "text-white" /* classe tailwind */,
+  navColor: "bg-white" /* classe tailwind */,
+  textColor: "text-black" /* classe tailwind */,
   hoverColor:
-    "hover:text-red-600" /* hoverColor e buyButtonColor corrispondono sempre, ma sono separati perché usano due classi tailwind diverse */,
-  buyButtonColor: "bg-red-600",
-  burgerColor: "#FFFFFF",
-  logo: "assets/core/EANavIcon.png",
+    "hover:text-[#FF9A3A]" /* hoverColor e buyButtonColor corrispondono sempre, ma sono separati perché usano due classi tailwind diverse */,
+  mobileActiveColor: "hover:text-[#FF9A3A]",
+  mobileBorderColor: "border-[#FF9A3A]",
+  buyButtonColor: "bg-[#FF9A3A]",
+  font: "font-f1-regular",
+  mainPage: "/homepage/F1",
+  mobileSidebarHeaderColor: "bg-[#F3F3F3]",
+  burgerColor: "#000000",
+  logo: "assets/pages/f1-ea/navbar-logo.png",
+  free: false,
   navLinks: [
     {
-      main: "Informazioni",
+      main: "PANORAMICA SUL GIOCO",
       /*       mainLink: "", */
       subsections: [
         {
-          title: "Panoramica",
           subTitles: [
             {
-              title: "Apex Legends",
-              link: "https://www.ea.com/it-it/games/apex-legends/about",
+              title: "Funzioni",
+              link: "https://www.ea.com/it-it/games/f1/f1-22/game-features",
             },
             {
-              title: "Leggende",
-              link: "https://www.ea.com/it-it/games/apex-legends/about/characters",
+              title: "Specifiche PC",
+              link: "https://www.ea.com/it-it/games/f1/f1-22/pc-system-requirements",
             },
             {
-              title: "Mappe",
-              link: "https://www.ea.com/it-it/games/apex-legends/maps",
-            },
-            {
-              title: "Domande Frequenti",
-              link: "https://www.ea.com/it-it/games/apex-legends/about/frequently-asked-questions",
-            },
-            {
-              title: "Requisiti PC",
-              link: "https://www.ea.com/it-it/games/apex-legends/about/pc-system-requirements",
-            },
-            {
-              title: "Riconoscimenti",
-              link: "https://www.ea.com/it-it/games/apex-legends/credits",
-            },
-            {
-              title: "Accessibilità",
-              link: "https://www.ea.com/it-it/able/resources/apex-legends",
-            },
-          ],
-        },
-        {
-          title: "Negozio",
-          subTitles: [
-            {
-              title: "Edizione Champion",
-              link: "https://www.ea.com/it-it/games/apex-legends/legend-editions/champion-edition",
+              title: "Dual Entitlement",
+              link: "https://www.ea.com/it-it/games/f1/f1-22/dual-entitlement",
             },
           ],
         },
       ],
     },
     {
-      main: "Modalità",
-      /*       mainLink: "", */
+      main: "NOTIZIE E AGGIORNAMENTI",
+
       subsections: [
         {
-          /*           title: "", */
           subTitles: [
             {
-              title: "Arene",
-              link: "https://www.ea.com/it-it/games/apex-legends/modes/arenas",
+              title: "Notizie",
+              link: "https://www.ea.com/it-it/games/f1/f1-22/news",
             },
             {
-              title: "Battle Royale",
-              link: "https://www.ea.com/it-it/games/apex-legends/modes/battle-royale",
+              title: "Note sulla patch",
+              link: "https://www.ea.com/it-it/games/f1/f1-22/patch-updates",
             },
           ],
         },
       ],
     },
+
     {
-      main: "Stagioni",
-      mainLink: "https://www.ea.com/it-it/games/apex-legends/hunted",
-    },
-    {
-      main: "Pass Battaglia",
-      mainLink: "https://www.ea.com/it-it/games/apex-legends/battle-pass",
-    },
-    {
-      main: "Notizie e Contenuti Multimediali",
-      /*       mainLink: "", */
+      main: "VALUTAZIONI PILOTI",
       subsections: [
         {
-          /*           title: "", */
           subTitles: [
             {
-              title: "Ultime Notizie",
-              link: "https://www.ea.com/it-it/games/apex-legends/news",
+              title: "Database valutazioni",
+              link: "https://www.ea.com/it-it/games/f1/f1-22/driver-ratings/ratings-database",
             },
+
             {
-              title: "Aggiornamenti di Gioco",
-              link: "https://www.ea.com/it-it/games/apex-legends/news#game-updates",
-            },
-            {
-              title: "Ultimi Contenuti Multimediali",
-              link: "https://www.ea.com/it-it/games/apex-legends/media",
-            },
-          ],
-        },
-      ],
-    },
-    {
-      main: "Community",
-      /*       mainLink: "", */
-      subsections: [
-        {
-          title: "Social",
-          subTitles: [
-            {
-              title: "Twitter",
-              link: "https://twitter.com/PlayApex",
-            },
-            {
-              title: "Instagram",
-              link: "https://www.instagram.com/playapex/",
-            },
-            {
-              title: "Facebook",
-              link: "https://www.facebook.com/playapex",
-            },
-            {
-              title: "Youtube",
-              link: "https://www.youtube.com/playapex",
-            },
-            {
-              title: "Twitch",
-              link: "https://www.twitch.tv/playapex",
-            },
-          ],
-        },
-        {
-          title: "Community",
-          subTitles: [
-            {
-              title: "Forum",
-              link: "https://answers.ea.com/t5/Apex-Legends/ct-p/apex-legends-it?profile.language=it",
-            },
-          ],
-        },
-        {
-          title: "Prodotti Ufficiali",
-          subTitles: [
-            {
-              title: "playapexshop.com",
-              link: "https://www.ea.com/it-it/games/apex-legends/apex-legends-shop",
-            },
-          ],
-        },
-      ],
-    },
-    {
-      main: "Competi",
-      /*       mainLink: "", */
-      subsections: [
-        {
-          /*           title: "", */
-          subTitles: [
-            {
-              title: "Competi",
-              link: "https://www.ea.com/it-it/games/apex-legends/compete",
-            },
-            {
-              title: "Linee Guida della Community",
-              link: "https://www.ea.com/it-it/games/apex-legends/community-tournament-guidelines",
+              title: "Informazioni sulle valutazion",
+              link: "https://www.ea.com/it-it/games/f1/f1-22/driver-ratings",
             },
           ],
         },
@@ -230,12 +129,10 @@ const F1Config: Config = {
     },
   ],
   buyButtonConfig: {
-    eaApp: "https://www.ea.com/it-it/games/apex-legends/buy/pc",
-    steam: "https://smarturl.it/apex-steam-unav",
-    ps4: "http://smarturl.it/apexlegends-ps4",
-    ps5: "https://store.playstation.com/product/EP0006-PPSA04874_00-APEXLEGENDRSPWN1",
-    xbox: "https://www.microsoft.com/p/APEX-Legends/BV9ML45J2Q5V",
-    switch: "https://smarturl.it/apex-std-ed-switch",
+    eaApp: "https://www.ea.com/it-it/games/f1/f1-22/buy/pc",
+    steam: "https://lnk.to/f122-steam",
+    ps4: "https://www.ea.com/it-it/games/f1/f1-22/buy/playstation",
+    ps5: "https://www.ea.com/it-it/games/f1/f1-22/buy/playstation",
   },
 };
 

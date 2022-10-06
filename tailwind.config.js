@@ -20,10 +20,12 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        'f1-bold': ['f1-bold', 'sans-serif'],
-        'f1-regular': ['f1-regular', 'sans-serif'],
-        'f1-wide': ['f1-wide', 'sans-serif'],
-      }
+        "tt-regular": ["tt-regular", "sans-serif"],
+        teko: ["teko", "sans-serif"],
+        "f1-bold": ["f1-bold", "sans-serif"],
+        "f1-regular": ["f1-regular", "sans-serif"],
+        "f1-wide": ["f1-wide", "sans-serif"],
+      },
     },
     colors: ({colors}) => ({
       inherit: colors.inherit,
@@ -54,7 +56,7 @@ module.exports = {
       pink: colors.pink,
       rose: colors.rose,
       eaBlack: {
-        100: '#121212',
+        100: "#121212",
       },
     }),
     columns: {
@@ -148,17 +150,13 @@ module.exports = {
     backgroundImage: {
       none: "none",
       "gradient-to-t": "linear-gradient(to top, var(--tw-gradient-stops))",
-      "gradient-to-tr":
-        "linear-gradient(to top right, var(--tw-gradient-stops))",
+      "gradient-to-tr": "linear-gradient(to top right, var(--tw-gradient-stops))",
       "gradient-to-r": "linear-gradient(to right, var(--tw-gradient-stops))",
-      "gradient-to-br":
-        "linear-gradient(to bottom right, var(--tw-gradient-stops))",
+      "gradient-to-br": "linear-gradient(to bottom right, var(--tw-gradient-stops))",
       "gradient-to-b": "linear-gradient(to bottom, var(--tw-gradient-stops))",
-      "gradient-to-bl":
-        "linear-gradient(to bottom left, var(--tw-gradient-stops))",
+      "gradient-to-bl": "linear-gradient(to bottom left, var(--tw-gradient-stops))",
       "gradient-to-l": "linear-gradient(to left, var(--tw-gradient-stops))",
-      "gradient-to-tl":
-        "linear-gradient(to top left, var(--tw-gradient-stops))",
+      "gradient-to-tl": "linear-gradient(to top left, var(--tw-gradient-stops))",
       "f1-orange-banner": "url('../public/assets/pages/f1-ea/orange_banner.jpg')",
       "f1-video": "url('../public/assets/pages/f1-ea/f122-video.mp4')",
     },
@@ -388,14 +386,7 @@ module.exports = {
         '"Segoe UI Symbol"',
         '"Noto Color Emoji"',
       ],
-      serif: [
-        "ui-serif",
-        "Georgia",
-        "Cambria",
-        '"Times New Roman"',
-        "Times",
-        "serif",
-      ],
+      serif: ["ui-serif", "Georgia", "Cambria", '"Times New Roman"', "Times", "serif"],
       mono: [
         "ui-monospace",
         "SFMono-Regular",
@@ -895,8 +886,7 @@ module.exports = {
       all: "all",
       DEFAULT:
         "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter",
-      colors:
-        "color, background-color, border-color, text-decoration-color, fill, stroke",
+      colors: "color, background-color, border-color, text-decoration-color, fill, stroke",
       opacity: "opacity",
       shadow: "box-shadow",
       transform: "transform",
