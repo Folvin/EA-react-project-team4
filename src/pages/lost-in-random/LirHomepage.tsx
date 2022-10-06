@@ -13,7 +13,6 @@ function LiRHomepage() {
     <div
       className="bg-fixed bg-[url(https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/common/lir-homepage-pg-bkg-xl.jpg.adapt.1920w.jpg)]"
       style={{fontFamily: "baskerville"}}>
-      <div className="h-[100px] w-full "></div>
       <NavigationBar
         mainPage={config.mainPage}
         navColor={config.navColor}
