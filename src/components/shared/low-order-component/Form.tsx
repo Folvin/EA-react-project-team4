@@ -80,7 +80,7 @@ function Form({buttonColor, bgColor, borderColor, textColor, bgCheck}: Props) {
         <div
           className={`${bgColor} ${borderColor} relative group border-2 rounded w-full md:w-1/2 h-16 flex justify-start flex-col focus-within:text-sm hover:scale-105 ease-in-out duration-200 `}>
           <div
-            className={`${bgColor} text-xl bottom z-10 indent-4 group-hover:text-sm text-gray-500  ease-in-out duration-200`}>
+            className={`${bgColor} text-xl bottom z-[1] indent-4 group-hover:text-sm text-gray-500  ease-in-out duration-200`}>
             Paese
           </div>
           <div className="absolute w-full top-4">

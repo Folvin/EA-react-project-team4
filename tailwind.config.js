@@ -22,6 +22,7 @@ module.exports = {
       fontFamily: {
         "tt-regular": ["tt-regular", "sans-serif"],
         teko: ["teko", "sans-serif"],
+        baskerville: ["baskerville", "sans-serif"],
         "f1-bold": ["f1-bold", "sans-serif"],
         "f1-regular": ["f1-regular", "sans-serif"],
         "f1-wide": ["f1-wide", "sans-serif"],
