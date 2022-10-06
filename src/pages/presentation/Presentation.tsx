@@ -10,16 +10,18 @@ import PresentationSection from "./PresentationSection";
 function Presentation() {
   const navigate = useNavigate();
   const eventHandler = (e: any) => {
-    const page = e.currentTarget.name
-    navigate(`/${page}`)
+    const page = e.currentTarget.name;
+    navigate(`/${page}`);
   };
 
   return (
-    <div className="absolute w-full bg-slate-200 z-[99999999] top-0">
-      <PresentationSection title="come siamo partiti?">
-        inizialmente non sapevamo fin da subito cosa fare quindi per decidere ci siamo incontrati
-        tutti quanti insieme per cominciare a capire cosa dovevamo fare, quindi innanzitutto abbiamo
-        creato il progetto in locale e successivamente su{" "}
+    <div className="absolute w-full bg-slate-600 z-[99999999] top-0">
+      <PresentationSection title="che cos'è questo progetto e come abbiamo iniziato">
+        questo è un progetto scolastico realizzato per develhope a scopo didattico. è una replica
+        del sito electronic arts, sviluppato in ambiente agile da un team composto da 4 studenti.{" "}
+        <br /> all'inizio non sapevamo fin da subito cosa fare quindi ci siamo incontrati e ci siamo
+        messi a discutere su come iniziare, quindi innanzitutto abbiamo creato il progetto in locale
+        e successivamente su{" "}
         <Anchor url="https://github.com/Folvin/ea-react-project-team4/tree/develop">github</Anchor>.
         <br />
         abbiamo deciso immediatamente di utilizzare sia typescript che tailwind essendo che era sia
@@ -110,10 +112,7 @@ function Presentation() {
         contenuto è possibile farlo senza andare a toccare il codice delle componenti che puo
         risultare piu complicato
         <div className="flex gap-2 mt-4">
-          <button
-            name="F1"
-            className="bg-[#ff9a3a] p-2 cursor-pointer"
-            onClick={eventHandler}>
+          <button name="F1" className="bg-[#ff9a3a] p-2 cursor-pointer" onClick={eventHandler}>
             Formula 1
           </button>
           <button
