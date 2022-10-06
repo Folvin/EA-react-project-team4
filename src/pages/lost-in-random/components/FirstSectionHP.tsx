@@ -1,5 +1,5 @@
-import Button from "../../components/shared/Button";
-import Section from "../../components/shared/Section";
+import Button from "../../../components/shared/Button";
+import Section from "../../../components/shared/Section";
 
 function FirstSectionHP() {
   return (
@@ -17,8 +17,7 @@ function FirstSectionHP() {
         />
         <div className="absolute w-[55%] mb-[5%] z-[2]">
           <h2 className="hidden md:block text-xl text-center text-white lg:text-2xl">
-            Ora disponibile su tutte le piattaforme, inclusi PC e Nintendo
-            Switch.
+            Ora disponibile su tutte le piattaforme, inclusi PC e Nintendo Switch.
           </h2>
 
           <div className="hidden md:flex justify-center gap-x-5 mt-5 ">
@@ -59,8 +58,7 @@ function FirstSectionHP() {
       <Section className="bg-[#161616]">
         <div className="md:hidden pt-7 pb-7 ">
           <h2 className="text-white text-center mb-5 text-xl ">
-            Ora disponibile su tutte le piattaforme, inclusi PC e Nintendo
-            Switch.
+            Ora disponibile su tutte le piattaforme, inclusi PC e Nintendo Switch.
           </h2>
           <Button url="#" className="bg-[#4D4A8A] border-[#4D4A8A] mb-5 m-auto">
             <div className="text-white">Guarda il trailer</div>

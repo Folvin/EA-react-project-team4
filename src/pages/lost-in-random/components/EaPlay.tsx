@@ -1,5 +1,5 @@
-import Button from "../../components/shared/Button";
-import Section from "../../components/shared/Section";
+import Button from "../../../components/shared/Button";
+import Section from "../../../components/shared/Section";
 
 function EaPlay() {
   return (

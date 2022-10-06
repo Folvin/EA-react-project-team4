@@ -1,12 +1,12 @@
-import EaPlay from "./EaPlay";
-import SecondSectionHomepage from "./SecondSectionHP";
-import TrailerHP from "./TrailerHP";
+import EaPlay from "./components/EaPlay";
+import SecondSectionHomepage from "./components/SecondSectionHP";
+import TrailerHP from "./components/TrailerHP";
 import "../../index.css";
-import FirstSectionHP from "./FirstSectionHP";
+import FirstSectionHP from "./components/FirstSectionHP";
 import Newsletter from "../../components/shared/Newsletter";
 import NavigationBar from "../../components/shared/NavigationBar";
 import config from "../../components/config/LostConfig";
-import UltimeNotizie from "./UltimeNotizieHP";
+import UltimeNotizie from "./components/UltimeNotizieHP";
 
 function LiRHomepage() {
   return (
