@@ -1,11 +1,11 @@
-
 import NavigationBar from "../../components/shared/NavigationBar";
-import F1Config, { F1ConfigLocalFooter } from "./F1Config";
+import F1Config, { F1ConfigHeroContent, F1ConfigLocalFooter } from "./F1Config";
 import HeroBanner from "./HeroBanner";
-
 import VideoSection from "./VideoSection";
 import F1LocalFooterEa from "./F1LocalFooter";
 import { containerCard, LoadMoreContent } from "./Card";
+import HeroContent from "./HeroContent";
+import F1Footer from "./F1Footer";
 
 function F1() {
   return (
@@ -30,10 +30,12 @@ function F1() {
       </div>
       <HeroBanner />
       <VideoSection />
-  
-        <LoadMoreContent container={containerCard} />
+      <LoadMoreContent container={containerCard} />
+      <HeroContent config={F1ConfigHeroContent} />
+    
+      <F1LocalFooterEa config={F1ConfigLocalFooter} className=''  />
+      <F1Footer className="" />
       
-      <F1LocalFooterEa config={F1ConfigLocalFooter} />
     </div>
   );
 }

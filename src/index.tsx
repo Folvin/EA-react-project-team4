@@ -17,7 +17,7 @@ root.render(
       {/* <Prove/> */}
       <Routing />
       {/* <F1 /> */}
-      <Footer />
+      {/* <Footer /> */}
     </BrowserRouter>
   </React.StrictMode>
 );

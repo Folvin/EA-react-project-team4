@@ -1,16 +1,15 @@
 import Section from "../../components/shared/Section";
-import LocalFooterSocialLinks from "../../components/shared/low-order-component/PreFooterSocialLinks";
 import { LocalFooterType } from "../../components/config/Interfaces";
 import F1LocalFooterConditions from "./F1LocalFooterConditions";
 import F1LocalFooterLinks from "./F1LocalFooterLinks";
 import F1LocalFooterSocialLinks from "./F1LocalFooterSocialLinks";
 
-function F1LocalFooterEa({ config }: { config: LocalFooterType }) {
+function F1LocalFooterEa({ config, className }: { config: LocalFooterType, className:string }) {
   return (
-    <Section className={`${config.bgColor} ${config.textColor} py-4`}>
-      <div>
+    <Section className={`${config.bgColor} ${config.textColor} ${className} py-4`}>
+      <div className="2xl:px-48">
 
-        <div className="pt-4 flex flex-col xl:flex-row justify-between ">
+        <div className="pt-4 flex flex-col xl:flex-row justify-between  ">
           <div>
             {config.title ? (
               <h1 className="pb-2 font-bold">{config.title}</h1>

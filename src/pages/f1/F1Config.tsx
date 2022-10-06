@@ -1,9 +1,39 @@
 import { Config } from "../../components/config/Interfaces";
-import { FaFacebookF, FaTwitter, FaYoutube, FaInstagram, FaTwitch } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaYoutube, FaInstagram} from 'react-icons/fa';
 import { LocalFooterType } from "../../components/config/Interfaces";
 
 //CONFIG FILE FOR LOCALFOOTER HOMEPAGE
 
+
+export const F1ConfigHeroContent = [
+  {
+    id: 1,
+    imgMobile: 'assets/pages/f1-ea/f122-home-new_season01-mobile.png',
+    imgDesktop: 'assets/pages/f1-ea/f122-home-new_season01.png',
+    imgOrder: 'lg:order-2',
+    title: 'NUOVA STAGIONE, NUOVE REGOLE',
+    description: 'Mettiti al volante con auto ridisegnate e regole rinnovate che ridefiniscono ogni gara con i partecipanti ufficiali del 2022.',
+    articleOrder: 'lg:order-1'
+  },
+  {
+    id: 2,
+    imgMobile: 'assets/pages/f1-ea/f122-home-race_day02-mobile.png',
+    imgDesktop: 'assets/pages/f1-ea/f122-home-race_day02.png',
+    imgOrder: 'lg:order-1',
+    title: 'GARE RIDEFINITE',
+    description: "Prendi il controllo dell'esperienza F1® con opzioni di trasmissione per pit stop, giri di formazione e molto altro.",
+    articleOrder: 'lg:order-2'
+  },
+  {
+    id: 3,
+    imgMobile: 'assets/pages/f1-ea/f122-home-new_era03-mobile.png',
+    imgDesktop: 'assets/pages/f1-ea/f122-home-new_era03.png',
+    imgOrder: 'lg:order-2',
+    title: "È ARRIVATA LA NUOVA ERA",
+    description: "Preparati a metterti al volante.",
+    articleOrder: 'lg:order-1'
+  }
+]
 
 export const F1ConfigLocalFooter: LocalFooterType = {
   bgColor: 'bg-zinc-900', //LocalFooter background Color
