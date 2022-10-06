@@ -95,7 +95,7 @@ function MobileSidebar({
             <div
               key={shortid.generate()}
               className={`absolute flex justify-between items-center top-0 left-0 min-w-[320px] w-[75vw] ${mobileSidebarHeaderColor} z-[100] h-14`}>
-              <img className="ml-3 h-6 w-12 lg:ml-12" src={`${logo}`} alt="" />
+              <img className="ml-3 h-fit w-fit lg:ml-12" src={`${logo}`} alt="" />
               <AiOutlineCloseCircle
                 onClick={handleToggle}
                 id="cross"

@@ -47,7 +47,7 @@ function NavigationBar({
     <div
       className={`h-14 w-full flex justify-between fixed ${
         handleShow ? "top-10" : "top-0"
-      } z-10 gap-x-8 items-center ${navColor}`}>
+      } z-10 gap-x-2 sm:gap-x-8 items-center ${navColor}`}>
       <div className="flex gap-3 items-center">
         {/* Mobile sidebar */}
         <MobileSidebar
@@ -62,8 +62,8 @@ function NavigationBar({
           navLinks={navLinks}
           mobileSidebarHeaderColor={mobileSidebarHeaderColor}
         />
-        <Link to={`${mainPage}`}>
-          <img className="h-9 w-14 mr-8 lg:ml-7" src={`${logo}`} alt="" />
+        <Link className="h-14 flex min-w-[80px] items-center lg:max-w-[15%] xl:max-w-none" to={`${mainPage}`}>
+          <img className="h-8 object-contain w-full" src={`${logo}`} alt="" />
         </Link>
         <DesktopNavContainer
           navColor={navColor}

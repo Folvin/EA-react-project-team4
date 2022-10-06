@@ -3,7 +3,8 @@ import ApexHomepage from "./pages/apex-legends/ApexHomepage";
 function Prove() {
   return (
     <div>
-      <ApexHomepage />
+    {/* <F1 /> */}
+    <ApexHomepage />
     </div>
   );
 }

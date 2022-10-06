@@ -32,7 +32,7 @@ function DesktopNavContainer({
           return (
             <Link
               key={shortid.generate()}
-              className={`h-12 md:text-base 2xl:text-lg ${textColor} flex justify-start items-center ${hoverColor}`}
+              className={`h-12 md:text-base 2xl:text-lg ${textColor} flex justify-start items-center text-center shrink-0 ${hoverColor}`}
               to={`${section.mainLink}`}>
               {section.main.toUpperCase()}
             </Link>

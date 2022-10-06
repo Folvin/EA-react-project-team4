@@ -16,7 +16,7 @@ function LocalFooterEa() {
             ) : null}
 
             <LocalFooterLinks
-              className="basis-[45%] lg:basis-auto"
+              className="lg:basis-auto"
               arr={config.links}
             />
             <hr className="border-gray-500 mt-4 xl:hidden" />

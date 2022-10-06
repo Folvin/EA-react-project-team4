@@ -1,6 +1,5 @@
 import NavigationBar from "../../components/shared/NavigationBar";
 import config from "../../components/config/ApexConfig";
-import FooterEa from "../../components/core/FooterEa";
 import LocalFooterEa from "../../components/core/LocalFooterEa";
 
 function ApexHomepage() {

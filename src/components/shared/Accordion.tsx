@@ -37,9 +37,7 @@ const Accordion = ({
         className={`${navColor} h-9 flex justify-between border-b border-1 cursor-pointer border-solid ${
           isOpened ? `${mobileBorderColor}` : `border-[${burgerColor}]`
         } ${isOpened ? `${mobileActiveColor}` : ""}`}>
-        <div className="text-base md:text-lg shrink-0">
-          {title.toUpperCase()}
-        </div>
+        <div className="text-base md:text-lg shrink-0">{title.toUpperCase()}</div>
         {isOpened ? (
           <FaChevronUp
             className={`mt-1 ${

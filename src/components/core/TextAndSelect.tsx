@@ -86,7 +86,7 @@ const language = [
 function TextAndSelect() {
   return (
     <div className="flex flex-col grow">
-      <div className="flex flex-col lg:flex-row gap-4">
+      <div className="flex flex-col lg:flex-row gap-4 lg:items-center">
         {/* top text list and select box */}
 
         <div className="grow-[5] shrink-0 basis-0">
@@ -106,11 +106,11 @@ function TextAndSelect() {
         <div className="grow-[4] min-w-[200px] md:min-w-[400px] basis-0 shrink-0 flex flex-col md:flex-row gap-8">
           {/* select box */}
 
-          <SelectBox className="flex-1 z-[2]">
+          <SelectBox className="flex-1 z-[1]">
             <SelectBoxData title="Prezzi Regionali" arr={nations} />
           </SelectBox>
 
-          <SelectBox className="flex-1 z-[1]">
+          <SelectBox className="flex-1 z-[2]">
             <SelectBoxData title="Lingua" arr={language} />
           </SelectBox>
         </div>

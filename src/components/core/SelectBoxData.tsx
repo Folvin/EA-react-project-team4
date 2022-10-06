@@ -32,14 +32,10 @@ function SelectBoxData({title, arr}: {title: string; arr: Array<Props>}) {
               <img src="assets/global/caret-down.png" alt="" />
             </span>
           </Listbox.Button>
-          <Transition
-            as={Fragment}
-            leave="transition ease-in duration-100"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0">
+
             <Listbox.Options
-              className="absolute mt-4 max-h-80 w-full overflow-auto bg-gray-100 py-2 text-base shadow-lg
-              sm:text-sm 2xl:grid 2xl:grid-cols-4 2xl:min-w-max 2xl:max-h-min 2xl:gap-6 2xl:right-0 2xl:px-2 2xl:py-4 ">
+              className="absolute bottom-[100%] mb-4 max-h-80 w-full overflow-auto bg-gray-100 py-2 text-base shadow-lg
+              sm:text-sm lg:grid lg:grid-cols-4 lg:min-w-max lg:max-h-min lg:gap-6 lg:right-0 lg:px-2 lg:py-4 ">
               {arr.map((nation, nationIdx) => (
                 <Listbox.Option
                   key={nationIdx}
@@ -49,7 +45,7 @@ function SelectBoxData({title, arr}: {title: string; arr: Array<Props>}) {
                   }) => `relative cursor-default select-none py-1 pl-1
                   ${
                     active
-                      ? "bg-blue-700 text-white 2xl:bg-transparent 2xl:text-inherit 2xl:translate-x-2 2xl:trnasition 2xl:ease-in 2xl:duration-100"
+                      ? "bg-blue-700 text-white lg:bg-transparent lg:text-inherit lg:translate-x-2 lg:trnasition lg:ease-in lg:duration-100"
                       : "text-gray-900"
                   }`}>
                   {({selected}) => (
@@ -71,7 +67,6 @@ function SelectBoxData({title, arr}: {title: string; arr: Array<Props>}) {
                 </Listbox.Option>
               ))}
             </Listbox.Options>
-          </Transition>
         </div>
       </Listbox>
     </div>
