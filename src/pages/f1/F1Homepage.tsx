@@ -1,9 +1,11 @@
-import LocalFooterEa from "../../components/shared/PreFooter";
+
 import NavigationBar from "../../components/shared/NavigationBar";
 import F1Config, { F1ConfigLocalFooter } from "./F1Config";
 import HeroBanner from "./HeroBanner";
 
 import VideoSection from "./VideoSection";
+import F1LocalFooterEa from "./F1LocalFooter";
+import { containerCard, LoadMoreContent } from "./Card";
 
 function F1() {
   return (
@@ -28,7 +30,10 @@ function F1() {
       </div>
       <HeroBanner />
       <VideoSection />
-      <LocalFooterEa config={F1ConfigLocalFooter} />
+  
+        <LoadMoreContent container={containerCard} />
+      
+      <F1LocalFooterEa config={F1ConfigLocalFooter} />
     </div>
   );
 }

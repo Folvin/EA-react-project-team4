@@ -1,4 +1,4 @@
-import {Config} from "../../components/config/Interfaces";
+import { Config } from "../../components/config/Interfaces";
 import { FaFacebookF, FaTwitter, FaYoutube, FaInstagram, FaTwitch } from 'react-icons/fa';
 import { LocalFooterType } from "../../components/config/Interfaces";
 
@@ -6,44 +6,43 @@ import { LocalFooterType } from "../../components/config/Interfaces";
 
 
 export const F1ConfigLocalFooter: LocalFooterType = {
-  bgColor: 'bg-gray-200', //LocalFooter background Color
-  textColor: 'text-black', //LocalFooter Text Color and Social media icon color
-  linkColor: 'text-black', //LocalFooter Link color
+  bgColor: 'bg-zinc-900', //LocalFooter background Color
+  textColor: 'text-white', //LocalFooter Text Color and Social media icon color
+  linkColor: 'text-gray-400', //LocalFooter Link color
   hover: 'hover:text-orange-400', // Color hover LocalFooter Link
 
   //LocalFooter Link
-  title: '',
-  links: [ 
-    { name: 'Lavora con noi', path: '#' },
-    { name: 'Dirigenza', path: '#' },
-    { name: "Rapporto sull'impatto", path: '#' },
-    { name: 'Attività politiche', path: '#' },
-    { name: 'Segnala un problema', path: '#' },
-    { name: 'Dichiarazione globale sul rispetto dei diritti umani', path: '#' },
-    { name: 'Sicurezza e privacy', path: '#' },
+  title: 'F1®22',
+  links: [
+    { name: 'F1® Mobile Racing', path: '#' },
+    { name: 'Formula 1®', path: '#' },
+    { name: "F1® Esports", path: '#' },
+    { name: 'Requisiti di sistema (PC)', path: '#' },
+    { name: 'Dual Entitlement', path: '#' },
+    { name: 'Esclusioni di responsabilità', path: '#' },
   ],
-  
+
   //Condition and Disclaimer
-  condition: [ 
+  condition: [
     {
       id: 1,
-      value: `*SI APPLICANO CONDIZIONI, LIMITAZIONI ED ESCLUSIONI. CONSULTARE https://tos.ea.com/legalapp/eaplay/US/it/PC/ PER I DETTAGLI.`
+      value: `Gioco F1® 22: un prodotto ufficiale del FIA FORMULA ONE WORLD CHAMPIONSHIP. © 2022 Electronic Arts Inc. EA, EA SPORTS, il logo EA SPORTS, Codemasters, EGO e il logo Codemasters sono marchi di Electronic Arts Inc.`
     },
     {
       id: 2,
-      value: "**L'offerta scade il 30 settembre 2022 alle ore 10:00 PT. Solo per i nuovi abbonati. Dopo il primo mese, l'abbonamento si rinnoverà automaticamente ogni mese al prezzo attuale dell'abbonamento mensile fino all'annullamento."
+      value: 'Il logo F1 FORMULA 1, il logo F1, FORMULA 1, F1, FIA FORMULA ONE WORLD CHAMPIONSHIP, GRAND PRIX e i relativi marchi sono marchi di Formula One Licensing BV, una società Formula 1. © 2022 Cover images Formula One World Championship Limited, una società Formula 1. Concesso su licenza da Formula One World Championship Limited. Il logo F2 FIA FORMULA 2 CHAMPIONSHIP, FIA FORMULA 2 CHAMPIONSHIP, FIA FORMULA 2, FORMULA 2, F2 e i relativi marchi sono marchi della Fédération Internationale de l’Automobile e sono utilizzati esclusivamente sotto licenza. Tutti i diritti riservati.'
     }
   ],
 
   // Social Media Icon. 
-  social: [  
-    {
-      icon: <FaFacebookF size={20} />,
-      link: 'https://www.facebook.com/ea.it/?brand_redir=68678914189'
-    },
+  social: [
     {
       icon: <FaTwitter size={20} />,
       link: 'https://www.twitter.com/ea'
+    },
+    {
+      icon: <FaFacebookF size={20} />,
+      link: 'https://www.facebook.com/ea.it/?brand_redir=68678914189'
     },
     {
       icon: <FaYoutube size={20} />,
@@ -53,10 +52,7 @@ export const F1ConfigLocalFooter: LocalFooterType = {
       icon: <FaInstagram size={20} />,
       link: 'https://www.instagram.com/ea'
     },
-    {
-      icon: <FaTwitch size={20} />,
-      link: 'https://www.twitch.tv/ea'
-    }
+
   ]
 }
 

@@ -6,6 +6,7 @@ import Routing from "./Routing";
 import Footer from "./components/core/Footer";
 import LoginBar from "./components/core/LoginBar";
 import Prove from "./Prove";
+import F1 from "./pages/f1/F1Homepage";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
@@ -13,8 +14,9 @@ root.render(
     <BrowserRouter>
       <LoginBar />
       <div className="h-[96px]"></div>
-      <Prove/>
+      {/* <Prove/> */}
       <Routing />
+      {/* <F1 /> */}
       <Footer />
     </BrowserRouter>
   </React.StrictMode>

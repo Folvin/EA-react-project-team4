@@ -21,7 +21,7 @@ function ApexHomepage() {
         mobileSidebarHeaderColor={config.mobileSidebarHeaderColor}
         free={config.free}
       />
-      <LocalFooterEa />
+      {/* <LocalFooterEa /> */}
     </div>
   );
 }

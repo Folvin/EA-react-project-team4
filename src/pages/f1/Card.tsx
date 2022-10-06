@@ -1,165 +1,3 @@
-/* import { useState } from 'react'; 
-
-
-import { Type } from 'typescript';
-
-
-export const containerCard = [
-  {
-    id: 1,
-    date: '26-SET-2022',
-    title: 'F1®22-Aggiornamento delle valutazioni dei piloti (Monza)',
-  },
-  {
-    id: 2,
-    date: '12-SET-2022',
-    title: 'F1®22-Note sulla patch 1.10',
-  },
-  {
-    id: 3,
-    date: '12-SET-2022',
-    title: 'La Cina fa il suo ritorno in F1® nel nuovo aggiornamento gratuito',
-  },
-  {
-    id: 4,
-    date: '24-AGO-2022',
-    title: 'Il cross-play arriva in F1®22-UPDATED',
-  },
-  {
-    id: 5,
-    date: '24-AGO-2022',
-    title: 'Serie 2 del Pass Podio disponibile adesso',
-  },
-  {
-    id: 6,
-    date: '22-AGO-2022',
-    title: 'F1®22-Note sulla patch 1.09',
-  },
-  {
-    id: 7,
-    date: '22-AGO-2022',
-    title: 'F1®22-Aggiornamento delle valutazioni dei piloti',
-  },
-  {
-    id: 8,
-    date: '9-AGO-2022',
-    title: 'F1®22-Note sulla patch 1.08',
-  },
-  {
-    id: 9,
-    date: '2-AGO-2022',
-    title: 'F1®22-Note sulla patch 1.07',
-  },
-
-
-
-];
-
-const cardContent = [
-  {
-    date: '26-SET-2022',
-    title: 'F1®22-Aggiornamento delle valutazioni dei piloti (Monza)',
-  },
-  {
-    date: '12-SET-2022',
-    title: 'F1®22-Note sulla patch 1.10',
-  },
-  {
-    date: '12-SET-2022',
-    title: 'La Cina fa il suo ritorno in F1® nel nuovo aggiornamento gratuito',
-  },
-  {
-    date: '24-AGO-2022',
-    title: 'Il cross-play arriva in F1®22-UPDATED',
-  },
-  {
-    date: '24-AGO-2022',
-    title: 'Serie 2 del Pass Podio disponibile adesso',
-  },
-  {
-    date: '22-AGO-2022',
-    title: 'F1®22-Note sulla patch 1.09',
-  },
-  {
-    date: '22-AGO-2022',
-    title: 'F1®22-Aggiornamento delle valutazioni dei piloti',
-  },
-  {
-    date: '9-AGO-2022',
-    title: 'F1®22-Note sulla patch 1.08',
-  },
-  {
-    date: '2-AGO-2022',
-    title: 'F1®22-Note sulla patch 1.07',
-  },
-]
-
-
-function Card() {
-  return (
-    <div className="p-2 px-8 ">
-      <div className="container-card 2xl:max-w-[350px] ">
-        <div className="card text-xl bg-black text-white py-4 font-f1-bold flex flex-col items-center text-center gap-2 ">
-          <div className="text-sm">
-            <h1 className="text-orange-400">F1®22</h1>
-            <h1>26-SET-2022</h1>
-          </div>
-          <div>
-            <h1>F122-Aggiornamento delle valutazioni dei piloti (Monza)</h1>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
-interface Props {
-  id: number;
-  date: string;
-  title: string;
-}
-export const LoadMoreContent = ({ container }: { container: Array<Props> }) => {
-
-  const cardPerRow = 3;
-  const [next, setNext] = useState(cardPerRow);
-
-  const handleMoreContent = () => {
-    setNext(next + cardPerRow);
-  };
-
-  return (
-    <>
-      <div className="">
-        {container?.slice(0, next)?.map((card, index) => {
-          return (
-            <div key={index} className="">
-              <div className="p-2 px-8 ">
-                <div className="container-card 2xl:max-w-[350px] ">
-                  <div className="card text-xl bg-black text-white py-4 font-f1-bold flex flex-col items-center text-center gap-2 ">
-                    <div className="text-sm">
-                      <h1 className="text-orange-400">F1®22</h1>
-                      <h1>{card.date}</h1>
-                    </div>
-                    <div>
-                      <h1>{card.title}</h1>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          );
-        })}
-        {next < container?.length && (
-          <button className="mt-4" onClick={handleMoreContent}>
-            LOAD MORE
-          </button>
-        )}
-      </div>
-    </>
-  );
-};
-export default Card; */
-
-
 import { useState } from 'react';
 
 export const containerCard = [
@@ -259,41 +97,49 @@ export const LoadMoreContent = ({ container }: { container: Array<Props> }) => {
 
   return (
     <>
-    
-      <div className="md:grid md:grid-cols-2 lg:grid-cols-3">
-      
-        {container?.slice(0, next)?.map((card, index) => {
-          return (
-            <div key={index} className="">
-              
-              <div className="p-2 px-8 ">
-                <div className="container card md:max-w-[350px] transition-all duration-500 hover:-translate-y-3 shadow-lg hover:shadow-3xl ">
-                  <div className="md:min-h-[480px] px-8 text-xl bg-zinc-800 text-white pb-4 font-f1-bold flex flex-col items-center text-center gap-2 ">
-                    <div>
-                      
-                      <img alt='' src={card.avatar} className='hidden md:block' />
-                    </div>
-                    <div className="text-sm">
-                      <h1 className="text-orange-400">{card.logo}</h1>
-                      <h1>{card.date}</h1>
-                    </div>
-                    <div className=''>
-                      <h1>{card.title}</h1>
-                      <h1 className='font-f1-regular text-sm pt-4 hidden md:block'>{card.description}</h1>
+      <h1 className="text-center font-f1-bold 2xl:text-5xl py-4 2xl:pt-28 2xl:pb-8">ULTIME NOTIZIE</h1>
+      <div className="flex flex-col md:flex-row items-center justify-center">
+        <div className="md:grid md:grid-cols-2 lg:grid-cols-3">
+
+          {container?.slice(0, next)?.map((card, index) => {
+            return (
+              <div key={index} className="">
+
+                <div className="p-2 px-8 ">
+                  <div className="container card md:max-w-[350px] transition-all duration-500 hover:-translate-y-3 shadow-lg hover:shadow-3xl ">
+                    <div className="md:min-h-[480px]  text-xl bg-zinc-800 text-white pb-4 font-f1-bold flex flex-col items-center text-center gap-2 ">
+                      <div className='w-[100%]'>
+
+                        <img alt='' src={card.avatar} className='hidden md:block' />
+                      </div>
+                      <div className="text-sm">
+                        <h1 className="text-orange-400">{card.logo}</h1>
+                        <h1>{card.date}</h1>
+                      </div>
+                      <div className='px-4'>
+                        <h1>{card.title}</h1>
+                        <h1 className='font-f1-regular text-sm pt-4 hidden md:block'>{card.description}</h1>
+                      </div>
                     </div>
                   </div>
                 </div>
+
               </div>
-              
-            </div>
-          );
-        })}
-        {next < container?.length && (
-          <button className="mt-4" onClick={handleMoreContent}>
-            LOAD MORE
-          </button>
-        )}
+            );
+          })}
+          
+        </div>
+        
       </div>
+      {next < container?.length && (
+            <div className='flex items-center justify-center'>
+              <button className="w-[100%] md:w-[80%] lg:w-[100%] xl:w-[75%] 2xl:w-[65%] mt-4 px-8 pb-4" onClick={handleMoreContent}>
+                <div className='border border-black py-8'>
+                  LOAD MORE
+                </div>
+              </button>
+            </div>
+          )}
     </>
   );
 };
