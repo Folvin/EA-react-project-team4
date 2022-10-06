@@ -1,7 +1,7 @@
-import TextWrap from "../shared/TextWrap";
+import TextWrap from "../TextWrap";
 import { Link } from 'react-router-dom';
-import config from '../config/LocalFooterHome';
-import {Links as LinksInterface} from '../config/Interfaces';
+import config from '../../config/LocalFooterHome';
+import {Links as LinksInterface} from '../../config/Interfaces';
 
 function LocalFooterLinks({ arr, className }: { arr: Array<LinksInterface>, className: string }) {
   return (

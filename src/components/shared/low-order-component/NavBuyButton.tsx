@@ -1,6 +1,6 @@
 import {Popover, Transition} from "@headlessui/react";
 import {FaChevronDown} from "react-icons/fa";
-import Button from "./Button";
+import Button from "../Button";
 import {SiOrigin} from "react-icons/si";
 import {SiSteam} from "react-icons/si";
 import {SiPlaystation} from "react-icons/si";

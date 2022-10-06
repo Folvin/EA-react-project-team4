@@ -1,5 +1,5 @@
 import Section from "./Section";
-import Form from "./Form";
+import Form from "./low-order-component/Form";
 
 interface Props {
   game: string;

@@ -1,4 +1,4 @@
-import {Condition as ConditionInterface} from "../config/Interfaces";
+import {Condition as ConditionInterface} from "../../config/Interfaces";
 
 function LocalFooterConditions({arr}: {arr: Array<ConditionInterface>}) {
   return (

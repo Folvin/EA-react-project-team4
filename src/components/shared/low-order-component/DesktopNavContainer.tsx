@@ -1,5 +1,5 @@
 import DesktopNavChild from "./DesktopNavChild";
-import {NavLinks} from "../config/Interfaces";
+import {NavLinks} from "../../config/Interfaces";
 import {Link} from "react-router-dom";
 import DesktopNavChildContent from "./DesktopNavChildContent";
 import shortid from "shortid";

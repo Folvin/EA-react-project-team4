@@ -2,11 +2,11 @@ import {useRef} from "react";
 import {AiOutlineCloseCircle} from "react-icons/ai";
 import {Transition} from "@headlessui/react";
 import {Link} from "react-router-dom";
-import useMobileSidebar from "../../hooks/core/UseMobileSidebar";
-import {NavLinks} from "../config/Interfaces";
+import useMobileSidebar from "../../../hooks/useMobileSidebar";
+import {NavLinks} from "../../config/Interfaces";
 import Accordion from "./Accordion";
 import shortid from "shortid";
-import useHideNavbar from "../../hooks/core/useHideNavbar";
+import useHideNavbar from "../../../hooks/useHideLoginBar";
 
 interface Props {
   navColor: string;
