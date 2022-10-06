@@ -1,6 +1,6 @@
 import LocalFooterEa from "../../components/shared/PreFooter";
 import NavigationBar from "../../components/shared/NavigationBar";
-import F1Config from "./F1Config";
+import F1Config, { F1ConfigLocalFooter } from "./F1Config";
 import HeroBanner from "./HeroBanner";
 
 import VideoSection from "./VideoSection";
@@ -28,7 +28,7 @@ function F1() {
       </div>
       <HeroBanner />
       <VideoSection />
-      <LocalFooterEa />
+      <LocalFooterEa config={F1ConfigLocalFooter} />
     </div>
   );
 }

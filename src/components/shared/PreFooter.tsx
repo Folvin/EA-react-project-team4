@@ -3,8 +3,9 @@ import LocalFooterLinks from "./low-order-component/PreFooterLinks";
 import LocalFooterConditions from "./low-order-component/PreFooterConditions";
 import LocalFooterSocialLinks from "./low-order-component/PreFooterSocialLinks";
 import config from "../config/LocalFooterHome";
+import { LocalFooterType } from "../config/Interfaces";
 
-function LocalFooterEa() {
+function LocalFooterEa({config}: {config: LocalFooterType}) {
   return (
     <Section className={`${config.bgColor} ${config.textColor} py-8`}>
       <div>
@@ -18,6 +19,7 @@ function LocalFooterEa() {
             <LocalFooterLinks
               className="lg:basis-auto"
               arr={config.links}
+              config={config}
             />
             <hr className="border-gray-500 mt-4 xl:hidden" />
           </div>

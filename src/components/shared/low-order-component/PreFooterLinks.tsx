@@ -1,9 +1,8 @@
 import TextWrap from "../TextWrap";
 import { Link } from 'react-router-dom';
-import config from '../../config/LocalFooterHome';
-import {Links as LinksInterface} from '../../config/Interfaces';
+import {Links as LinksInterface, LocalFooterType} from '../../config/Interfaces';
 
-function LocalFooterLinks({ arr, className }: { arr: Array<LinksInterface>, className: string }) {
+function LocalFooterLinks({ arr, className, config }: { arr: Array<LinksInterface>, className: string, config: LocalFooterType }) {
   return (
     <TextWrap>
       {arr.map((link, index) => {
