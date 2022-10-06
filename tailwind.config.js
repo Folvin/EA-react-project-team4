@@ -23,6 +23,9 @@ module.exports = {
         "tt-regular": ["tt-regular", "sans-serif"],
         teko: ["teko", "sans-serif"],
         baskerville: ["baskerville", "sans-serif"],
+        "f1-bold": ["f1-bold", "sans-serif"],
+        "f1-regular": ["f1-regular", "sans-serif"],
+        "f1-wide": ["f1-wide", "sans-serif"],
       },
     },
     colors: ({colors}) => ({
@@ -155,6 +158,8 @@ module.exports = {
       "gradient-to-bl": "linear-gradient(to bottom left, var(--tw-gradient-stops))",
       "gradient-to-l": "linear-gradient(to left, var(--tw-gradient-stops))",
       "gradient-to-tl": "linear-gradient(to top left, var(--tw-gradient-stops))",
+      "f1-orange-banner": "url('../public/assets/pages/f1-ea/orange_banner.jpg')",
+      "f1-video": "url('../public/assets/pages/f1-ea/f122-video.mp4')",
     },
     backgroundOpacity: ({theme}) => theme("opacity"),
     backgroundPosition: {
