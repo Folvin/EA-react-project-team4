@@ -21,7 +21,6 @@ function ApexHomepage() {
         mobileSidebarHeaderColor={config.mobileSidebarHeaderColor}
         free={config.free}
       />
-      <div className="bg-red-400 h-screen"></div>
       <LocalFooterEa />
     </div>
   );
