@@ -7,6 +7,7 @@ import Newsletter from "../../components/shared/Newsletter";
 import NavigationBar from "../../components/shared/NavigationBar";
 import config from "../../components/config/LostConfig";
 import UltimeNotizie from "./components/UltimeNotizieHP";
+import FirstSectionFooter from "./components/FirstSectionFooter";
 
 function LiRHomepage() {
   return (
@@ -33,7 +34,6 @@ function LiRHomepage() {
       <FirstSectionHP />
       <SecondSectionHomepage />
       <TrailerHP />
-
       <UltimeNotizie />
 
       <div className="w-full h-400"></div>
@@ -50,6 +50,7 @@ function LiRHomepage() {
           />
         </div>
       </div>
+      <FirstSectionFooter />
     </div>
   );
 }

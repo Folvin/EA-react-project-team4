@@ -1,10 +1,8 @@
-import LiRHomepage from "./pages/lost-in-random/LirHomepage";
+// import LiRHomepage from "./pages/lost-in-random/LirHomepage";
 
 function Prove() {
   return (
-    <div>
-      <LiRHomepage />
-    </div>
+    <div></div>
   );
 }
 export default Prove;
