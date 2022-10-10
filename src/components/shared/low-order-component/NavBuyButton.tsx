@@ -30,7 +30,7 @@ function NavBuyButton({buyButtonConfig, buyButtonColor, textColor, free}: Props)
     <Popover className="font-tt-regular z-40 relative transition-all">
       <Popover.Button
         className={`flex justify-center w-40 lg:w-48 h-10 cursor-pointer text-sm lg:text-base text-center items-center mr-2 rounded ${buyButtonColor} ${textColor}`}>
-        {free ? "SCARICA GRATIS*" : "ACQUISTA ORA"} <FaChevronDown className="mt-1 ml-1" />
+        {free ? "SCARICA GRATIS*" : "ACQUISTA ORA"} <FaChevronDown className=" ml-1" />
       </Popover.Button>
 
       <Transition
@@ -61,7 +61,7 @@ function NavBuyButton({buyButtonConfig, buyButtonColor, textColor, free}: Props)
                 url={buyButtonConfig.origin}>
                 <div className="text-base text-white front flex gap-2 items-center justify-between">
                   Origin
-                  <SiOrigin className="mt-1" />
+                  <SiOrigin className="" />
                 </div>
               </Button>
             ) : (
@@ -72,7 +72,7 @@ function NavBuyButton({buyButtonConfig, buyButtonColor, textColor, free}: Props)
               <Button className="h-12 sm:w-full bg-transparent" url={buyButtonConfig.steam}>
                 <div className="text-base text-white front flex gap-2 items-center justify-between">
                   Steam
-                  <SiSteam className="mt-1" />
+                  <SiSteam className="" />
                 </div>
               </Button>
             ) : (
@@ -83,7 +83,7 @@ function NavBuyButton({buyButtonConfig, buyButtonColor, textColor, free}: Props)
               <Button className="h-12 sm:w-full bg-[#003087] border-none" url={buyButtonConfig.ps4}>
                 <div className="text-base text-white front flex gap-2 items-center justify-between">
                   PlayStation® 4
-                  <SiPlaystation className="mt-1" />
+                  <SiPlaystation className="" />
                 </div>
               </Button>
             ) : (
@@ -94,7 +94,7 @@ function NavBuyButton({buyButtonConfig, buyButtonColor, textColor, free}: Props)
               <Button className="h-12 sm:w-full bg-[#003087] border-none" url={buyButtonConfig.ps5}>
                 <div className="text-base text-white front flex gap-2 items-center justify-between">
                   PlayStation® 5
-                  <SiPlaystation className="mt-1" />
+                  <SiPlaystation className="" />
                 </div>
               </Button>
             ) : (
@@ -107,7 +107,7 @@ function NavBuyButton({buyButtonConfig, buyButtonColor, textColor, free}: Props)
                 url={buyButtonConfig.xbox}>
                 <div className="text-base text-white front flex gap-2 items-center justify-between">
                   Xbox
-                  <SiXbox className="mt-1" />
+                  <SiXbox className="" />
                 </div>
               </Button>
             ) : (
@@ -120,7 +120,7 @@ function NavBuyButton({buyButtonConfig, buyButtonColor, textColor, free}: Props)
                 url={buyButtonConfig.switch}>
                 <div className="text-base text-white front flex gap-2 items-center justify-between">
                   Nintendo Switch™
-                  <SiNintendoswitch className="mt-1" />
+                  <SiNintendoswitch className="" />
                 </div>
               </Button>
             ) : (
@@ -131,7 +131,7 @@ function NavBuyButton({buyButtonConfig, buyButtonColor, textColor, free}: Props)
               <Button className="h-12 sm:w-full bg-slate-600 border-none" url={buyButtonConfig.egs}>
                 <div className="text-base text-white border-black front flex gap-2 items-center justify-between">
                   Epic Game Store
-                  <SiEpicgames className="mt-1" />
+                  <SiEpicgames className="" />
                 </div>
               </Button>
             ) : (

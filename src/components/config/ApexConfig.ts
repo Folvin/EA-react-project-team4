@@ -9,7 +9,7 @@ const ApexConfig: Config = {
   mobileBorderColor: "border-red-600",
   buyButtonColor: "bg-red-600",
   font: "font-teko",
-  mainPage: "/homepage/apex" /* Determina l'url della mainpage del gioco */,
+  mainPage: "/apex" /* Determina l'url della mainpage del gioco */,
   mobileSidebarHeaderColor:
     "bg-[#161616]" /* bg-[#161616] per le navbar nere e bg-[#1C1F26] per le navbar bianche*/,
   burgerColor: "#FFFFFF" /* #FFFFFF per navbar nere e #000000 per navbar bianche */,

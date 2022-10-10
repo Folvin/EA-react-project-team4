@@ -47,8 +47,15 @@ function useMobileSidebar(sidebarRef: any) {
     };
   }, [sidebarOpen, handleOutsideClicks]);
 
+  /* Function that removes overflow:hidden whenever a link inside the sidebar is clicked */
+
+  const removeOverflow = () => {
+    document.body.style.overflow = "unset";
+  };
+
   return {
     handleToggle,
+    removeOverflow,
     setIsOverlayOpen,
     isOverlayOpen,
     sidebarOpen,
