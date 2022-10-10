@@ -2,6 +2,9 @@ import NavigationBar from "../../components/shared/NavigationBar";
 import config from "../../components/config/ApexConfig";
 import LocalFooterEa from "../../components/shared/PreFooter";
 import ApexHeroSection from "./apex-components/ApexHeroSection";
+import InstinctSection from "./apex-components/InstinctSection";
+import ApexCards from "./apex-components/ApexCards";
+import VantageSection from "./apex-components/VantageSection";
 
 function ApexHomepage() {
   return (
@@ -24,6 +27,9 @@ function ApexHomepage() {
       />
       <div>
         <ApexHeroSection />
+        <InstinctSection />
+        <ApexCards />
+        <VantageSection />
       </div>
       <LocalFooterEa />
     </div>
