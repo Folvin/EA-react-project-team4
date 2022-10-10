@@ -165,19 +165,19 @@ export const F1ConfigLocalFooter: LocalFooterType = {
   social: [
     {
       icon: <FaTwitter size={20} />,
-      link: 'https://www.twitter.com/ea'
+      link: 'https://twitter.com/Formula1game'
     },
     {
       icon: <FaFacebookF size={20} />,
-      link: 'https://www.facebook.com/ea.it/?brand_redir=68678914189'
+      link: 'https://www.facebook.com/formula1game'
     },
     {
       icon: <FaYoutube size={20} />,
-      link: 'https://www.youtube.com/EAvideos'
+      link: 'https://www.youtube.com/user/formula1game'
     },
     {
       icon: <FaInstagram size={20} />,
-      link: 'https://www.instagram.com/ea'
+      link: 'https://www.instagram.com/formula1game/'
     },
 
   ]
