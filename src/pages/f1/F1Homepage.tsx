@@ -3,7 +3,7 @@ import F1Config, { F1ConfigHeroContent, F1ConfigLocalFooter, F1ConfigNewsletter 
 import F1HeroBanner from "./F1HeroBanner";
 import F1VideoSection from "./F1VideoSection";
 import F1LocalFooterEa from "./F1LocalFooter";
-import { LoadMoreContent } from "./Card";
+import { LoadMoreContent } from "./F1Card";
 import F1HeroContent from "./F1HeroContent";
 import F1Footer from "./F1Footer";
 import F1Newsletter from "./F1Newsletter";
