@@ -1,8 +1,8 @@
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Section from "../../components/shared/Section";
 import TextAndSelect from "../../components/core/low-order-component/TextAndSelect";
 
-function F1Footer({className}: {className:string}) {
+function F1Footer({ className }: { className: string }) {
   return (
     <footer className={`${className} bg-gray-100 2xl:px-60`}>
       <Section className="pt-8 pb-12">
@@ -17,7 +17,6 @@ function F1Footer({className}: {className:string}) {
               />
             </Link>
           </div>
-
           {/* text and selectbox */}
           <TextAndSelect />
         </div>

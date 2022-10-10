@@ -2,9 +2,29 @@ import { Config } from "../../components/config/Interfaces";
 import { FaFacebookF, FaTwitter, FaYoutube, FaInstagram} from 'react-icons/fa';
 import { LocalFooterType } from "../../components/config/Interfaces";
 
+
+
+
+
+
+
+//CONFIG FILE FOR FORM AND NEWSLETTERS SECTION
+export const F1ConfigNewsletter = {
+  game: 'F1® 22',
+  bgColor: 'bg-black',
+  textColor: 'text-white',
+  background: 'bg-f1-newsletter-bg',
+  article: {
+    title: 'NON PERDERTI NULLA CON LE E-MAIL DI EA E',
+    description: 'Iscriviti subito per ricevere e-mail con notizie, aggiornamenti, contenuti dietro le quinte, offerte esclusive e molto altro su F1® 22. Sono incluse altre informazioni su novità, prodotti, eventi e promozioni di EA..'
+  }
+}
+
+
 //CONFIG FILE FOR LOCALFOOTER HOMEPAGE
 
 
+//Config file for HeroContent and last news
 export const F1ConfigHeroContent = [
   {
     id: 1,
@@ -35,6 +55,83 @@ export const F1ConfigHeroContent = [
   }
 ]
 
+//Config file for card content
+export const F1ConfigContainerCard = [
+  {
+    id: 1,
+    date: '26-SET-2022',
+    title: 'F1®22-Aggiornamento delle valutazioni dei piloti (Monza)',
+    description: 'Le battaglie in griglia si riflettono nelle',
+    logo: 'F1®22',
+    avatar: 'assets/pages/f1-ea/card-avatar-01.png'
+  },
+  {
+    id: 2,
+    date: '12-SET-2022',
+    title: 'F1®22-Note sulla patch 1.10',
+    description: 'Lo Shanghai international Circuit, una livrea Ferrari speciale, correzioni relative alla risposta del cordolo, alle informazioni di telemetria nelle strategie di gara e altro',
+    logo: 'F1®22',
+    avatar: 'assets/pages/f1-ea/card-avatar-02.png'
+  },
+  {
+    id: 3,
+    date: '12-SET-2022',
+    title: 'La Cina fa il suo ritorno in F1® nel nuovo aggiornamento gratuito',
+    description: 'Al gioco sono stati aggiunti lo Shanghai International Circuit, una livrea Ferrari speciale e un evento dedicato alla festa della luna',
+    logo: 'F1®22',
+    avatar: 'assets/pages/f1-ea/card-avatar-03.png'
+  },
+  {
+    id: 4,
+    date: '24-AGO-2022',
+    title: 'Il cross-play arriva in F1®22-UPDATED',
+    description: 'A partire da oggi, potrai correre nello sport motoristico più veloce del mondo sfidando giocatori di qualsiasi piattaforma',
+    logo: 'F1®22',
+    avatar: 'assets/pages/f1-ea/card-avatar-04.png'
+  },
+  {
+    id: 5,
+    date: '24-AGO-2022',
+    title: 'Serie 2 del Pass Podio disponibile adesso',
+    description: 'Alcune spettacolari livree debuttano nella serie 2 del Pass Podio',
+    logo: 'F1®22',
+    avatar: 'assets/pages/f1-ea/card-avatar-05.png'
+  },
+  {
+    id: 6,
+    date: '22-AGO-2022',
+    title: 'F1®22-Note sulla patch 1.09',
+    description: 'Cambio automatico, temperature delle gomme e molto altro; scopri cosa è stato corretto nella patch 1.09',
+    logo: 'F1®22',
+    avatar: 'assets/pages/f1-ea/card-avatar-06.png'
+  },
+  {
+    id: 7,
+    date: '22-AGO-2022',
+    title: 'F1®22-Aggiornamento delle valutazioni dei piloti',
+    description: "Con la conclusione del Gran Premio d'Ungheria, è iniziata la pausa estiva del nostro sport motoristico preferito. Quale momento migliore, dunque, per aggiornare le valutazioni dei piloti di F1®22?",
+    logo: 'F1®22',
+    avatar: 'assets/pages/f1-ea/card-avatar-07.png'
+  },
+  {
+    id: 8,
+    date: '9-AGO-2022',
+    title: 'F1®22-Note sulla patch 1.08',
+    description: "Scopri di più sull'ultima patch",
+    logo: 'F1®22',
+    avatar: 'assets/pages/f1-ea/card-avatar-08.png'
+  },
+  {
+    id: 9,
+    date: '2-AGO-2022',
+    title: 'F1®22-Note sulla patch 1.07',
+    description: "Scopri di più sull'ultima patch",
+    logo: 'F1®22',
+    avatar: 'assets/pages/f1-ea/card-avatar-09.png'
+  },
+];
+
+//CONFIG FILE FOR LOCAL FOOTER
 export const F1ConfigLocalFooter: LocalFooterType = {
   bgColor: 'bg-zinc-900', //LocalFooter background Color
   textColor: 'text-white', //LocalFooter Text Color and Social media icon color
@@ -86,7 +183,7 @@ export const F1ConfigLocalFooter: LocalFooterType = {
   ]
 }
 
-//Hero banner configuration
+//CONFIG FILE FOR HERO BANNER CONFIGURATION
 export const F1ConfigBanner = {
   logo: "assets/pages/f1-ea/f122-black-logo.png",
   background: "bg-f1-orange-banner",
@@ -101,7 +198,7 @@ export const F1ConfigBanner = {
   },
 };
 
-//Video section configuration
+//CONFIG FILE FOR VIDEO SECTION CONFIGURATION
 export const F1ConfigVideoSection = {
   button: {
     buttonOne: {
@@ -137,7 +234,7 @@ export const F1ConfigVideoSection = {
 };
 
 
-
+//CONFIG FILE FOR NAVBAR AND HAMBURGHER MENU CONFIGURATION
 const F1Config: Config = {
   navColor: "bg-white" /* classe tailwind */,
   textColor: "text-black" /* classe tailwind */,

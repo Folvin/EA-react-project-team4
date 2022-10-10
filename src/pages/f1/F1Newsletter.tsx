@@ -1,13 +1,12 @@
 import Section from "../../components/shared/Section";
 import F1Form from "./F1Form";
+import { F1ConfigNewsletter } from "./F1Config";
 
 interface Props {
   game: string;
-  buttonColor: string;
   bgColor: string;
-  borderColor: string;
   textColor: string;
-  bgCheck: string;
+  background: string;
 }
 // game = Nome del gioco da visuallizare nel titolo del Form,                                 ES: game="Lost in Random™"
 // textColor = colore del testo di tutta la componenet                                        ES: textColor="text-white"
@@ -22,20 +21,17 @@ className="bg-cover bg-[url(https://media.contentapi.ea.com/content/dam/apex-leg
 dove l'url è limmagine di bg da usare
  */
 
-function F1Newsletter({ game, buttonColor, bgColor, borderColor, textColor, bgCheck }: Props) {
+function F1Newsletter({ game, bgColor, textColor, background }: Props) {
   return (
-    <Section className="py-20 2xl:px-[340px] bg-f1-newsletter-bg">
+    <Section className={`py-20 2xl:px-[340px] ${background}`}>
       <div className=" flex flex-col lg:flex-row gap-y-6 lg:gap-x-6 justify-center">
         <div className="w-full lg:w-2/4">
           <FormTitle gameTitle={game} textCoror={textColor} />
         </div>
         <div className="w-full lg:w-2/4">
           <F1Form
-            buttonColor={buttonColor}
             bgColor={bgColor}
-            borderColor={borderColor}
             textColor={textColor}
-            bgCheck={bgCheck}
           />
         </div>
       </div>
@@ -52,10 +48,10 @@ function FormTitle({ gameTitle, textCoror }: Props2) {
   return (
     <div className={`${textCoror} font-f1-regular`}>
       <h2 className="font-f1-bold text-2xl mb-8 2xl:text-5xl">
-        NON PERDERTI NULLA CON LE E-MAIL DI EA E  {gameTitle.toUpperCase()}
+        {F1ConfigNewsletter.article.title}  {gameTitle.toUpperCase()}
       </h2>
       <p className="">
-      Iscriviti subito per ricevere e-mail con notizie, aggiornamenti, contenuti dietro le quinte, offerte esclusive e molto altro su {gameTitle}. Sono incluse altre informazioni su novità, prodotti, eventi e promozioni di EA..{" "}
+        {F1ConfigNewsletter.article.description}{" "}
       </p>
     </div>
   );
