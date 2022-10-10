@@ -2,6 +2,8 @@ import Section from "../../components/shared/Section";
 import Button from "../../components/shared/Button";
 import { F1ConfigVideoSection } from "./F1Config";
 
+
+
 function VideoSection() {
   return (
     <div className="relative">
@@ -34,11 +36,12 @@ function VideoSection() {
             <Button
               url="#"
               className={`${F1ConfigVideoSection.button.buttonOne.bgColor} min-w-[100%] border-orange-400 2xl:py-4 2xl:px-8`}>
-              {F1ConfigVideoSection.button.buttonOne.value}
+              {F1ConfigVideoSection.button.buttonOne.value} 
             </Button>
             <Button url="#" className="min-w-[100%] 2xl:py-4 px-8">
-              {F1ConfigVideoSection.button.buttonTwo.value}
+              {F1ConfigVideoSection.button.buttonTwo.value}<span className="pl-1">▷</span>
             </Button>
+            
           </div>
         </div>
       </Section>

@@ -52,8 +52,9 @@ export const LoadMoreContent = ({ container }: { container: Array<Props> }) => {
       {next < container?.length && (
         <div className='flex items-center justify-center'>
           <button className="w-[100%] md:w-[80%] lg:w-[100%] xl:w-[75%] 2xl:w-[65%] mt-4 px-8 pb-4" onClick={handleMoreContent}>
-            <div className='border border-black py-8'>
-              LOAD MORE
+            <div className='text-gray-400 border border-black py-4 font-f1-bold hover:border-gray-300 hover:text-transparent flex flex-col items-center'>
+              <div className='border border-gray-300 rounded-full w-[50px] h-[50px] flex items-center justify-center '>+</div>
+              <span className='text-xl'>LOAD MORE</span>
             </div>
           </button>
         </div>
