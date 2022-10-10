@@ -1,6 +1,5 @@
 import NavigationBar from "../../components/shared/NavigationBar";
 import config from "../../components/config/ApexConfig";
-import LocalFooterEa from "../../components/shared/PreFooter";
 import ApexHeroSection from "./apex-components/ApexHeroSection";
 import InstinctSection from "./apex-components/InstinctSection";
 import ApexCards from "./apex-components/ApexCards";
@@ -9,6 +8,7 @@ import BattleRoyaleSection from "./apex-components/BattleRoyaleSection";
 import LegendsSection from "./apex-components/LegendsSection";
 import Newsletter from "../../components/shared/Newsletter";
 import PlayFreeSection from "./apex-components/PlayFreeSection";
+import LocalFooterApex from "./apex-components/LocalFooterApex";
 
 function ApexHomepage() {
   return (
@@ -48,7 +48,7 @@ function ApexHomepage() {
         </div>
       </div>
       <PlayFreeSection />
-      <LocalFooterEa />
+      <LocalFooterApex />
     </div>
   );
 }

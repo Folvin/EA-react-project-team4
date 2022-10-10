@@ -8,7 +8,7 @@ function ApexCards() {
         <div className="font-teko font-bold text-5xl">ULTIME NOTIZIE</div>
       </div>
       <CardGrid columns="auto-rows-fr md:grid-cols-autoxl gap-5 px-[8%]">
-        <div className="">
+        <div className="h-fit">
           <Card styleCard="bg-black h-fit md:max-h-[550px] border-b-8 border-red-600 border-solid">
             <div className="">
               <img src="assets/pages/apex-legends/fight-or-fright-card.jpg" alt="" />
@@ -23,12 +23,12 @@ function ApexCards() {
                 <div className="text-white font-tt-regular text-lg">
                   Paura del buio ritorna con quattro settimane di divertimento da brivido!
                 </div>
-                <div className="h-[180px]"></div>
+                <div className="md:h-[180px]"></div>
               </div>
             </div>
           </Card>
         </div>
-        <div className="">
+        <div className="h-fit">
           <Card styleCard="bg-black h-full md:max-h-[550px] border-b-8 border-red-600 border-solid">
             <div className="">
               <img src="assets/pages/apex-legends/crosshair-update-card.jpg" alt="" />
@@ -44,12 +44,12 @@ function ApexCards() {
                   Scopri in che modo Apex Legends™ migliorerà l'integrità competitiva dei mirini
                   standard in futuro.
                 </div>
-                <div className="h-[180px]"></div>
+                <div className="md:h-[180px]"></div>
               </div>
             </div>
           </Card>
         </div>
-        <div className="">
+        <div className="h-fit">
           <Card styleCard="bg-black h-fit md:max-h-[550px] border-b-8 border-red-600 border-solid">
             <div className="">
               <img src="assets/pages/apex-legends/beast-of-prey-update-card.jpg" alt="" />
@@ -65,7 +65,7 @@ function ApexCards() {
                   Dal 20 settembre al 4 ottobre, gioca la nuova modalità Corsa alle armi e sblocca
                   il cimelio di Loba.
                 </div>
-                <div className="h-[180px]"></div>
+                <div className="md:h-[180px]"></div>
               </div>
             </div>
           </Card>
