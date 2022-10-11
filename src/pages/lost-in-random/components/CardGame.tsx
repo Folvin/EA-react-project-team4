@@ -17,64 +17,64 @@ interface satoCarteType {
   indovinata: string;
 }
 
-// const CarteNuove: CarteType[] = [
-//   {
-//     id: 1,
-//     src: "https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/common/cards/lir-game-hammer-of-two-image.png",
-//     covered: true,
-//     indovinata: false,
-//     nrCarta: 0,
-//   },
-//   {
-//     id: 1,
-//     src: "https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/common/cards/lir-game-hammer-of-two-image.png",
-//     covered: true,
-//     indovinata: false,
-//     nrCarta: 1,
-//   },
-//   {
-//     id: 2,
-//     src: "https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/common/cards/lir-game-master-card-image.png",
-//     covered: true,
-//     indovinata: false,
-//     nrCarta: 2,
-//   },
-//   {
-//     id: 2,
-//     src: "https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/common/cards/lir-game-master-card-image.png",
-//     covered: true,
-//     indovinata: false,
-//     nrCarta: 3,
-//   },
-//   {
-//     id: 3,
-//     src: "https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/common/cards/lir-game-explosive-dice-image.png",
-//     covered: true,
-//     indovinata: false,
-//     nrCarta: 4,
-//   },
-//   {
-//     id: 3,
-//     src: "https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/common/cards/lir-game-explosive-dice-image.png",
-//     covered: true,
-//     indovinata: false,
-//     nrCarta: 5,
-//   },
-//   {
-//     id: 4,
-//     src: "https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/common/cards/lir-game-ooma-s-blessing-image.png",
-//     covered: true,
-//     indovinata: false,
-//     nrCarta: 6,
-//   },
-//   {
-//     id: 4,
-//     src: "https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/common/cards/lir-game-ooma-s-blessing-image.png",
-//     covered: true,
-//     indovinata: false,
-//     nrCarta: 7,
-//   },
-// ];
+const CarteNuove: CarteType[] = [
+  {
+    id: 1,
+    nrCarta: 0,
+    covered: true,
+    indovinata: false,
+    src: "https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/common/cards/lir-game-hammer-of-two-image.png",
+  },
+  {
+    id: 1,
+    nrCarta: 1,
+    covered: true,
+    indovinata: false,
+    src: "https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/common/cards/lir-game-hammer-of-two-image.png",
+  },
+  {
+    id: 2,
+    nrCarta: 2,
+    covered: true,
+    indovinata: false,
+    src: "https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/common/cards/lir-game-master-card-image.png",
+  },
+  {
+    id: 2,
+    nrCarta: 3,
+    covered: true,
+    indovinata: false,
+    src: "https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/common/cards/lir-game-master-card-image.png",
+  },
+  {
+    id: 3,
+    nrCarta: 4,
+    covered: true,
+    indovinata: false,
+    src: "https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/common/cards/lir-game-explosive-dice-image.png",
+  },
+  {
+    id: 3,
+    nrCarta: 5,
+    covered: true,
+    indovinata: false,
+    src: "https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/common/cards/lir-game-explosive-dice-image.png",
+  },
+  {
+    id: 4,
+    nrCarta: 6,
+    covered: true,
+    indovinata: false,
+    src: "https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/common/cards/lir-game-ooma-s-blessing-image.png",
+  },
+  {
+    id: 4,
+    nrCarta: 7,
+    covered: true,
+    indovinata: false,
+    src: "https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/common/cards/lir-game-ooma-s-blessing-image.png",
+  },
+];
 
 const statoCarta: satoCarteType = {
   coperta:
@@ -148,14 +148,12 @@ function CardGame() {
   const [carteMescoate, setCarteMescoate] = useState<boolean>(false);
   // state usato per carte identiche
   const [carteScoperte, setCarteScoperte] = useState<number[]>([]);
+  //serve per non incrementare i vari contatori cliccando sulla stessa carta
+  const [singleClick, setSingleClick] = useState<number>(9);
   //per sapere quando il gioco e finito e posso renderizzare la seconda img
   const [carteIndovinate, setCarteIndovinate] = useState<number>(0);
   //con questo do il tempo all'animazione di essere eseguita
   const [finito, setFinito] = useState<boolean>(false);
-  //serve per non incrementare i vari contatori cliccando sulla stessa carta
-  const [singleClick, setSingleClick] = useState<number>(9);
-  //per gestire l'animazione una volta finito il gioco
-  const [animation, setAnimation] = useState<string>("");
 
   //mescola le carte
   useEffect(() => {
@@ -166,10 +164,7 @@ function CardGame() {
   //si attiva a gioco completato (animazione e cambio img)
   useEffect(() => {
     if (carteIndovinate === Carte.length) {
-      setAnimation("animate-spin");
-      setTimeout(() => {
-        setFinito(true);
-      }, 1000);
+      setFinito(true);
     }
   }, [carteIndovinate]);
 
@@ -270,6 +265,19 @@ function CardGame() {
     setSingleClick(9);
   }
 
+  //ricomincia il gioco resettando tutti i parametri
+  function resetGame() {
+    shuffle(CarteNuove);
+    setCarte(CarteNuove);
+    shuffle(Carte);
+    setCarteMescoate(true);
+    shuffle(Carte);
+    setCarteScoperte([]);
+    setCarteIndovinate(0);
+    setFinito(false);
+    setSingleClick(999);
+  }
+
   return (
     <Section>
       {/* Titolo e immagine */}
@@ -280,46 +288,49 @@ function CardGame() {
         <img
           src="https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/common/lir-homepage-element-2.png"
           alt=""
-          className="m-auto py-5"
+          className="m-auto py-5 hover:scale-110 hover:cursor-pointer"
+          onClick={resetGame}
         />
       </div>
 
       {/* LA grid con le carte */}
-      {!finito ? (
-        <div className=" grid gap-1 grid-cols-4 grid-rows-2 max-w-[1024px] m-auto">
-          {carteMescoate
-            ? Carte.map((carta, index) => {
-                return (
-                  <div className={`max-w-[300px] flex justify-center items-center ${animation}`}>
-                    <img
-                      src={carta.covered ? statoCarta.coperta : carta.src}
-                      alt={`${carta.nrCarta}`}
-                      onClick={onClickCard}
-                      key={index}
-                      className="m-auto hover:cursor-pointer  hover:shadow-[inset_3px_5px_30px_#291F24] "
-                    />
-                  </div>
-                );
-              })
-            : null}
-        </div>
-      ) : (
-        <div>
-          <img
-            src="https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/images/2021/09/lir-reward-image-screenshot.png.adapt.crop16x9.320w.png"
-            alt={"Gioco FInito"}
-            srcSet="https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/images/2021/09/lir-reward-image-screenshot.png.adapt.crop16x9.320w.png 320w,https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/images/2021/09/lir-reward-image-screenshot.png.adapt.crop16x9.767w.png 768w,https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/images/2021/09/lir-reward-image-screenshot.png.adapt.crop16x9.1023w.png 1024w,https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/images/2021/09/lir-reward-image-screenshot.png.adapt.crop16x9.1455w.png 1120w"
-            className="max-w-6xl m-auto"
-          />
-          <p className="text-center text-white py-7 lg:text-lg">
-            Scopri di più sulle carte che raccoglierai nel corso della tua avventura in Lost in
-            Random.
-          </p>
-          <Button url="#" className="bg-transparent m-auto">
-            <div className="text-white lg:text-lg">Visualizza le carte </div>
-          </Button>
-        </div>
-      )}
+      <div className="">
+        {!finito ? (
+          <div className=" grid gap-1 grid-cols-4 grid-rows-2 max-w-[1024px] m-auto">
+            {carteMescoate
+              ? Carte.map((carta, index) => {
+                  return (
+                    <div className={`max-w-[300px] flex justify-center items-center `}>
+                      <img
+                        src={carta.covered ? statoCarta.coperta : carta.src}
+                        alt={`${carta.nrCarta}`}
+                        onClick={onClickCard}
+                        key={index}
+                        className="m-auto hover:cursor-pointer  hover:shadow-[inset_3px_5px_30px_#291F24] "
+                      />
+                    </div>
+                  );
+                })
+              : null}
+          </div>
+        ) : (
+          // secondoa parte appare a gioco completato
+          <div className="effect m-auto max-w-6xl">
+            <img
+              srcSet="https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/images/2021/09/lir-reward-image-screenshot.png.adapt.crop16x9.320w.png 320w,https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/images/2021/09/lir-reward-image-screenshot.png.adapt.crop16x9.767w.png 768w,https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/images/2021/09/lir-reward-image-screenshot.png.adapt.crop16x9.1023w.png 1024w,https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/images/2021/09/lir-reward-image-screenshot.png.adapt.crop16x9.1455w.png 1120w"
+              src="https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/images/2021/09/lir-reward-image-screenshot.png.adapt.crop16x9.320w.png"
+              alt={"Gioco FInito"}
+            />
+            <p className="text-center text-white py-7 lg:text-lg">
+              Scopri di più sulle carte che raccoglierai nel corso della tua avventura in Lost in
+              Random.
+            </p>
+            <Button url="#" className="bg-transparent m-auto">
+              <div className="text-white lg:text-lg">Visualizza le carte </div>
+            </Button>
+          </div>
+        )}
+      </div>
     </Section>
   );
 }
