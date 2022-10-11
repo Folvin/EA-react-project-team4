@@ -31,13 +31,13 @@ function FirstSectionHP() {
                 <g>
                   <path
                     d="M3 13.6L13 8 3 2.4v11.2z"
-                    clip-rule="evenodd"
+                    clipRule="evenodd"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-miterlimit="10"></path>
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeMiterlimit="10"></path>
                 </g>
               </svg>
             </Button>
@@ -70,13 +70,13 @@ function FirstSectionHP() {
               <g>
                 <path
                   d="M3 13.6L13 8 3 2.4v11.2z"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"></path>
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeMiterlimit="10"></path>
               </g>
             </svg>
           </Button>

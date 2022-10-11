@@ -8,6 +8,7 @@ import NavigationBar from "../../components/shared/NavigationBar";
 import config from "../../components/config/LostConfig";
 import UltimeNotizie from "./components/UltimeNotizieHP";
 import FirstSectionFooter from "./components/FirstSectionFooter";
+import CardGame from "./components/CardGame";
 
 function LiRHomepage() {
   return (
@@ -35,6 +36,8 @@ function LiRHomepage() {
       <SecondSectionHomepage />
       <TrailerHP />
       <UltimeNotizie />
+
+      <CardGame />
 
       <div className="w-full h-400"></div>
 
