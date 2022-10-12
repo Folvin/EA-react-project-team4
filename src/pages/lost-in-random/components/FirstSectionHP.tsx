@@ -47,7 +47,7 @@ function FirstSectionHP() {
             </Button>
           </div>
         </div>
-        <video autoPlay loop muted className="relative">
+        <video autoPlay loop muted poster="assets/pages/lost-in-random/lost-in-random-poster.png" className="relative w-full">
           <source
             src="https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/videos/2021/06/with-tm/lir-keyart-cinemagraph-tm-xl.mp4"
             type="video/mp4"
