@@ -21,7 +21,7 @@ function FirstSectionHP() {
           </h2>
 
           <div className="hidden md:flex justify-center gap-x-5 mt-5 ">
-            <Button url="#" className="bg-[#4D4A8A] border-[#4D4A8A]">
+            <Button url="#" className="bg-[#4D4A8A] border-[#4D4A8a]">
               <div className="text-white lg:text-lg">Guarda il trailer</div>
               <svg
                 viewBox="0 0 16 16"
@@ -31,13 +31,13 @@ function FirstSectionHP() {
                 <g>
                   <path
                     d="M3 13.6L13 8 3 2.4v11.2z"
-                    clip-rule="evenodd"
+                    clipRule="evenodd"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-miterlimit="10"></path>
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeMiterlimit="10"></path>
                 </g>
               </svg>
             </Button>
@@ -47,7 +47,7 @@ function FirstSectionHP() {
             </Button>
           </div>
         </div>
-        <video autoPlay loop muted className="relative">
+        <video autoPlay loop muted poster="assets/pages/lost-in-random/lost-in-random-poster.png" className="relative w-full">
           <source
             src="https://media.contentapi.ea.com/content/dam/eacom/lost-in-random/videos/2021/06/with-tm/lir-keyart-cinemagraph-tm-xl.mp4"
             type="video/mp4"
@@ -70,13 +70,13 @@ function FirstSectionHP() {
               <g>
                 <path
                   d="M3 13.6L13 8 3 2.4v11.2z"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"></path>
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeMiterlimit="10"></path>
               </g>
             </svg>
           </Button>
