@@ -43,8 +43,6 @@ function F1() {
         background={F1ConfigNewsletter.background}
       />
       <F1LocalFooterEa config={F1ConfigLocalFooter} className='' />
-      <F1Footer className="" />
-
     </div>
   );
 }
