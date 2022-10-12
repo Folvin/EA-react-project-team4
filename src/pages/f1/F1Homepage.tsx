@@ -5,7 +5,6 @@ import F1VideoSection from "./F1VideoSection";
 import F1LocalFooterEa from "./F1LocalFooter";
 import { LoadMoreContent } from "./F1Card";
 import F1HeroContent from "./F1HeroContent";
-import F1Footer from "./F1Footer";
 import F1Newsletter from "./F1Newsletter";
 import { F1ConfigContainerCard } from "./F1Config";
 

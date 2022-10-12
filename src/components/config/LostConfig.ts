@@ -48,11 +48,11 @@ const Lost: Config = {
     },
     {
       main: "Contenuti multimediali",
-      mainLink: "#",
+      mainLink: "media",
     },
     {
       main: "Notizie",
-      mainLink: "#",
+      mainLink: "notizie",
     },
   ],
   buyButtonConfig: {
