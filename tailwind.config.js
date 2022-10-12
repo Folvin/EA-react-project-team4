@@ -160,6 +160,8 @@ module.exports = {
       "gradient-to-tl": "linear-gradient(to top left, var(--tw-gradient-stops))",
       "f1-orange-banner": "url('../public/assets/pages/f1-ea/orange_banner.jpg')",
       "f1-video": "url('../public/assets/pages/f1-ea/f122-video.mp4')",
+      "f1-newsletter-bg": "url('../public/assets/pages/f1-ea/F1-newsletter-background.jpg')",
+      "f1-homepage-bg": "url('../public/assets/pages/f1-ea/f122-homepage-background.png')"
     },
     backgroundOpacity: ({theme}) => theme("opacity"),
     backgroundPosition: {
