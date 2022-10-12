@@ -12,7 +12,7 @@ export interface Config {
   font: string;
   free: boolean;
   navLinks: NavLinks[];
-  buyButtonConfig: buyButtonConfig;
+  buyButtonConfig?: buyButtonConfig;
 }
 
 export interface NavLinks {
@@ -50,7 +50,7 @@ export interface LocalFooterType {
   hover: string;
   links: Links[];
   title?: string;
-  condition: Condition[];
+  condition?: Condition[];
   social: Social[];
 }
 

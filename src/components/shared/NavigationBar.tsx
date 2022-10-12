@@ -17,7 +17,7 @@ interface Props {
   free: boolean;
   borderColor?: string;
   mainPage: string;
-  buyButtonConfig: buyButtonConfig;
+  buyButtonConfig?: buyButtonConfig;
   buyButtonColor: string;
   navLinks: NavLinks[];
   mobileSidebarHeaderColor: string;
@@ -62,7 +62,7 @@ function NavigationBar({
           navLinks={navLinks}
           mobileSidebarHeaderColor={mobileSidebarHeaderColor}
         />
-        <Link className="h-14 flex min-w-[80px] items-center lg:max-w-[15%] xl:max-w-none" to={`${mainPage}`}>
+        <Link className="h-14 flex min-w-[80px] items-center xl:max-w-none" to={`${mainPage}`}>
           <img className="h-8 object-contain w-full" src={`${logo}`} alt="" />
         </Link>
         <DesktopNavContainer
@@ -77,12 +77,12 @@ function NavigationBar({
         />
       </div>
       <div>
-        <NavBuyButton
+        {buyButtonConfig && <NavBuyButton
           buyButtonColor={buyButtonColor}
           buyButtonConfig={buyButtonConfig}
           textColor={textColor}
           free={free}
-        />
+        />}
       </div>
     </div>
   );

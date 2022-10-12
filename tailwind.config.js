@@ -17,6 +17,9 @@ module.exports = {
       lg: "1024px",
       xl: "1280px",
       "2xl": "1536px",
+      "3xl": "2000px",
+      "4xl": "2280px",
+      "5xl": "2560px",
     },
     extend: {
       fontFamily: {
@@ -26,6 +29,9 @@ module.exports = {
         "f1-bold": ["f1-bold", "sans-serif"],
         "f1-regular": ["f1-regular", "sans-serif"],
         "f1-wide": ["f1-wide", "sans-serif"],
+        "roboto-thin": ["roboto-thin", "sans-serif"],
+        "roboto-normal": ["roboto-regular", "sans-serif"],
+        "roboto-bold": ["roboto-bold", "sans-serif"],
       },
     },
     colors: ({colors}) => ({
@@ -390,16 +396,7 @@ module.exports = {
         '"Noto Color Emoji"',
       ],
       serif: ["ui-serif", "Georgia", "Cambria", '"Times New Roman"', "Times", "serif"],
-      mono: [
-        "ui-monospace",
-        "SFMono-Regular",
-        "Menlo",
-        "Monaco",
-        "Consolas",
-        '"Liberation Mono"',
-        '"Courier New"',
-        "monospace",
-      ],
+      mono: ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", '"Liberation Mono"', '"Courier New"', "monospace"],
     },
     fontSize: {
       xs: ["0.75rem", {lineHeight: "1rem"}],

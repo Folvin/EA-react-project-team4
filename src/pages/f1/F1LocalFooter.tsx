@@ -25,7 +25,7 @@ function F1LocalFooterEa({ config, className }: { config: LocalFooterType, class
           <F1LocalFooterSocialLinks arr={config.social} />
         </div>
         {/* Component for Disclaimer and politicy for the game of F122 */}
-        <F1LocalFooterConditions arr={config.condition} />
+        {config.condition && <F1LocalFooterConditions arr={config.condition} />}
       </div>
     </Section>
   );
