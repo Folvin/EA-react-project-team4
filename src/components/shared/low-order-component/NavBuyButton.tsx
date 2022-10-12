@@ -9,7 +9,7 @@ import {SiNintendoswitch} from "react-icons/si";
 import {SiEpicgames} from "react-icons/si";
 
 interface Props {
-  buyButtonConfig: buyButtonConfig;
+  buyButtonConfig?: buyButtonConfig;
   buyButtonColor: string;
   textColor: string;
   free: boolean;
@@ -26,6 +26,7 @@ interface buyButtonConfig {
 }
 
 function NavBuyButton({buyButtonConfig, buyButtonColor, textColor, free}: Props) {
+  if (!buyButtonConfig) return <></>;
   return (
     <Popover className="font-tt-regular z-40 relative transition-all">
       <Popover.Button

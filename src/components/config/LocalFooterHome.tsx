@@ -12,7 +12,7 @@ const config: LocalFooterType = {
 
   //LocalFooter Link
   title: '',
-  links: [ 
+  links: [
     { name: 'Lavora con noi', path: '#' },
     { name: 'Dirigenza', path: '#' },
     { name: "Rapporto sull'impatto", path: '#' },
@@ -21,21 +21,11 @@ const config: LocalFooterType = {
     { name: 'Dichiarazione globale sul rispetto dei diritti umani', path: '#' },
     { name: 'Sicurezza e privacy', path: '#' },
   ],
-  
-  //Condition and Disclaimer
-  condition: [ 
-    {
-      id: 1,
-      value: `*SI APPLICANO CONDIZIONI, LIMITAZIONI ED ESCLUSIONI. CONSULTARE https://tos.ea.com/legalapp/eaplay/US/it/PC/ PER I DETTAGLI.`
-    },
-    {
-      id: 2,
-      value: "**L'offerta scade il 30 settembre 2022 alle ore 10:00 PT. Solo per i nuovi abbonati. Dopo il primo mese, l'abbonamento si rinnoverà automaticamente ogni mese al prezzo attuale dell'abbonamento mensile fino all'annullamento."
-    }
-  ],
 
-  // Social Media Icon. 
-  social: [  
+  //Condition and Disclaimer
+
+  // Social Media Icon.
+  social: [
     {
       icon: <FaFacebookF size={20} />,
       link: 'https://www.facebook.com/ea.it/?brand_redir=68678914189'

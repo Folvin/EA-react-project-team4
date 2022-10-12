@@ -13,7 +13,7 @@ root.render(
     <BrowserRouter>
       <LoginBar />
       <div className="h-[96px]"></div>
-      <Prove/>
+      {/* <Prove/> */}
       <Routing />
       <Footer />
     </BrowserRouter>
