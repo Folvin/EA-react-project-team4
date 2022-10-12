@@ -44,9 +44,8 @@ function Presentation() {
         piuttosto che copiare quello che hanno fatto loro abbiamo cominciato a pensare a come migliorare su questo aspetto e abbiamo
         cominciato a lavorare a queste component che abbiamo poi raggruppato in una cartella chiamata shared in quanto component
         riutilizzabili e "condivise" da tutti. <br />
-        qui si è subito posto un problema e cioè visto che dovevamo lavorare su delle cose in comune, senza organnizarsi c'era il rischio di
-        fare piu volte lo stesso lavoro o addirrittura creare conflitti. per questo abbiamo deciso di lavorare in una maniera da essere
-        organizzati ma soprattutto lavorare in un ambiente{" "}
+        qui si è subito posto un problema e cioè visto che dovevamo lavorare su delle cose in comune, senza organizzarsi c'era il rischio di
+        fare piu volte lo stesso lavoro o addirrittura creare conflitti. per questo abbiamo deciso di lavorare in una maniera da essere{" "}
         <Anchor url="https://github.com/Folvin/ea-react-project-team4/tree/develop#workflow">agile.</Anchor>
         <div className="mt-4 flex flex-col sm:flex-row gap-4">
           <div className="flex flex-col gap-2 flex-1">
@@ -125,7 +124,7 @@ function Presentation() {
         </div>
         <hr className="border-8 my-6 border-green-400" />
         <div id="our" className="flex flex-col max-w-[220px] lg:max-w-none mx-auto gap-4 lg:flex-row justify-between">
-        <Image className="" file="our-nav-buy-button-apex.png" />
+          <Image className="" file="our-nav-buy-button-apex.png" />
           <Image className="" file="our-nav-buy-button-f1.png" />
           <Image className="" file="our-nav-buy-button-LIR.png" />
         </div>
