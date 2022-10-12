@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "TT-Lakes Condensed Regular";
-  src: url("../public/fonts/TT-Lakes-Condensed-Regular.woff2");
+  font-family: "tt-regular";
+  src: url("./fonts/TT-Lakes-Condensed-Regular.woff2");
 }
 @font-face {
   font-family: "Teko";
