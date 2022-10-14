@@ -4,8 +4,8 @@ This is a scolastic project for Develhope, realized for didactic purpose. it's a
 
 # Scripts
 
-start: it serve react on localhost 
-build: deploy the application
+- start: it serve react on localhost 
+- build: deploy the application
 
 # Node & package versions
 
