@@ -128,6 +128,11 @@ function Presentation() {
           <Image className="" file="our-nav-buy-button-LIR.png" />
         </div>
       </PresentationSection>
+
+      <PresentationSection title="scalabilità">
+        vorrei soffermarmi su un aspetto fondamentale del nostro progetto in quanto facilmente scalabile, in quanto è possibile creare ogni
+        pagina semplicemente riutilizzando le component progettate e di conseguenza è possibile creare piu pagine nel giro di poco tempo
+      </PresentationSection>
     </div>
   );
 }
