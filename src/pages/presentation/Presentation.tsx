@@ -17,36 +17,35 @@ function Presentation() {
   return (
     <div className="absolute w-full bg-slate-600 z-[99999999] top-0">
       <PresentationSection title="che cos'è questo progetto e come abbiamo iniziato">
-        questo è un progetto scolastico realizzato per develhope a scopo didattico. è una replica del sito electronic arts, sviluppato in
-        ambiente agile da un team composto da 4 studenti. <br /> abbiamo iniziato creando il progetto su{" "}
-        <Anchor url="https://github.com/Folvin/ea-react-project-team4/tree/develop">github</Anchor>.
+        questo è un progetto realizzato per develhope a scopo didattico. è una replica del sito di electronic arts, sviluppato in ambiente
+        agile da un team composto da 4 studenti. il team è composto da Kevin Alessi, Cristian Rimbu, Andrea Sellan e Christian Silvestri.
+        <br /> abbiamo iniziato creando il progetto in locale, su{" "}
+        <Anchor url="https://github.com/Folvin/ea-react-project-team4/tree/develop">github</Anchor> e collegandoli.
         <br />
-        abbiamo deciso immediatamente di utilizzare sia typescript che tailwind essendo che era sia una buona occasione per impararli meglio
-        ma anche perche ne abbiamo riconosciuto l'utilità
+        abbiamo deciso di implementare sia typescript che tailwind perche ci siamo subito resi conto che erano strumenti utili e comodi per
+        quello che dovevamo fare
       </PresentationSection>
 
       <PresentationSection title="inizializzazione struttura">
-        una volta creato il progetto abbiamo subito messo giu una piccola base strutturale per quanto riguarda l'ordinamento delle cartelle,
-        quindi semplicemente una cartella per le components e un file index in cui viene inizializzata la root per react che all'interno
-        renderizza il BrowserRouter e al suo interno una component chiamata Routing.tsx dove dentro ci andranno tutte le route abbiamo anche
-        deciso fin da subito una struttura di branch e di{" "}
-        <Anchor url="https://github.com/Folvin/ea-react-project-team4/tree/develop#naming-convention">naming</Anchor> che stiamo utilizzando
-        anche tutt'ora
+        abbiamo cominciato a progettare un po la struttura del progetto e abbiamo creato uno scaffolding iniziale divindendo
+        l'inizializzazione della root di react e le rotte che sono in una component chiamata Routing.tsx dove dentro ci andranno tutte le
+        route. <br /> abbiamo anche deciso fin da subito una struttura di branch e di{" "}
+        <Anchor url="https://github.com/Folvin/ea-react-project-team4/tree/develop#naming-convention">naming</Anchor>
         <div className="mt-4 flex justify-center">
           <Image file="first-structure.jpg" />
         </div>
       </PresentationSection>
 
       <PresentationSection title="design system e workflow">
-        abbiamo cominciato a guardare attentamente la pagina di EA per riuscire a capire quali elementi di design potessero essere
-        trasformati in component riutilizzabili per comporre ogni pagina e siamo giunti ad alcune conclusioni tra cui il fatto che molte
-        delle cose fatte nel sito originale erano incosistenti per esempio alcune spaziature erano piu grandi e altre piu piccole. quindi
-        piuttosto che copiare quello che hanno fatto loro abbiamo cominciato a pensare a come migliorare su questo aspetto e abbiamo
-        cominciato a lavorare a queste component che abbiamo poi raggruppato in una cartella chiamata shared in quanto component
-        riutilizzabili e "condivise" da tutti. <br />
-        qui si è subito posto un problema e cioè visto che dovevamo lavorare su delle cose in comune, senza organizzarsi c'era il rischio di
-        fare piu volte lo stesso lavoro o addirrittura creare conflitti. per questo abbiamo deciso di lavorare in una maniera da essere{" "}
-        <Anchor url="https://github.com/Folvin/ea-react-project-team4/tree/develop#workflow">agile.</Anchor>
+        abbiamo cominciato ad osservare attentamente la pagina di EA per riuscire a capire quali elementi di design potessero essere
+        trasformati in component riutilizzabili per comporre ogni pagina e siamo giunti alla seguente conclusione cioè il fatto che molte
+        delle parti fatte nel sito originale erano incosistenti come per esempio alcune spaziature erano piu grandi e altre piu piccole o
+        alcuni colori di elementi che dovrebbero essere unici. quindi piuttosto che copiare quello che hanno fatto loro abbiamo cominciato a
+        pensare a come migliorare su questo aspetto e quindi abbiamo cominciato a progettare queste component che abbiamo poi raggruppato in
+        una cartella chiamata shared in quanto component riutilizzabili e "condivise" da tutti. <br />
+        qui si è subito posto un problema e cioè visto che dovevamo lavorare su delle parti in comune, senza organizzarsi c'era il rischio
+        di fare piu volte lo stesso lavoro o addirrittura creare conflitti. per questo abbiamo deciso di lavorare organizzandoci in maniera
+        da essere <Anchor url="https://github.com/Folvin/ea-react-project-team4/tree/develop#workflow">agile.</Anchor>
         <div className="mt-4 flex flex-col sm:flex-row gap-4">
           <div className="flex flex-col gap-2 flex-1">
             <Button className="bg-cyan-300 border-black" url="#">
@@ -82,10 +81,10 @@ function Presentation() {
       </PresentationSection>
 
       <PresentationSection title="modernizzazione struttura">
-        con il progetto che cresceva e le component che aumentavano chiaramente abbiamo dovuto aggiornare la{" "}
-        <Anchor url="https://github.com/Folvin/ea-react-project-team4/tree/develop#about-the-structure">struttura</Anchor> di conseguenza in
-        modo tale da permettere comunque un ordine costante nel progetto e anche una chiarezza immediata senza perdersi troppo nelle
-        cartelle.
+        con il progetto che cresceva e le component che aumentavano la
+        <Anchor url="https://github.com/Folvin/ea-react-project-team4/tree/develop#about-the-structure">struttura</Anchor> chiaramente
+        veniva aggiornata di conseguenza in modo tale da permettere comunque un ordine costante nel progetto e anche una chiarezza immediata
+        senza perdersi troppo nelle cartelle. e in modo tale da poter implementare nuove feature nella maniera piu ordinata possibile
         <div className="mt-4 flex justify-center">
           <Image file="modern-structure.jpg" />
         </div>
