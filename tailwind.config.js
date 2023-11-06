@@ -17,6 +17,22 @@ module.exports = {
       lg: "1024px",
       xl: "1280px",
       "2xl": "1536px",
+      "3xl": "2000px",
+      "4xl": "2280px",
+      "5xl": "2560px",
+    },
+    extend: {
+      fontFamily: {
+        "tt-regular": ["tt-regular", "sans-serif"],
+        teko: ["teko", "sans-serif"],
+        baskerville: ["baskerville", "sans-serif"],
+        "f1-bold": ["f1-bold", "sans-serif"],
+        "f1-regular": ["f1-regular", "sans-serif"],
+        "f1-wide": ["f1-wide", "sans-serif"],
+        "roboto-thin": ["roboto-thin", "sans-serif"],
+        "roboto-normal": ["roboto-regular", "sans-serif"],
+        "roboto-bold": ["roboto-bold", "sans-serif"],
+      },
     },
     colors: ({colors}) => ({
       inherit: colors.inherit,
@@ -46,6 +62,9 @@ module.exports = {
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
+      eaBlack: {
+        100: "#121212",
+      },
     }),
     columns: {
       auto: "auto",
@@ -111,6 +130,7 @@ module.exports = {
       72: "18rem",
       80: "20rem",
       96: "24rem",
+      400: "25rem",
     },
     animation: {
       none: "none",
@@ -137,17 +157,17 @@ module.exports = {
     backgroundImage: {
       none: "none",
       "gradient-to-t": "linear-gradient(to top, var(--tw-gradient-stops))",
-      "gradient-to-tr":
-        "linear-gradient(to top right, var(--tw-gradient-stops))",
+      "gradient-to-tr": "linear-gradient(to top right, var(--tw-gradient-stops))",
       "gradient-to-r": "linear-gradient(to right, var(--tw-gradient-stops))",
-      "gradient-to-br":
-        "linear-gradient(to bottom right, var(--tw-gradient-stops))",
+      "gradient-to-br": "linear-gradient(to bottom right, var(--tw-gradient-stops))",
       "gradient-to-b": "linear-gradient(to bottom, var(--tw-gradient-stops))",
-      "gradient-to-bl":
-        "linear-gradient(to bottom left, var(--tw-gradient-stops))",
+      "gradient-to-bl": "linear-gradient(to bottom left, var(--tw-gradient-stops))",
       "gradient-to-l": "linear-gradient(to left, var(--tw-gradient-stops))",
-      "gradient-to-tl":
-        "linear-gradient(to top left, var(--tw-gradient-stops))",
+      "gradient-to-tl": "linear-gradient(to top left, var(--tw-gradient-stops))",
+      "f1-orange-banner": "url('../public/assets/pages/f1-ea/orange_banner.jpg')",
+      "f1-video": "url('../public/assets/pages/f1-ea/f122-video.mp4')",
+      "f1-newsletter-bg": "url('../public/assets/pages/f1-ea/F1-newsletter-background.jpg')",
+      "f1-homepage-bg": "url('../public/assets/pages/f1-ea/f122-homepage-background.png')"
     },
     backgroundOpacity: ({theme}) => theme("opacity"),
     backgroundPosition: {
@@ -223,6 +243,7 @@ module.exports = {
       lg: "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
       xl: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
       "2xl": "0 25px 50px -12px rgb(0 0 0 / 0.25)",
+      "3xl": "0 1rem 20px 10px rgb(0 0 0 / 0.40)",
       inner: "inset 0 2px 4px 0 rgb(0 0 0 / 0.05)",
       none: "none",
     },
@@ -374,24 +395,8 @@ module.exports = {
         '"Segoe UI Symbol"',
         '"Noto Color Emoji"',
       ],
-      serif: [
-        "ui-serif",
-        "Georgia",
-        "Cambria",
-        '"Times New Roman"',
-        "Times",
-        "serif",
-      ],
-      mono: [
-        "ui-monospace",
-        "SFMono-Regular",
-        "Menlo",
-        "Monaco",
-        "Consolas",
-        '"Liberation Mono"',
-        '"Courier New"',
-        "monospace",
-      ],
+      serif: ["ui-serif", "Georgia", "Cambria", '"Times New Roman"', "Times", "serif"],
+      mono: ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", '"Liberation Mono"', '"Courier New"', "monospace"],
     },
     fontSize: {
       xs: ["0.75rem", {lineHeight: "1rem"}],
@@ -525,6 +530,10 @@ module.exports = {
       10: "repeat(10, minmax(0, 1fr))",
       11: "repeat(11, minmax(0, 1fr))",
       12: "repeat(12, minmax(0, 1fr))",
+      autosm: "repeat(auto-fit, minmax(150px, 1fr))",
+      automd: "repeat(auto-fit, minmax(200px, 1fr))",
+      autolg: "repeat(auto-fit, minmax(250px, 1fr))",
+      autoxl: "repeat(auto-fit, minmax(300px, 1fr))",
     },
     gridTemplateRows: {
       none: "none",
@@ -877,8 +886,7 @@ module.exports = {
       all: "all",
       DEFAULT:
         "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter",
-      colors:
-        "color, background-color, border-color, text-decoration-color, fill, stroke",
+      colors: "color, background-color, border-color, text-decoration-color, fill, stroke",
       opacity: "opacity",
       shadow: "box-shadow",
       transform: "transform",

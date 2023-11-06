@@ -1,3 +1,67 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "tt-regular";
+  src: url("./fonts/TT-Lakes-Condensed-Regular.woff2");
+}
+@font-face {
+  font-family: "Teko";
+  src: url("./pages/apex-legends/font/Teko-Regular.ttf");
+}
+@font-face {
+  font-family: "f1-bold";
+  src: url("../public/assets/pages/f1-ea/font/Formula1-Bold_web_0.ttf");
+}
+@font-face {
+  font-family: "f1-regular";
+  src: url("../public/assets/pages/f1-ea/font/Formula1-Regular_web_0.ttf");
+}
+@font-face {
+  font-family: "f1-wide";
+  src: url("../public/assets/pages/f1-ea/font/Formula1-Wide_web_0.ttf");
+}
+
+@font-face {
+  font-family: "baskerville";
+  src: url("./pages/lost-in-random/font/Baskerville.otf");
+}
+
+@font-face {
+  font-family: "roboto-thin";
+  src: url("./pages/homepage/fonts/Roboto-Thin.ttf");
+}
+@font-face {
+  font-family: "roboto-normal";
+  src: url("./pages/homepage/fonts/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "roboto-bold";
+  src: url("./pages/homepage/fonts/Roboto-Bold.ttf");
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  letter-spacing: inherit;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 2px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(131, 131, 131);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-track {
+  background: #cdcdcd;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(73, 73, 73, 0.702);
+}

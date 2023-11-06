@@ -1,0 +1,53 @@
+.effect {
+  animation: both 2s ease-out;
+  animation-fill-mode: both;
+  -webkit-animation: reveal 2s ease-out;
+  -webkit-animation-fill-mode: both;
+}
+
+@-webkit-keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.effect2 {
+  animation: both 2s ease-out;
+  animation-fill-mode: both;
+  -webkit-animation: reveal2 2s ease-out;
+  -webkit-animation-fill-mode: both;
+}
+
+@-webkit-keyframes reveal2 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes reveal2 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
